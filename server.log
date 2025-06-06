@@ -1,0 +1,17 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/dev-server.ts
+
+🚀 Starting development server...
+👀 Watching for file changes...
+6:31:39 PM [express] serving on port 5000
+Browserslist: browsers data (caniuse-lite) is 8 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+6:33:15 PM [express] GET /api/health 200 in 5ms
+6:59:03 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=cfQAEPDy_cI1EIELANBuL
+7:04:33 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=cfQAEPDy_cI1EIELANBuL
+7:17:06 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=cfQAEPDy_cI1EIELANBuL
+7:25:16 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=cfQAEPDy_cI1EIELANBuL
+7:36:59 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=cfQAEPDy_cI1EIELANBuL
+7:49:45 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=cfQAEPDy_cI1EIELANBuL

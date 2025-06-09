@@ -67,6 +67,22 @@ const GearPumpSpecificationsPage: React.FC = () => {
   // Get pump data from gearPumpsComplete
   const pumpData = gearPumpsComplete.find(p => p.diameter === mappedDiameter);
   
+  // Set selected model based on modelId if provided
+  useEffect(() => {
+    if (modelId && pumpData && pumpData.models) {
+      const modelIndex = pumpData.models.findIndex(model => model.id === modelId);
+      if (modelIndex !== -1) {
+        setSelectedModel(modelIndex);
+      } else {
+        // If modelId not found, default to 0
+        setSelectedModel(0);
+      }
+    } else {
+      // If no modelId provided, default to 0
+      setSelectedModel(0);
+    }
+  }, [modelId, pumpData]);
+  
   // Get specifications from fbeDetailedSpecs
   const detailedSpecs = fbeDetailedSpecs[mappedDiameter];
   const specs = detailedSpecs?.[selectedModel] || detailedSpecs?.[0];
@@ -135,24 +151,15 @@ const GearPumpSpecificationsPage: React.FC = () => {
             <img 
               src="/src/assets/backgrounds/benefits-dark.svg"
               alt=""
-              className="w-full h-full object-cover object-top opacity-60"
+              className="w-full h-full object-cover object-top opacity-80"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-red-600/70 via-red-700/85 to-red-800/95" />
+            <div className="absolute inset-0 bg-gradient-to-b from-red-600/50 via-red-700/65 to-red-800/80" />
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24">
             {/* Breadcrumb */}
             <Breadcrumb className="mb-6">
               <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink 
-                    onClick={() => setLocation('/')}
-                    className="text-white/70 hover:text-white cursor-pointer"
-                  >
-                    {language === 'pt' ? 'Início' : language === 'en' ? 'Home' : 'Inicio'}
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="text-white/50" />
                 <BreadcrumbItem>
                   <BreadcrumbLink 
                     onClick={() => setLocation('/produtos')}
@@ -170,41 +177,100 @@ const GearPumpSpecificationsPage: React.FC = () => {
               </BreadcrumbList>
             </Breadcrumb>
 
-            {/* Model Navigation */}
+            {/* Model Navigation - Category Based */}
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
               className="mb-8"
             >
-              <div className="flex flex-wrap gap-2">
-                {gearPumpsComplete
-                  .filter(pump => {
-                    // Group by size category
-                    const smallPumps = ['1/8"', '1/4"', '3/8"', '1/2"', '3/4"'];
-                    const currentIsSmall = smallPumps.includes(mappedDiameter);
-                    return currentIsSmall ? smallPumps.includes(pump.diameter) : pump.diameter === mappedDiameter;
-                  })
-                  .map((pump) => {
-                    const reverseDiameterMap: Record<string, string> = {
-                      '1/8"': '18',
-                      '1/4"': '14',
-                      '3/8"': '38',
-                      '1/2"': '12',
-                      '3/4"': '34',
-                      '1"': '1',
-                      '1.1/2"': '112',
-                      '2"': '2',
-                      '3"': '3',
-                      '4"': '4'
-                    };
-                    const urlDiameter = reverseDiameterMap[pump.diameter] || pump.diameter;
-                    const isActive = pump.diameter === mappedDiameter;
+              {(() => {
+                const smallPumps = ['1/8"', '1/4"', '3/8"', '1/2"', '3/4"'];
+                const isSmallPump = smallPumps.includes(mappedDiameter);
+                const categoryTitle = isSmallPump ? 
+                  (language === 'pt' ? 'Bombas Pequenas' : language === 'en' ? 'Small Pumps' : 'Bombas Pequeñas') :
+                  mappedDiameter === '1"' ?
+                  (language === 'pt' ? 'Bombas de 1"' : language === 'en' ? '1" Pumps' : 'Bombas de 1"') :
+                  (language === 'pt' ? `Bombas de ${mappedDiameter}` : language === 'en' ? `${mappedDiameter} Pumps` : `Bombas de ${mappedDiameter}`);
+                
+                const pumpsToShow = gearPumpsComplete.filter(pump => {
+                  if (isSmallPump) return smallPumps.includes(pump.diameter);
+                  return pump.diameter === mappedDiameter;
+                });
 
+                return (
+                  <>
+                    <div className="flex flex-wrap gap-2">
+                      {pumpsToShow.map((pump) => {
+                        const reverseDiameterMap: Record<string, string> = {
+                          '1/8"': '18',
+                          '1/4"': '14',
+                          '3/8"': '38',
+                          '1/2"': '12',
+                          '3/4"': '34',
+                          '1"': '1',
+                          '1.1/2"': '112',
+                          '2"': '2',
+                          '3"': '3',
+                          '4"': '4'
+                        };
+                        const urlDiameter = reverseDiameterMap[pump.diameter] || pump.diameter;
+                        const isActive = pump.diameter === mappedDiameter;
+
+                        return (
+                          <Button
+                            key={pump.diameter}
+                            onClick={() => setLocation(`/produtos/bombas-engrenagem/${urlDiameter}/especificacoes`)}
+                            variant={isActive ? "default" : "outline"}
+                            className={cn(
+                              "px-4 py-2 text-sm font-medium transition-all",
+                              isActive 
+                                ? "bg-white text-red-700 hover:bg-white/90" 
+                                : "bg-white/10 text-white border-white/30 hover:bg-white/20"
+                            )}
+                          >
+                            FBE {pump.diameter}
+                          </Button>
+                        );
+                      })}
+                    </div>
+                  </>
+                );
+              })()}
+            </motion.div>
+
+            {/* Model Navigation for pumps with multiple models */}
+            {pumpData && pumpData.models && pumpData.models.length > 1 && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                className="mb-6"
+              >
+                <div className="flex flex-wrap gap-2">
+                  {pumpData.models.map((model, index) => {
+                    const isActive = index === selectedModel;
                     return (
                       <Button
-                        key={pump.diameter}
-                        onClick={() => setLocation(`/produtos/bombas-engrenagem/${urlDiameter}/especificacoes`)}
+                        key={model.id}
+                        onClick={() => {
+                          setSelectedModel(index);
+                          // Update URL with modelId
+                          const reverseDiameterMap: Record<string, string> = {
+                            '1/8"': '18',
+                            '1/4"': '14',
+                            '3/8"': '38',
+                            '1/2"': '12',
+                            '3/4"': '34',
+                            '1"': '1',
+                            '1.1/2"': '112',
+                            '2"': '2',
+                            '3"': '3',
+                            '4"': '4'
+                          };
+                          const urlDiameter = reverseDiameterMap[pumpData.diameter] || pumpData.diameter;
+                          setLocation(`/produtos/bombas-engrenagem/${urlDiameter}/especificacoes/${model.id}`);
+                        }}
                         variant={isActive ? "default" : "outline"}
                         className={cn(
                           "px-4 py-2 text-sm font-medium transition-all",
@@ -213,12 +279,13 @@ const GearPumpSpecificationsPage: React.FC = () => {
                             : "bg-white/10 text-white border-white/30 hover:bg-white/20"
                         )}
                       >
-                        {pump.diameter}
+                        FBE {model.model}
                       </Button>
                     );
                   })}
-              </div>
-            </motion.div>
+                </div>
+              </motion.div>
+            )}
 
             {/* Title - Left aligned, 2 lines */}
             <motion.div

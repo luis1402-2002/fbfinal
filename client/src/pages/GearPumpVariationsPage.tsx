@@ -91,7 +91,7 @@ const GearPumpVariationsPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {variations.map((model, index) => {
                 // Extract flow rate value from specification
-                const flowRate = model.specifications.flowRate.split(' ').pop() || '';
+                const flowRate = model.specifications?.maxFlow || '';
                 
                 return (
                 <motion.div

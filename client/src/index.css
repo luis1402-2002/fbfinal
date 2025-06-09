@@ -69,6 +69,25 @@
   }
 }
 
+/* Animações para carrossel de produtos */
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-x-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /* Utilitários adicionais */
 .motion-safe\:animate-subtle-zoom {
   animation: subtle-zoom 30s ease-in-out infinite;

@@ -4,14 +4,272 @@
 
 🚀 Starting development server...
 👀 Watching for file changes...
-6:31:39 PM [express] serving on port 5000
+3:58:14 PM [express] serving on port 5000
 Browserslist: browsers data (caniuse-lite) is 8 months old. Please run:
   npx update-browserslist-db@latest
   Why you should do it regularly: https://github.com/browserslist/update-db#readme
-6:33:15 PM [express] GET /api/health 200 in 5ms
-6:59:03 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=cfQAEPDy_cI1EIELANBuL
-7:04:33 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=cfQAEPDy_cI1EIELANBuL
-7:17:06 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=cfQAEPDy_cI1EIELANBuL
-7:25:16 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=cfQAEPDy_cI1EIELANBuL
-7:36:59 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=cfQAEPDy_cI1EIELANBuL
-7:49:45 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=cfQAEPDy_cI1EIELANBuL
+3:58:42 PM [vite] hmr update /src/pages/GearPumpSpecificationsPage.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+3:59:33 PM [vite] hmr update /src/pages/GearPumpSpecificationsPage.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+3:59:53 PM [vite] hmr update /src/pages/GearPumpSpecificationsPage.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+4:03:26 PM [vite] hmr update /src/pages/GearPumpSpecificationsPage.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+4:03:32 PM [vite] hmr update /src/App.tsx?v=gBpB0JCgSfM9DqawanTgn, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+4:03:42 PM [vite] hmr update /src/pages/GearPumpSpecificationsPage.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+4:25:09 PM [vite] hmr update /src/pages/GearPumpSpecificationsPage.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+6:08:13 PM [vite] hmr update /src/pages/GearPumpSpecificationsPage.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+6:08:41 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+6:50:26 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+7:00:44 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+7:09:18 PM [vite] hmr update /src/pages/GearPumpVariationsPage.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+12:17:06 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+12:17:19 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+12:19:30 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+12:20:51 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+12:22:02 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+12:22:31 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+12:22:57 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+12:23:04 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+12:23:27 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+12:23:53 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+12:34:44 AM [vite] hmr update /src/index.css?v=gBpB0JCgSfM9DqawanTgn
+12:35:07 AM [vite] page reload /home/nando/fbfinal/tailwind.config.ts
+12:40:03 AM [vite] Pre-transform error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Expected corresponding JSX closing tag for <div>. (1083:20)
+
+  1081 |                         </div>
+  1082 |                       </div>
+> 1083 |                     </Card>
+       |                     ^
+  1084 |                   </div>
+  1085 |
+  1086 |                   {/* FBOT Series */}
+12:40:07 AM [vite] Internal server error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Expected corresponding JSX closing tag for <div>. (1083:20)
+
+  1081 |                         </div>
+  1082 |                       </div>
+> 1083 |                     </Card>
+       |                     ^
+  1084 |                   </div>
+  1085 |
+  1086 |                   {/* FBOT Series */}
+  Plugin: vite:react-babel
+  File: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx:1083:20
+  1081|                          </div>
+  1082|                        </div>
+  1083|                      </Card>
+     |                      ^
+  1084|                    </div>
+  1085|  
+      at toParseError (/home/nando/fbfinal/node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at raise (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:527:18)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at fn (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3588:23)
+      at tryParse (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/util.ts:174:20)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3587:20)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseMaybeAssignAllowIn (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at parseParenAndDistinguishExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1771:16)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1131:21)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:583:22)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOpBaseRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:569:12)
+      at parseExprOpRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:554:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:485:27)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:506:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:407:17)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3607:22)
+      at parseExpressionBase (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:221:23)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:212:39)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:212:17)
+      at jsxParseExpressionContainer (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:376:33)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:500:24)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+12:40:09 AM [vite] Internal server error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Expected corresponding JSX closing tag for <div>. (1083:20)
+
+  1081 |                         </div>
+  1082 |                       </div>
+> 1083 |                     </Card>
+       |                     ^
+  1084 |                   </div>
+  1085 |
+  1086 |                   {/* FBOT Series */}
+  Plugin: vite:react-babel
+  File: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx:1083:20
+  1081|                          </div>
+  1082|                        </div>
+  1083|                      </Card>
+     |                      ^
+  1084|                    </div>
+  1085|  
+      at toParseError (/home/nando/fbfinal/node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at raise (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:527:18)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at fn (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3588:23)
+      at tryParse (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/util.ts:174:20)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3587:20)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseMaybeAssignAllowIn (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at parseParenAndDistinguishExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1771:16)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1131:21)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:583:22)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOpBaseRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:569:12)
+      at parseExprOpRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:554:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:485:27)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:506:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:407:17)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3607:22)
+      at parseExpressionBase (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:221:23)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:212:39)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:212:17)
+      at jsxParseExpressionContainer (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:376:33)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:500:24)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+12:48:48 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn, /src/index.css?v=frpAzZHn6FLBx0H4_NBO3
+12:48:49 AM [vite] Pre-transform error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Expected corresponding JSX closing tag for <motion.div>. (1084:18)
+
+  1082 |                       </div>
+  1083 |                     </div>
+> 1084 |                   </div>
+       |                   ^
+  1085 |
+  1086 |                   {/* FBOT Series */}
+  1087 |                   <div className="mb-24">
+12:57:19 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn, /src/index.css?v=frpAzZHn6FLBx0H4_NBO3
+1:32:32 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn, /src/index.css?v=frpAzZHn6FLBx0H4_NBO3
+1:34:56 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn, /src/index.css?v=frpAzZHn6FLBx0H4_NBO3
+1:36:14 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn, /src/index.css?v=frpAzZHn6FLBx0H4_NBO3
+1:37:33 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn, /src/index.css?v=frpAzZHn6FLBx0H4_NBO3
+1:38:38 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn, /src/index.css?v=frpAzZHn6FLBx0H4_NBO3
+1:39:01 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn, /src/index.css?v=frpAzZHn6FLBx0H4_NBO3
+1:39:34 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn, /src/index.css?v=frpAzZHn6FLBx0H4_NBO3
+1:39:58 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn, /src/index.css?v=frpAzZHn6FLBx0H4_NBO3
+1:40:24 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn, /src/index.css?v=frpAzZHn6FLBx0H4_NBO3
+1:40:54 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn, /src/index.css?v=frpAzZHn6FLBx0H4_NBO3
+1:42:03 AM [vite] Pre-transform error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Expected corresponding JSX closing tag for <motion.div>. (947:18)
+
+  945 |                     </div>
+  946 |                   </motion.div>
+> 947 |                   </div> {/* Close FBE Container */}
+      |                   ^
+  948 |                 </motion.div>
+  949 |               )}
+  950 |
+1:42:03 AM [vite] Internal server error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Expected corresponding JSX closing tag for <motion.div>. (947:18)
+
+  945 |                     </div>
+  946 |                   </motion.div>
+> 947 |                   </div> {/* Close FBE Container */}
+      |                   ^
+  948 |                 </motion.div>
+  949 |               )}
+  950 |
+  Plugin: vite:react-babel
+  File: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx:947:18
+  945|                      </div>
+  946|                    </motion.div>
+  947|                    </div> {/* Close FBE Container */}
+     |                    ^
+  948|                  </motion.div>
+  949|                )}
+      at toParseError (/home/nando/fbfinal/node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at raise (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:527:18)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at fn (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3588:23)
+      at tryParse (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/util.ts:174:20)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3587:20)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseMaybeAssignAllowIn (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at parseParenAndDistinguishExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1771:16)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1131:21)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:583:22)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOpBaseRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:569:12)
+      at parseExprOpRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:554:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:485:27)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:506:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:407:17)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3607:22)
+      at parseExpressionBase (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:221:23)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:212:39)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:212:17)
+      at jsxParseExpressionContainer (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:376:33)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:500:24)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+1:42:30 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=gBpB0JCgSfM9DqawanTgn, /src/index.css?v=frpAzZHn6FLBx0H4_NBO3

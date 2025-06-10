@@ -225,7 +225,7 @@ const ClientsSection = () => {
   return (
     <section 
       id="clientes" 
-      className="pt-0 pb-16 md:pb-20 bg-white dark:bg-slate-900 relative"
+      className="pt-16 pb-16 md:pb-20 bg-slate-50 dark:bg-slate-800 relative"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
         <motion.div

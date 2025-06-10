@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "wouter";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -13,8 +13,8 @@ import {
   Thermometer,
   Gauge,
   Settings,
-  ChevronRight,
   Phone,
+  ChevronRight,
   Info,
   FileText,
   Download,
@@ -48,17 +48,17 @@ import { centrifugalPumpsComplete } from "../data/centrifugalPumpsComplete";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "../components/ui/breadcrumb";
 
 // Group pumps by category
-const smallPumps = gearPumpsComplete.filter((pump) =>
-  ['1/8"', '1/4"', '3/8"', '1/2"', '3/4"'].includes(pump.diameter),
-);
+const smallPumps = gearPumpsComplete?.filter((pump) =>
+  ['1/8"', '1/4"', '3/8"', '1/2"', '3/4"'].includes(pump?.diameter),
+) || [];
 
-const mediumPumps = gearPumpsComplete.filter((pump) => pump.diameter === '1"');
+const mediumPumps = gearPumpsComplete?.filter((pump) => pump?.diameter === '1"') || [];
 
 const largePumps = [
-  gearPumpsComplete.find((pump) => pump.diameter === '1.1/2"'),
-  gearPumpsComplete.find((pump) => pump.diameter === '2"'),
-  gearPumpsComplete.find((pump) => pump.diameter === '3"'),
-  gearPumpsComplete.find((pump) => pump.diameter === '4"'),
+  gearPumpsComplete?.find((pump) => pump?.diameter === '1.1/2"'),
+  gearPumpsComplete?.find((pump) => pump?.diameter === '2"'),
+  gearPumpsComplete?.find((pump) => pump?.diameter === '3"'),
+  gearPumpsComplete?.find((pump) => pump?.diameter === '4"'),
 ].filter(Boolean);
 
 const ProductsPagePremium: React.FC = () => {
@@ -74,7 +74,7 @@ const ProductsPagePremium: React.FC = () => {
     return 'gear';
   };
   
-  const [activeCategory, setActiveCategory] = useState<"gear" | "centrifugal">(getInitialCategory());
+  const [activeCategory, setActiveCategory] = useState<"gear" | "centrifugal">(() => getInitialCategory());
   const [hoveredPump, setHoveredPump] = useState<string | null>(null);
   const [fbcnImage, setFbcnImage] = useState(0);
   const [fbotImage, setFbotImage] = useState(0);
@@ -120,7 +120,7 @@ const ProductsPagePremium: React.FC = () => {
     }, 3000);
     
     return () => clearInterval(interval);
-  }, []);
+  }, [fbcnImages.length, fbotImages.length]);
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(
@@ -154,7 +154,14 @@ const ProductsPagePremium: React.FC = () => {
     if (modelId) {
       setLocation(`/produtos/bombas-engrenagem/${urlDiameter}/${modelId}/especificacoes`);
     } else {
-      setLocation(`/produtos/bombas-engrenagem/${urlDiameter}/especificacoes`);
+      // For pumps with multiple models, go to variations page
+      const pump = gearPumpsComplete.find(p => p.diameter === diameter);
+      if (pump && pump.models.length > 1) {
+        setLocation(`/produtos/bombas-engrenagem/${urlDiameter}`);
+      } else {
+        // For single model pumps, go directly to specifications
+        setLocation(`/produtos/bombas-engrenagem/${urlDiameter}/especificacoes`);
+      }
     }
   };
 
@@ -208,14 +215,14 @@ const ProductsPagePremium: React.FC = () => {
 
       <div className="min-h-screen bg-slate-50 dark:bg-slate-800">
         {/* Hero Section with Background Image */}
-        <section className="relative pt-20 md:pt-24 pb-0 overflow-hidden">
+        <section className="relative pt-16 md:pt-20 pb-0 overflow-hidden">
           {/* Premium Background Effect with Hero Background */}
           <div className="absolute inset-0">
-            {/* Background image for both themes */}
             <img 
-              src="/src/assets/backgrounds/hero-dark.png"
+              src="/src/assets/backgrounds/benefits-light-products.svg"
               alt=""
               className="w-full h-full object-cover"
+              style={{ objectPosition: 'top right' }}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-slate-950/95 via-slate-900/85 to-slate-800/70" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent" />
@@ -223,86 +230,124 @@ const ProductsPagePremium: React.FC = () => {
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-left py-8"
-            >
-              {/* FB Bombas Text */}
+            {/* Content */}
+            <div className="py-6">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="flex items-center gap-4 mb-6"
-              >
-                <div className="h-px w-16 bg-gradient-to-l from-laranja to-transparent rounded-r-full" />
-                <span className="text-laranja uppercase tracking-[0.2em] font-medium text-sm">
-                  FB BOMBAS
-                </span>
-              </motion.div>
-
-              {/* Main Title */}
-              <h1 className="text-3xl md:text-5xl lg:text-6xl text-white mb-6 font-light">
-                <motion.span
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="block text-3xl md:text-4xl lg:text-5xl"
-                >
-                  {language === "pt"
-                    ? "Nossos"
-                    : language === "en"
-                      ? "Our"
-                      : "Nuestros"}
-                </motion.span>
-                <motion.span
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="block text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-white via-blue-200 to-cyan-200 bg-clip-text text-transparent pb-2"
-                >
-                  {language === "pt"
-                    ? "Produtos"
-                    : language === "en"
-                      ? "Products"
-                      : "Productos"}
-                </motion.span>
-              </h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="text-base md:text-lg text-slate-300 mb-8 max-w-2xl leading-relaxed font-light"
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="text-left"
               >
-                {language === "pt"
-                  ? "Soluções especializadas em bombeamento industrial com tecnologia de ponta e qualidade garantida."
-                  : language === "en"
-                    ? "Specialized industrial pumping solutions with cutting-edge technology and guaranteed quality."
-                    : "Soluciones especializadas en bombeo industrial con tecnología de punta y calidad garantizada."}
-              </motion.p>
+                {/* FB Bombas Text */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="flex items-center gap-4 mb-6"
+                >
+                  <div className="h-px w-16 bg-gradient-to-l from-laranja to-transparent rounded-r-full" />
+                  <span className="text-laranja uppercase tracking-[0.2em] font-medium text-sm">
+                    FB BOMBAS
+                  </span>
+                </motion.div>
+
+                {/* Main Title */}
+                <h1 className="text-3xl md:text-5xl lg:text-6xl text-white mb-6 font-light">
+                  <motion.span
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="block text-3xl md:text-4xl lg:text-5xl"
+                  >
+                    {language === "pt"
+                      ? "Nossos"
+                      : language === "en"
+                        ? "Our"
+                        : "Nuestros"}
+                  </motion.span>
+                  <motion.span
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="block text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-white via-blue-200 to-cyan-200 bg-clip-text text-transparent pb-2"
+                  >
+                    {language === "pt"
+                      ? "Produtos"
+                      : language === "en"
+                        ? "Products"
+                        : "Productos"}
+                  </motion.span>
+                </h1>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="text-base md:text-lg text-slate-300 mb-8 max-w-xl leading-relaxed font-light"
+                >
+                  {language === "pt"
+                    ? <>Há mais de 80 anos desenvolvendo soluções<br />sob medida para os desafios mais exigentes da indústria brasileira.</>
+                    : language === "en"
+                      ? <>For over 80 years developing custom solutions<br />for the most demanding challenges in Brazilian industry.</>
+                      : <>Por más de 80 años desarrollando soluciones<br />a medida para los desafíos más exigentes de la industria brasileña.</>}
+                </motion.p>
+              </motion.div>
+            </div>
+
+            {/* Empresa 100% Brasileira Badge - Bottom Right Corner */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3, type: "spring" }}
+              className="hidden md:block absolute bottom-10 right-12"
+            >
+              <img 
+                src="/src/assets/empresa-100-brasileira.png" 
+                alt="Empresa 100% Brasileira"
+                className="w-48 md:w-56 lg:w-64 xl:w-72 h-auto object-contain drop-shadow-2xl"
+                loading="eager"
+              />
             </motion.div>
           </div>
 
-          {/* Wave Divider */}
-          <div className="relative">
+          {/* Wave Divider - 3 layers without gradients */}
+          <div className="relative w-full -mt-px">
             <svg
+              className="w-full h-16 sm:h-20 md:h-24"
               viewBox="0 0 1440 120"
               preserveAspectRatio="none"
-              className="w-full h-[60px] md:h-[80px] lg:h-[120px]"
+              xmlns="http://www.w3.org/2000/svg"
             >
+              {/* Background wave layer */}
               <path
-                d="M0,60 C360,10 720,90 1080,50 C1260,30 1380,20 1440,40 L1440,120 L0,120 Z"
-                className="fill-slate-50 dark:fill-slate-900"
+                d="M0,20 C480,100 960,100 1440,20 L1440,120 L0,120 Z"
+                fill="#f8fafc"
+                className="dark:fill-slate-800"
+                opacity="0.4"
+              />
+              
+              {/* Middle wave layer */}
+              <path
+                d="M0,40 C360,90 720,90 1080,40 S1440,0 1440,0 L1440,120 L0,120 Z"
+                fill="#f8fafc"
+                className="dark:fill-slate-800"
+                opacity="0.7"
+              />
+              
+              {/* Front wave layer */}
+              <path
+                d="M0,60 C240,95 480,95 720,60 C960,25 1200,25 1440,60 L1440,120 L0,120 Z"
+                fill="#f8fafc"
+                className="dark:fill-slate-800"
               />
             </svg>
+            {/* Bottom cover to hide any lines */}
+            <div className="absolute bottom-0 left-0 right-0 h-2 bg-slate-50 dark:bg-slate-800" />
           </div>
         </section>
 
         {/* Category Buttons - Below Wave Divider */}
-        <section className="py-6 bg-slate-50 dark:bg-slate-800">
+        <section className="pt-16 pb-6 bg-slate-50 dark:bg-slate-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -324,16 +369,12 @@ const ProductsPagePremium: React.FC = () => {
                   )}
                 >
                   <div className={cn(
-                    "p-3 rounded-xl transition-all duration-300 shadow-lg",
-                    activeCategory === "gear"
-                      ? "bg-gradient-to-br from-white/30 to-white/10 rotate-3"
-                      : "bg-gradient-to-br from-azul-profundo to-blue-600"
+                    "p-3 rounded-xl transition-all duration-300 shadow-lg bg-gradient-to-br from-[#E30613] to-[#ff6b6b]",
+                    activeCategory === "gear" && "rotate-3"
                   )}>
                     <Cog className={cn(
-                      "w-6 h-6 transition-all duration-300",
-                      activeCategory === "gear" 
-                        ? "text-white animate-spin-slow" 
-                        : "text-white"
+                      "w-6 h-6 text-white transition-all duration-300",
+                      activeCategory === "gear" && "animate-spin-slow"
                     )} />
                   </div>
                   <div className="text-left">
@@ -440,28 +481,28 @@ const ProductsPagePremium: React.FC = () => {
                           <div className="bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 p-4 rounded-xl border border-red-200 dark:border-red-800">
                             <Gauge className="w-6 h-6 text-laranja mx-auto mb-2" />
                             <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-1">
-                              {language === "pt" ? "Pressão" : language === "en" ? "Pressure" : "Presión"}
+                              {language === "pt" ? "Pressão (MÁX)" : language === "en" ? "Pressure (MAX)" : "Presión (MÁX)"}
                             </h4>
                             <p className="text-sm text-slate-700 dark:text-slate-300 font-bold">
-                              {language === "pt" ? "Até 300 Bar" : language === "en" ? "Up to 300 Bar" : "Hasta 300 Bar"}
+                              {language === "pt" ? "Até 210 kgf/cm²" : language === "en" ? "Up to 210 kgf/cm²" : "Hasta 210 kgf/cm²"}
                             </p>
                           </div>
                           <div className="bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 p-4 rounded-xl border border-red-200 dark:border-red-800">
                             <Thermometer className="w-6 h-6 text-laranja mx-auto mb-2" />
                             <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-1">
-                              {language === "pt" ? "Temperatura" : language === "en" ? "Temperature" : "Temperatura"}
+                              {language === "pt" ? "Viscosidade (MÁX)" : language === "en" ? "Viscosity (MAX)" : "Viscosidad (MÁX)"}
                             </h4>
                             <p className="text-sm text-slate-700 dark:text-slate-300 font-bold">
-                              {language === "pt" ? "Até 350°C" : language === "en" ? "Up to 350°C" : "Hasta 350°C"}
+                              {language === "pt" ? "Até 1.000.000 cSt" : language === "en" ? "Up to 1,000,000 cSt" : "Hasta 1.000.000 cSt"}
                             </p>
                           </div>
                           <div className="bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 p-4 rounded-xl border border-red-200 dark:border-red-800">
                             <Droplets className="w-6 h-6 text-laranja mx-auto mb-2" />
                             <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-1">
-                              {language === "pt" ? "Vazão" : language === "en" ? "Flow" : "Flujo"}
+                              {language === "pt" ? "Vazão (MÁX)" : language === "en" ? "Flow (MAX)" : "Flujo (MÁX)"}
                             </h4>
                             <p className="text-sm text-slate-700 dark:text-slate-300 font-bold">
-                              {language === "pt" ? "Até 460 L/min" : language === "en" ? "Up to 460 L/min" : "Hasta 460 L/min"}
+                              {language === "pt" ? "0,17 a 27.600 L/h" : language === "en" ? "0.17 to 27,600 L/h" : "0,17 a 27.600 L/h"}
                             </p>
                           </div>
                         </div>
@@ -529,23 +570,41 @@ const ProductsPagePremium: React.FC = () => {
                               </div>
 
                               <CardContent className="p-4">
-                                <div className="space-y-2 mb-4">
+                                <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
                                   <div>
-                                    <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400">
-                                      <Droplets className="w-3 h-3 text-laranja" />
-                                      {language === "pt" ? "Vazão" : "Flow"}
+                                    <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 mb-1">
+                                      <Droplets className="w-4 h-4 text-laranja" />
+                                      <span className="whitespace-nowrap">{language === "pt" ? "Vazão (MÁX)" : language === "en" ? "Flow (MAX)" : "Flujo (MÁX)"}</span>
                                     </div>
-                                    <p className="text-sm font-bold text-slate-900 dark:text-white">
+                                    <p className="font-bold text-sm text-slate-900 dark:text-white">
                                       {pump.models[0].specifications.maxFlow}
                                     </p>
                                   </div>
                                   <div>
-                                    <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400">
-                                      <Gauge className="w-3 h-3 text-laranja" />
-                                      {language === "pt" ? "Pressão" : "Pressure"}
+                                    <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 mb-1">
+                                      <Gauge className="w-4 h-4 text-laranja" />
+                                      <span className="whitespace-nowrap">{language === "pt" ? "Pressão (MÁX)" : language === "en" ? "Pressure (MAX)" : "Presión (MÁX)"}</span>
                                     </div>
-                                    <p className="text-sm font-bold text-slate-900 dark:text-white">
+                                    <p className="font-bold text-sm text-slate-900 dark:text-white">
                                       {pump.models[0].specifications.maxPressure}
+                                    </p>
+                                  </div>
+                                  <div>
+                                    <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 mb-1">
+                                      <Thermometer className="w-4 h-4 text-laranja" />
+                                      {language === "pt" ? "Temp." : language === "en" ? "Temp." : "Temp."}
+                                    </div>
+                                    <p className="font-bold text-sm text-slate-900 dark:text-white">
+                                      até 350°C
+                                    </p>
+                                  </div>
+                                  <div>
+                                    <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 mb-1">
+                                      <Settings className="w-4 h-4 text-laranja" />
+                                      RPM
+                                    </div>
+                                    <p className="font-bold text-sm text-slate-900 dark:text-white">
+                                      {pump.models[0].specifications.maxRPM}
                                     </p>
                                   </div>
                                 </div>
@@ -645,10 +704,10 @@ const ProductsPagePremium: React.FC = () => {
                                   <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 mb-1">
                                     <Droplets className="w-4 h-4 text-laranja" />
                                     {language === "pt"
-                                      ? "Vazão"
+                                      ? "Vazão (MÁX)"
                                       : language === "en"
-                                        ? "Flow"
-                                        : "Flujo"}
+                                        ? "Flow (MAX)"
+                                        : "Flujo (MÁX)"}
                                   </div>
                                   <p className="font-bold text-sm text-slate-900 dark:text-white">
                                     {model.specifications.maxFlow}
@@ -658,10 +717,10 @@ const ProductsPagePremium: React.FC = () => {
                                   <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 mb-1">
                                     <Gauge className="w-4 h-4 text-laranja" />
                                     {language === "pt"
-                                      ? "Pressão"
+                                      ? "Pressão (MÁX)"
                                       : language === "en"
-                                        ? "Pressure"
-                                        : "Presión"}
+                                        ? "Pressure (MAX)"
+                                        : "Presión (MÁX)"}
                                   </div>
                                   <p className="font-bold text-sm text-slate-900 dark:text-white">
                                     {model.specifications.maxPressure}
@@ -670,7 +729,7 @@ const ProductsPagePremium: React.FC = () => {
                                 <div>
                                   <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 mb-1">
                                     <Thermometer className="w-4 h-4 text-laranja" />
-                                    {language === "pt" ? "Temp." : "Temp."}
+                                    {language === "pt" ? "Temp. (MÁX)" : "Temp. (MAX)"}
                                   </div>
                                   <p className="font-bold text-sm text-slate-900 dark:text-white">
                                     até 350°C
@@ -679,7 +738,7 @@ const ProductsPagePremium: React.FC = () => {
                                 <div>
                                   <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 mb-1">
                                     <Settings className="w-4 h-4 text-laranja" />
-                                    RPM
+                                    RPM (MÁX)
                                   </div>
                                   <p className="font-bold text-sm text-slate-900 dark:text-white">
                                     {model.specifications.maxRPM}
@@ -788,10 +847,10 @@ const ProductsPagePremium: React.FC = () => {
                                       <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-1">
                                         <Droplets className="w-4 h-4 text-laranja" />
                                         {language === "pt"
-                                          ? "Vazão"
+                                          ? "Vazão (MÁX)"
                                           : language === "en"
-                                            ? "Flow"
-                                            : "Flujo"}
+                                            ? "Flow (MAX)"
+                                            : "Flujo (MÁX)"}
                                       </div>
                                       <p className="font-bold text-slate-900 dark:text-white">
                                         {model.specifications.maxFlow}
@@ -801,10 +860,10 @@ const ProductsPagePremium: React.FC = () => {
                                       <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-1">
                                         <Gauge className="w-4 h-4 text-laranja" />
                                         {language === "pt"
-                                          ? "Pressão"
+                                          ? "Pressão (MÁX)"
                                           : language === "en"
-                                            ? "Pressure"
-                                            : "Presión"}
+                                            ? "Pressure (MAX)"
+                                            : "Presión (MÁX)"}
                                       </div>
                                       <p className="font-bold text-slate-900 dark:text-white">
                                         {model.specifications.maxPressure}
@@ -929,7 +988,7 @@ const ProductsPagePremium: React.FC = () => {
                       </div>
 
                       {/* Right Side - Image */}
-                      <div className="relative h-full flex items-center justify-center">
+                      <div className="relative h-full flex items-center justify-center lg:justify-end">
                         <AnimatePresence mode="wait">
                           <motion.div
                             key={fbcnImage}
@@ -937,12 +996,12 @@ const ProductsPagePremium: React.FC = () => {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.8 }}
                             transition={{ duration: 0.5 }}
-                            className="relative w-full"
+                            className="relative w-full max-w-md lg:max-w-lg"
                           >
                             <img 
                               src={fbcnImages[fbcnImage]} 
                               alt="FBCN" 
-                              className="w-full h-auto object-contain max-h-[700px] drop-shadow-2xl"
+                              className="w-full h-auto object-contain max-h-[400px] lg:max-h-[500px] drop-shadow-2xl"
                               onError={(e) => {
                                 const img = e.target as HTMLImageElement;
                                 img.src = '/src/assets/products/fbcn.png';
@@ -968,10 +1027,10 @@ const ProductsPagePremium: React.FC = () => {
                                 {language === "pt" ? "Características Técnicas" : language === "en" ? "Technical Features" : "Características Técnicas"}
                               </h4>
                             </div>
-                            <div className="space-y-4">
+                            <div className="space-y-3">
                               <div className="flex items-center gap-4 p-4 bg-white/60 dark:bg-slate-800/60 rounded-xl backdrop-blur-sm">
-                                <div className="flex-shrink-0 w-12 h-12 bg-azul-profundo/10 rounded-lg flex items-center justify-center">
-                                  <Droplets className="w-6 h-6 text-azul-profundo" />
+                                <div className="flex-shrink-0 w-12 h-12 bg-azul-profundo/10 dark:bg-blue-600/20 rounded-lg flex items-center justify-center">
+                                  <Droplets className="w-6 h-6 text-azul-profundo dark:text-blue-400" />
                                 </div>
                                 <div className="flex-1">
                                   <p className="text-sm text-slate-600 dark:text-slate-400">{language === "pt" ? "Capacidade" : "Capacity"}</p>
@@ -979,8 +1038,8 @@ const ProductsPagePremium: React.FC = () => {
                                 </div>
                               </div>
                               <div className="flex items-center gap-4 p-4 bg-white/60 dark:bg-slate-800/60 rounded-xl backdrop-blur-sm">
-                                <div className="flex-shrink-0 w-12 h-12 bg-azul-profundo/10 rounded-lg flex items-center justify-center">
-                                  <Factory className="w-6 h-6 text-azul-profundo" />
+                                <div className="flex-shrink-0 w-12 h-12 bg-azul-profundo/10 dark:bg-blue-600/20 rounded-lg flex items-center justify-center">
+                                  <Factory className="w-6 h-6 text-azul-profundo dark:text-blue-400" />
                                 </div>
                                 <div className="flex-1">
                                   <p className="text-sm text-slate-600 dark:text-slate-400">{language === "pt" ? "Construção" : "Construction"}</p>
@@ -988,8 +1047,8 @@ const ProductsPagePremium: React.FC = () => {
                                 </div>
                               </div>
                               <div className="flex items-center gap-4 p-4 bg-white/60 dark:bg-slate-800/60 rounded-xl backdrop-blur-sm">
-                                <div className="flex-shrink-0 w-12 h-12 bg-azul-profundo/10 rounded-lg flex items-center justify-center">
-                                  <Gauge className="w-6 h-6 text-azul-profundo" />
+                                <div className="flex-shrink-0 w-12 h-12 bg-azul-profundo/10 dark:bg-blue-600/20 rounded-lg flex items-center justify-center">
+                                  <Gauge className="w-6 h-6 text-azul-profundo dark:text-blue-400" />
                                 </div>
                                 <div className="flex-1">
                                   <p className="text-sm text-slate-600 dark:text-slate-400">{language === "pt" ? "Operação" : "Operation"}</p>
@@ -1034,21 +1093,23 @@ const ProductsPagePremium: React.FC = () => {
                     </div>
 
                     {/* CTA Buttons */}
-                    <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                    <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
                       <Button
                         onClick={() => window.open('/public/assets/manuals/FB_Manual_Tecnico_FBCN.pdf', '_blank')}
-                        className="bg-gradient-to-r from-azul-profundo to-blue-600 hover:from-blue-600 hover:to-azul-profundo text-white"
+                        className="bg-gradient-to-r from-azul-profundo to-blue-600 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4 text-base font-medium"
                       >
                         <Download className="mr-2 h-5 w-5" />
-                        {language === "pt" ? "Manual Técnico" : language === "en" ? "Technical Manual" : "Manual Técnico"}
+                        {language === "pt" ? "Baixar Manual Técnico" : language === "en" ? "Download Technical Manual" : "Descargar Manual Técnico"}
                       </Button>
                       <Button
                         onClick={handleWhatsAppClick}
                         variant="outline"
-                        className="border-azul-profundo text-azul-profundo hover:bg-azul-profundo hover:text-white"
+                        className="bg-white border-2 border-azul-profundo text-azul-profundo hover:bg-azul-profundo hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4 text-base font-medium group"
                       >
-                        <MessageCircle className="mr-2 h-5 w-5" />
-                        {language === "pt" ? "Solicitar Orçamento" : language === "en" ? "Request Quote" : "Solicitar Presupuesto"}
+                        <svg className="mr-2 h-5 w-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        {language === "pt" ? "Fale com um Especialista" : language === "en" ? "Talk to a Specialist" : "Hable con un Especialista"}
                       </Button>
                     </div>
                   </div>
@@ -1120,7 +1181,7 @@ const ProductsPagePremium: React.FC = () => {
                       </div>
 
                       {/* Right Side - Image */}
-                      <div className="relative h-full flex items-center justify-center">
+                      <div className="relative h-full flex items-center justify-center lg:justify-end">
                         <AnimatePresence mode="wait">
                           <motion.div
                             key={fbotImage}
@@ -1128,12 +1189,12 @@ const ProductsPagePremium: React.FC = () => {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.8 }}
                             transition={{ duration: 0.5 }}
-                            className="relative w-full"
+                            className="relative w-full max-w-md lg:max-w-lg"
                           >
                             <img 
                               src={fbotImages[fbotImage]} 
                               alt="FBOT" 
-                              className="w-full h-auto object-contain max-h-[700px] drop-shadow-2xl"
+                              className="w-full h-auto object-contain max-h-[400px] lg:max-h-[500px] drop-shadow-2xl"
                               onError={(e) => {
                                 const img = e.target as HTMLImageElement;
                                 img.src = '/src/assets/products/fbot.png';
@@ -1190,7 +1251,7 @@ const ProductsPagePremium: React.FC = () => {
                             </div>
                           </div>
 
-                          {/* Special Applications */}
+                          {/* Special Applications - Clean Design */}
                           <div>
                             <div className="flex items-center gap-3 mb-4">
                               <div className="p-2.5 bg-gradient-to-br from-azul-profundo to-blue-600 rounded-xl">
@@ -1200,30 +1261,37 @@ const ProductsPagePremium: React.FC = () => {
                                 {language === "pt" ? "Aplicações Especiais" : language === "en" ? "Special Applications" : "Aplicaciones Especiales"}
                               </h4>
                             </div>
-                            <div className="bg-gradient-to-br from-white/40 to-white/20 dark:from-slate-800/40 dark:to-slate-800/20 rounded-2xl p-6 backdrop-blur-sm">
-                              <div className="grid grid-cols-1 gap-4">
-                                <div className="flex items-start gap-3">
-                                  <div className="mt-1 w-2 h-2 bg-azul-profundo rounded-full flex-shrink-0" />
-                                  <p className="text-sm text-slate-700 dark:text-slate-300">
-                                    {language === "pt" ? "Sistemas de aquecimento industrial de alta temperatura" : "High temperature industrial heating systems"}
-                                  </p>
+                            
+                            {/* Clean Applications List */}
+                            <div className="space-y-3">
+                              {[
+                                { 
+                                  text: language === "pt" 
+                                    ? "Sistemas de aquecimento industrial de alta temperatura" 
+                                    : "High temperature industrial heating systems" 
+                                },
+                                { 
+                                  text: language === "pt" 
+                                    ? "Processos químicos e farmacêuticos com controle térmico" 
+                                    : "Chemical and pharmaceutical processes with thermal control" 
+                                },
+                                { 
+                                  text: language === "pt" 
+                                    ? "Indústrias alimentícias e têxteis com requisitos especiais" 
+                                    : "Food and textile industries with special requirements" 
+                                }
+                              ].map((item, idx) => (
+                                <div key={idx} className="flex items-center gap-3 p-3 bg-white/60 dark:bg-slate-800/60 rounded-lg backdrop-blur-sm">
+                                  <div className="w-2 h-2 bg-azul-profundo rounded-full flex-shrink-0" />
+                                  <p className="text-sm font-medium text-slate-700 dark:text-slate-300">{item.text}</p>
                                 </div>
-                                <div className="flex items-start gap-3">
-                                  <div className="mt-1 w-2 h-2 bg-azul-profundo rounded-full flex-shrink-0" />
-                                  <p className="text-sm text-slate-700 dark:text-slate-300">
-                                    {language === "pt" ? "Processos químicos e farmacêuticos com controle térmico" : "Chemical and pharmaceutical processes with thermal control"}
-                                  </p>
-                                </div>
-                                <div className="flex items-start gap-3">
-                                  <div className="mt-1 w-2 h-2 bg-azul-profundo rounded-full flex-shrink-0" />
-                                  <p className="text-sm text-slate-700 dark:text-slate-300">
-                                    {language === "pt" ? "Indústrias alimentícias e têxteis com requisitos especiais" : "Food and textile industries with special requirements"}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="mt-4 p-3 bg-blue-100/50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-                                <p className="text-xs text-blue-700 dark:text-blue-400 font-medium">
-                                  ⚠️ {language === "pt" ? "Importante: Fluidos sem partículas abrasivas" : "Important: Fluids without abrasive particles"}
+                              ))}
+                              
+                              {/* Important Notice - Simplified */}
+                              <div className="mt-4 flex items-center gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+                                <Info className="w-5 h-5 text-azul-profundo flex-shrink-0" />
+                                <p className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                                  {language === "pt" ? "Fluidos sem partículas abrasivas" : "Fluids without abrasive particles"}
                                 </p>
                               </div>
                             </div>
@@ -1233,21 +1301,23 @@ const ProductsPagePremium: React.FC = () => {
                     </div>
 
                     {/* CTA Buttons */}
-                    <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                    <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
                       <Button
                         onClick={() => window.open('/public/assets/manuals/FB_Manual_Tecnico_FBOT.pdf', '_blank')}
-                        className="bg-gradient-to-r from-azul-profundo to-blue-600 hover:from-blue-600 hover:to-azul-profundo text-white"
+                        className="bg-gradient-to-r from-azul-profundo to-blue-600 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4 text-base font-medium"
                       >
                         <Download className="mr-2 h-5 w-5" />
-                        {language === "pt" ? "Manual Técnico" : language === "en" ? "Technical Manual" : "Manual Técnico"}
+                        {language === "pt" ? "Baixar Manual Técnico" : language === "en" ? "Download Technical Manual" : "Descargar Manual Técnico"}
                       </Button>
                       <Button
                         onClick={handleWhatsAppClick}
                         variant="outline"
-                        className="border-azul-profundo text-azul-profundo hover:bg-azul-profundo hover:text-white"
+                        className="bg-white border-2 border-azul-profundo text-azul-profundo hover:bg-azul-profundo hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4 text-base font-medium group"
                       >
-                        <MessageCircle className="mr-2 h-5 w-5" />
-                        {language === "pt" ? "Solicitar Orçamento" : language === "en" ? "Request Quote" : "Solicitar Presupuesto"}
+                        <svg className="mr-2 h-5 w-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        {language === "pt" ? "Fale com um Especialista" : language === "en" ? "Talk to a Specialist" : "Hable con un Especialista"}
                       </Button>
                     </div>
                   </div>
@@ -1259,7 +1329,7 @@ const ProductsPagePremium: React.FC = () => {
         </section>
 
         {/* Premium CTA Section */}
-        <section className="py-8 bg-slate-50 dark:bg-slate-800">
+        <section className="py-20 bg-slate-50 dark:bg-slate-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1305,16 +1375,23 @@ const ProductsPagePremium: React.FC = () => {
                         : "Nuestro equipo técnico especializado está listo para ofrecer consultoría personalizada, dimensionamiento correcto y la solución ideal para su aplicación. Con más de 80 años de experiencia, garantizamos calidad y confiabilidad en cada proyecto."}
                   </p>
 
-                  {/* CTA Button */}
-                  <Button
-                    onClick={handleWhatsAppClick}
-                    size="lg"
-                    className="bg-white hover:bg-white/90 text-slate-900 font-semibold px-10 py-6 text-lg shadow-2xl transition-all duration-300 group"
-                  >
-                    <MessageCircle className="mr-3 h-6 w-6 transition-transform duration-300 group-hover:rotate-12" />
-                    <span>{language === "pt" ? "Falar com Especialista Agora" : language === "en" ? "Talk to Expert Now" : "Hablar con Experto Ahora"}</span>
-                    <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </Button>
+                  {/* CTA Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button
+                      onClick={handleWhatsAppClick}
+                      size="lg"
+                      className="bg-white hover:bg-white/90 text-slate-900 font-semibold px-10 py-6 text-lg shadow-2xl transition-all duration-300"
+                    >
+                      {language === "pt" ? "Falar com Especialista" : language === "en" ? "Talk to Expert" : "Hablar con Experto"}
+                    </Button>
+                    <Button
+                      onClick={() => setLocation('/contato')}
+                      size="lg"
+                      className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold px-10 py-6 text-lg transition-all duration-300"
+                    >
+                      {language === "pt" ? "Preencher Formulário" : language === "en" ? "Fill Out Form" : "Completar Formulario"}
+                    </Button>
+                  </div>
                 </div>
               </div>
             </motion.div>

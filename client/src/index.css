@@ -127,6 +127,15 @@
   }
 }
 
+@keyframes gradient-x {
+  0%, 100% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}
+
 /* Utilitários adicionais */
 .motion-safe\:animate-subtle-zoom {
   animation: subtle-zoom 30s ease-in-out infinite;
@@ -142,6 +151,10 @@
 
 .animate-spin-slow {
   animation: spin-slow 3s linear infinite;
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease-in-out infinite;
 }
 
 @layer base {

@@ -7,7 +7,6 @@ import BenefitsSection from "@/components/sections/BenefitsSection";
 import CompanySection from "@/components/sections/CompanySection";
 import ClientsSection from "@/components/sections/ClientsSection";
 import ProductsSection from "@/components/sections/ProductsSection";
-import ModernWaveDivider from "@/components/ui/modern-wave-divider";
 import DownloadsSection from "@/components/sections/DownloadsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import WorkWithUsSection from "@/components/sections/WorkWithUsSection";
@@ -135,7 +134,6 @@ const HomePage = () => {
       <Header />
       <main className="overflow-hidden">
         <HeroSection />
-        <ModernWaveDivider />
         <ClientsSection />
         <BenefitsSection />
         <CompanySection />

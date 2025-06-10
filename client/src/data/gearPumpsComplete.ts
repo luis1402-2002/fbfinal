@@ -56,8 +56,8 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
       code: 'FBE-1/8',
       image: '/images/products/fbe-1-8.jpg',
       specifications: {
-        flowRate: '5,15 L/min',
-        maxFlow: '5,15 L/min',
+        flowRate: '5.15 L/min',
+        maxFlow: '5.15 L/min',
         maxRPM: '1750 RPM',
         rpm: '1750',
         maxPressure: '22 bar',
@@ -65,7 +65,7 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
         maxViscosity: '100.000 SSU',
         viscosity: 'até 100.000 SSU',
         temperature: 'até 350°C',
-        weight: '3,5 kg',
+        weight: '3.5 kg',
         inlet: 'Ø 1/8" BSP',
         outlet: 'Ø 1/8" BSP'
       },
@@ -141,8 +141,8 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
       code: 'FBE-1/4',
       image: '/images/products/fbe-1-4.jpg',
       specifications: {
-        flowRate: '8,90 L/min',
-        maxFlow: '8,90 L/min',
+        flowRate: '8.90 L/min',
+        maxFlow: '8.90 L/min',
         maxRPM: '1750 RPM',
         rpm: '1750',
         maxPressure: '22 bar',
@@ -150,7 +150,7 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
         maxViscosity: '100.000 SSU',
         viscosity: 'até 100.000 SSU',
         temperature: 'até 350°C',
-        weight: '4,2 kg',
+        weight: '4.2 kg',
         inlet: 'Ø 1/4" BSP',
         outlet: 'Ø 1/4" BSP'
       },
@@ -311,8 +311,8 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
       code: 'FBE-1/2',
       image: '/images/products/fbe-1-2.jpg',
       specifications: {
-        flowRate: '17,70 L/min',
-        maxFlow: '17,70 L/min',
+        flowRate: '17.70 L/min',
+        maxFlow: '17.70 L/min',
         maxRPM: '1750 RPM',
         rpm: '1750',
         maxPressure: '22 bar',
@@ -320,7 +320,7 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
         maxViscosity: '100.000 SSU',
         viscosity: 'até 100.000 SSU',
         temperature: 'até 350°C',
-        weight: '6,8 kg',
+        weight: '6.8 kg',
         inlet: 'Ø 1/2" BSP',
         outlet: 'Ø 1/2" BSP'
       },
@@ -396,8 +396,8 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
       code: 'FBE-3/4',
       image: '/images/products/fbe-3-4.jpg',
       specifications: {
-        flowRate: '44,40 L/min',
-        maxFlow: '44,40 L/min',
+        flowRate: '44.40 L/min',
+        maxFlow: '44.40 L/min',
         maxRPM: '1750 RPM',
         rpm: '1750',
         maxPressure: '22 bar',
@@ -405,7 +405,7 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
         maxViscosity: '100.000 SSU',
         viscosity: 'até 100.000 SSU',
         temperature: 'até 350°C',
-        weight: '9,5 kg',
+        weight: '9.5 kg',
         inlet: 'Ø 3/4" BSP',
         outlet: 'Ø 3/4" BSP'
       },
@@ -654,11 +654,45 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
         id: 'fbe-1-d',
         model: '1" D',
         code: 'FBE-1-D',
+        image: '/images/products/fbe-1-d.jpg',
         specifications: {
-          maxFlow: '88,6 L/min',
+          flowRate: '88.6 L/min',
+          maxFlow: '88.6 L/min',
           maxRPM: '1750 RPM',
+          rpm: '1750',
           maxPressure: '22 bar',
-          maxViscosity: '100.000 SSU'
+          pressure: 'até 22 bar',
+          maxViscosity: '100.000 SSU',
+          viscosity: 'até 100.000 SSU',
+          temperature: 'até 350°C',
+          weight: '15 kg',
+          inlet: 'Ø 1" BSP',
+          outlet: 'Ø 1" BSP'
+        },
+        materials: {
+          pt: [
+            'Corpo em ferro fundido nodular',
+            'Engrenagens em aço liga tratado termicamente',
+            'Eixos em aço inox 304/316',
+            'Buchas em bronze TM23 autolubrificante'
+          ],
+          en: [
+            'Nodular cast iron body',
+            'Heat-treated alloy steel gears',
+            '304/316 stainless steel shafts',
+            'TM23 self-lubricating bronze bushings'
+          ],
+          es: [
+            'Cuerpo en hierro fundido nodular',
+            'Engranajes en acero aleado tratado térmicamente',
+            'Ejes en acero inoxidable 304/316',
+            'Casquillos en bronce TM23 autolubricante'
+          ]
+        },
+        performance: {
+          efficiency: '90%',
+          noiseLevel: '< 75 dB',
+          npshRequired: '4 m'
         },
         technicalSpecs: {
           pt: [
@@ -705,11 +739,45 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
         id: 'fbe-1-da',
         model: '1" DA',
         code: 'FBE-1-DA',
+        image: '/images/products/fbe-1-da.jpg',
         specifications: {
+          flowRate: '112 L/min',
           maxFlow: '112 L/min',
           maxRPM: '1750 RPM',
+          rpm: '1750',
           maxPressure: '22 bar',
-          maxViscosity: '100.000 SSU'
+          pressure: 'até 22 bar',
+          maxViscosity: '100.000 SSU',
+          viscosity: 'até 100.000 SSU',
+          temperature: 'até 350°C',
+          weight: '17 kg',
+          inlet: 'Ø 1" BSP',
+          outlet: 'Ø 1" BSP'
+        },
+        materials: {
+          pt: [
+            'Corpo em ferro fundido nodular',
+            'Engrenagens em aço liga tratado termicamente',
+            'Eixos em aço inox 304/316',
+            'Buchas em bronze TM23 autolubrificante'
+          ],
+          en: [
+            'Nodular cast iron body',
+            'Heat-treated alloy steel gears',
+            '304/316 stainless steel shafts',
+            'TM23 self-lubricating bronze bushings'
+          ],
+          es: [
+            'Cuerpo en hierro fundido nodular',
+            'Engranajes en acero aleado tratado térmicamente',
+            'Ejes en acero inoxidable 304/316',
+            'Casquillos en bronce TM23 autolubricante'
+          ]
+        },
+        performance: {
+          efficiency: '90%',
+          noiseLevel: '< 75 dB',
+          npshRequired: '4.5 m'
         },
         technicalSpecs: {
           pt: [
@@ -762,11 +830,45 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
         id: 'fbe-1-5',
         model: '1.1/2"',
         code: 'FBE-1.1/2',
+        image: '/images/products/fbe-1-5.jpg',
         specifications: {
+          flowRate: '150 L/min',
           maxFlow: '150 L/min',
           maxRPM: '1750 RPM',
+          rpm: '1750',
           maxPressure: '14 bar',
-          maxViscosity: '100.000 SSU'
+          pressure: 'até 14 bar',
+          maxViscosity: '100.000 SSU',
+          viscosity: 'até 100.000 SSU',
+          temperature: 'até 350°C',
+          weight: '22 kg',
+          inlet: 'Ø 1.1/2" flange ANSI B16.1',
+          outlet: 'Ø 1.1/2" flange ANSI B16.1'
+        },
+        materials: {
+          pt: [
+            'Corpo em ferro fundido nodular',
+            'Engrenagens em aço liga tratado termicamente',
+            'Eixos em aço inox 304/316',
+            'Buchas em bronze TM23 autolubrificante'
+          ],
+          en: [
+            'Nodular cast iron body',
+            'Heat-treated alloy steel gears',
+            '304/316 stainless steel shafts',
+            'TM23 self-lubricating bronze bushings'
+          ],
+          es: [
+            'Cuerpo en hierro fundido nodular',
+            'Engranajes en acero aleado tratado térmicamente',
+            'Ejes en acero inoxidable 304/316',
+            'Casquillos en bronce TM23 autolubricante'
+          ]
+        },
+        performance: {
+          efficiency: '90%',
+          noiseLevel: '< 77 dB',
+          npshRequired: '5 m'
         },
         technicalSpecs: {
           pt: [
@@ -816,11 +918,45 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
         id: 'fbe-1-5-a',
         model: '1.1/2" A',
         code: 'FBE-1.1/2-A',
+        image: '/images/products/fbe-1-5-a.jpg',
         specifications: {
+          flowRate: '200 L/min',
           maxFlow: '200 L/min',
           maxRPM: '1750 RPM',
+          rpm: '1750',
           maxPressure: '14 bar',
-          maxViscosity: '100.000 SSU'
+          pressure: 'até 14 bar',
+          maxViscosity: '100.000 SSU',
+          viscosity: 'até 100.000 SSU',
+          temperature: 'até 350°C',
+          weight: '25 kg',
+          inlet: 'Ø 1.1/2" flange ANSI B16.1',
+          outlet: 'Ø 1.1/2" flange ANSI B16.1'
+        },
+        materials: {
+          pt: [
+            'Corpo em ferro fundido nodular',
+            'Engrenagens em aço liga tratado termicamente',
+            'Eixos em aço inox 304/316',
+            'Buchas em bronze TM23 autolubrificante'
+          ],
+          en: [
+            'Nodular cast iron body',
+            'Heat-treated alloy steel gears',
+            '304/316 stainless steel shafts',
+            'TM23 self-lubricating bronze bushings'
+          ],
+          es: [
+            'Cuerpo en hierro fundido nodular',
+            'Engranajes en acero aleado tratado térmicamente',
+            'Ejes en acero inoxidable 304/316',
+            'Casquillos en bronce TM23 autolubricante'
+          ]
+        },
+        performance: {
+          efficiency: '90%',
+          noiseLevel: '< 77 dB',
+          npshRequired: '5 m'
         },
         technicalSpecs: {
           pt: [
@@ -876,11 +1012,45 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
         id: 'fbe-2',
         model: '2"',
         code: 'FBE-2',
+        image: '/images/products/fbe-2.jpg',
         specifications: {
+          flowRate: '300 L/min',
           maxFlow: '300 L/min',
           maxRPM: '1750 RPM',
+          rpm: '1750',
           maxPressure: '14 bar',
-          maxViscosity: '100.000 SSU'
+          pressure: 'até 14 bar',
+          maxViscosity: '100.000 SSU',
+          viscosity: 'até 100.000 SSU',
+          temperature: 'até 350°C',
+          weight: '35 kg',
+          inlet: 'Ø 2" flange ANSI B16.1',
+          outlet: 'Ø 2" flange ANSI B16.1'
+        },
+        materials: {
+          pt: [
+            'Corpo em ferro fundido nodular',
+            'Engrenagens em aço liga tratado termicamente',
+            'Eixos em aço inox 304/316',
+            'Buchas em bronze TM23 autolubrificante'
+          ],
+          en: [
+            'Nodular cast iron body',
+            'Heat-treated alloy steel gears',
+            '304/316 stainless steel shafts',
+            'TM23 self-lubricating bronze bushings'
+          ],
+          es: [
+            'Cuerpo en hierro fundido nodular',
+            'Engranajes en acero aleado tratado térmicamente',
+            'Ejes en acero inoxidable 304/316',
+            'Casquillos en bronce TM23 autolubricante'
+          ]
+        },
+        performance: {
+          efficiency: '91%',
+          noiseLevel: '< 78 dB',
+          npshRequired: '5.5 m'
         },
         technicalSpecs: {
           pt: [
@@ -930,11 +1100,45 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
         id: 'fbe-2-a',
         model: '2" A',
         code: 'FBE-2-A',
+        image: '/images/products/fbe-2-a.jpg',
         specifications: {
+          flowRate: '420 L/min',
           maxFlow: '420 L/min',
           maxRPM: '1750 RPM',
+          rpm: '1750',
           maxPressure: '14 bar',
-          maxViscosity: '100.000 SSU'
+          pressure: 'até 14 bar',
+          maxViscosity: '100.000 SSU',
+          viscosity: 'até 100.000 SSU',
+          temperature: 'até 350°C',
+          weight: '40 kg',
+          inlet: 'Ø 2" flange ANSI B16.1',
+          outlet: 'Ø 2" flange ANSI B16.1'
+        },
+        materials: {
+          pt: [
+            'Corpo em ferro fundido nodular',
+            'Engrenagens em aço liga tratado termicamente',
+            'Eixos em aço inox 304/316',
+            'Buchas em bronze TM23 autolubrificante'
+          ],
+          en: [
+            'Nodular cast iron body',
+            'Heat-treated alloy steel gears',
+            '304/316 stainless steel shafts',
+            'TM23 self-lubricating bronze bushings'
+          ],
+          es: [
+            'Cuerpo en hierro fundido nodular',
+            'Engranajes en acero aleado tratado térmicamente',
+            'Ejes en acero inoxidable 304/316',
+            'Casquillos en bronce TM23 autolubricante'
+          ]
+        },
+        performance: {
+          efficiency: '91%',
+          noiseLevel: '< 78 dB',
+          npshRequired: '5.5 m'
         },
         technicalSpecs: {
           pt: [
@@ -990,11 +1194,45 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
         id: 'fbe-3',
         model: '3"',
         code: 'FBE-3',
+        image: '/images/products/fbe-3.jpg',
         specifications: {
+          flowRate: '500 L/min',
           maxFlow: '500 L/min',
           maxRPM: '1150 RPM',
+          rpm: '1150',
           maxPressure: '12 bar',
-          maxViscosity: '100.000 SSU'
+          pressure: 'até 12 bar',
+          maxViscosity: '100.000 SSU',
+          viscosity: 'até 100.000 SSU',
+          temperature: 'até 350°C',
+          weight: '55 kg',
+          inlet: 'Ø 3" flange ANSI B16.1',
+          outlet: 'Ø 3" flange ANSI B16.1'
+        },
+        materials: {
+          pt: [
+            'Corpo em ferro fundido nodular',
+            'Engrenagens em aço liga tratado termicamente',
+            'Eixos em aço inox 304/316',
+            'Buchas em bronze TM23 autolubrificante'
+          ],
+          en: [
+            'Nodular cast iron body',
+            'Heat-treated alloy steel gears',
+            '304/316 stainless steel shafts',
+            'TM23 self-lubricating bronze bushings'
+          ],
+          es: [
+            'Cuerpo en hierro fundido nodular',
+            'Engranajes en acero aleado tratado térmicamente',
+            'Ejes en acero inoxidable 304/316',
+            'Casquillos en bronce TM23 autolubricante'
+          ]
+        },
+        performance: {
+          efficiency: '92%',
+          noiseLevel: '< 80 dB',
+          npshRequired: '6 m'
         },
         technicalSpecs: {
           pt: [
@@ -1044,11 +1282,45 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
         id: 'fbe-3-m9',
         model: '3" M9',
         code: 'FBE-3-M9',
+        image: '/images/products/fbe-3-m9.jpg',
         specifications: {
+          flowRate: '600 L/min',
           maxFlow: '600 L/min',
           maxRPM: '1150 RPM',
+          rpm: '1150',
           maxPressure: '8 bar',
-          maxViscosity: '100.000 SSU'
+          pressure: 'até 8 bar',
+          maxViscosity: '100.000 SSU',
+          viscosity: 'até 100.000 SSU',
+          temperature: 'até 350°C',
+          weight: '60 kg',
+          inlet: 'Ø 3" flange ANSI B16.1',
+          outlet: 'Ø 3" flange ANSI B16.1'
+        },
+        materials: {
+          pt: [
+            'Corpo em ferro fundido nodular',
+            'Engrenagens em aço liga tratado termicamente',
+            'Eixos em aço inox 304/316',
+            'Buchas em bronze TM23 autolubrificante'
+          ],
+          en: [
+            'Nodular cast iron body',
+            'Heat-treated alloy steel gears',
+            '304/316 stainless steel shafts',
+            'TM23 self-lubricating bronze bushings'
+          ],
+          es: [
+            'Cuerpo en hierro fundido nodular',
+            'Engranajes en acero aleado tratado térmicamente',
+            'Ejes en acero inoxidable 304/316',
+            'Casquillos en bronce TM23 autolubricante'
+          ]
+        },
+        performance: {
+          efficiency: '92%',
+          noiseLevel: '< 80 dB',
+          npshRequired: '6 m'
         },
         technicalSpecs: {
           pt: [
@@ -1104,11 +1376,45 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
         id: 'fbe-4-m6',
         model: '4" M6',
         code: 'FBE-4-M6',
+        image: '/images/products/fbe-4-m6.jpg',
         specifications: {
+          flowRate: '650 L/min',
           maxFlow: '650 L/min',
           maxRPM: '1150 RPM',
+          rpm: '1150',
           maxPressure: '8 bar',
-          maxViscosity: '100.000 SSU'
+          pressure: 'até 8 bar',
+          maxViscosity: '100.000 SSU',
+          viscosity: 'até 100.000 SSU',
+          temperature: 'até 350°C',
+          weight: '75 kg',
+          inlet: 'Ø 4" flange ANSI B16.1',
+          outlet: 'Ø 4" flange ANSI B16.1'
+        },
+        materials: {
+          pt: [
+            'Corpo em ferro fundido nodular',
+            'Engrenagens em aço liga tratado termicamente',
+            'Eixos em aço inox 304/316',
+            'Buchas em bronze TM23 autolubrificante'
+          ],
+          en: [
+            'Nodular cast iron body',
+            'Heat-treated alloy steel gears',
+            '304/316 stainless steel shafts',
+            'TM23 self-lubricating bronze bushings'
+          ],
+          es: [
+            'Cuerpo en hierro fundido nodular',
+            'Engranajes en acero aleado tratado térmicamente',
+            'Ejes en acero inoxidable 304/316',
+            'Casquillos en bronce TM23 autolubricante'
+          ]
+        },
+        performance: {
+          efficiency: '93%',
+          noiseLevel: '< 82 dB',
+          npshRequired: '6.5 m'
         },
         technicalSpecs: {
           pt: [
@@ -1158,11 +1464,45 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
         id: 'fbe-4-m8',
         model: '4" M8',
         code: 'FBE-4-M8',
+        image: '/images/products/fbe-4-m8.jpg',
         specifications: {
-          maxFlow: '1.000 L/min',
+          flowRate: '1000 L/min',
+          maxFlow: '1000 L/min',
           maxRPM: '1150 RPM',
+          rpm: '1150',
           maxPressure: '8 bar',
-          maxViscosity: '100.000 SSU'
+          pressure: 'até 8 bar',
+          maxViscosity: '100.000 SSU',
+          viscosity: 'até 100.000 SSU',
+          temperature: 'até 350°C',
+          weight: '85 kg',
+          inlet: 'Ø 4" flange ANSI B16.1',
+          outlet: 'Ø 4" flange ANSI B16.1'
+        },
+        materials: {
+          pt: [
+            'Corpo em ferro fundido nodular',
+            'Engrenagens em aço liga tratado termicamente',
+            'Eixos em aço inox 304/316',
+            'Buchas em bronze TM23 autolubrificante'
+          ],
+          en: [
+            'Nodular cast iron body',
+            'Heat-treated alloy steel gears',
+            '304/316 stainless steel shafts',
+            'TM23 self-lubricating bronze bushings'
+          ],
+          es: [
+            'Cuerpo en hierro fundido nodular',
+            'Engranajes en acero aleado tratado térmicamente',
+            'Ejes en acero inoxidable 304/316',
+            'Casquillos en bronce TM23 autolubricante'
+          ]
+        },
+        performance: {
+          efficiency: '93%',
+          noiseLevel: '< 82 dB',
+          npshRequired: '6.5 m'
         },
         technicalSpecs: {
           pt: [
@@ -1212,11 +1552,45 @@ export const gearPumpsComplete: GearPumpDiameter[] = [
         id: 'fbe-4-m12',
         model: '4" M12',
         code: 'FBE-4-M12',
+        image: '/images/products/fbe-4-m12.jpg',
         specifications: {
-          maxFlow: '1.350 L/min',
+          flowRate: '1350 L/min',
+          maxFlow: '1350 L/min',
           maxRPM: '1150 RPM',
+          rpm: '1150',
           maxPressure: '6 bar',
-          maxViscosity: '100.000 SSU'
+          pressure: 'até 6 bar',
+          maxViscosity: '100.000 SSU',
+          viscosity: 'até 100.000 SSU',
+          temperature: 'até 350°C',
+          weight: '95 kg',
+          inlet: 'Ø 4" flange ANSI B16.1',
+          outlet: 'Ø 4" flange ANSI B16.1'
+        },
+        materials: {
+          pt: [
+            'Corpo em ferro fundido nodular',
+            'Engrenagens em aço liga tratado termicamente',
+            'Eixos em aço inox 304/316',
+            'Buchas em bronze TM23 autolubrificante'
+          ],
+          en: [
+            'Nodular cast iron body',
+            'Heat-treated alloy steel gears',
+            '304/316 stainless steel shafts',
+            'TM23 self-lubricating bronze bushings'
+          ],
+          es: [
+            'Cuerpo en hierro fundido nodular',
+            'Engranajes en acero aleado tratado térmicamente',
+            'Ejes en acero inoxidable 304/316',
+            'Casquillos en bronce TM23 autolubricante'
+          ]
+        },
+        performance: {
+          efficiency: '93%',
+          noiseLevel: '< 82 dB',
+          npshRequired: '6.5 m'
         },
         technicalSpecs: {
           pt: [

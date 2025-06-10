@@ -6,10 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/HomePage";
 import ProductsPagePremium from "@/pages/ProductsPagePremium";
-import ProductDetailPage from "@/pages/ProductDetailPage";
 import GearPumpVariationsPage from "@/pages/GearPumpVariationsPage";
 import GearPumpSpecificationsPage from "@/pages/GearPumpSpecificationsPage";
-import GearPumpDetailPage from "@/pages/GearPumpDetailPage";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { useEffect } from "react";
@@ -49,22 +47,16 @@ function Router() {
       <Route path="/produtos" component={ProductsPagePremium} />
       
       {/* Rotas para bombas de engrenagem */}
-      <Route path="/produtos/bombas-engrenagem/:diameter">
-        {(params) => <GearPumpVariationsPage />}
-      </Route>
-      <Route path="/produtos/bombas-engrenagem/:diameter/especificacoes">
-        {(params) => <GearPumpDetailPage />}
-      </Route>
-      <Route path="/produtos/bombas-engrenagem/:diameter/:model">
-        {(params) => <GearPumpDetailPage />}
-      </Route>
-      <Route path="/produtos/bombas-engrenagem/:diameter/:modelId/especificacoes">
-        {(params) => <GearPumpSpecificationsPage />}
-      </Route>
+      <Route path="/produtos/bombas-engrenagem/:diameter" component={GearPumpVariationsPage} />
+      <Route path="/produtos/bombas-engrenagem/:diameter/especificacoes" component={GearPumpSpecificationsPage} />
+      <Route path="/produtos/bombas-engrenagem/:diameter/:modelId/especificacoes" component={GearPumpSpecificationsPage} />
       
-      {/* Detalhe de produto individual */}
+      {/* Redireciona rota antiga de produtos */}
       <Route path="/produtos/fbe/:id">
-        {(params) => <ProductDetailPage />}
+        {() => {
+          window.location.href = '/produtos#engrenagem';
+          return null;
+        }}
       </Route>
       
       {/* Compatibilidade com rotas antigas - redireciona para produtos */}

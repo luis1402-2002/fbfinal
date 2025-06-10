@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown, Award, Shield, Clock } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
   const { t } = useLanguage();
   const [scrollIndicator, setScrollIndicator] = useState(true);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   // Efeito para ocultar o indicador de scroll após o usuário rolar a página
   useEffect(() => {
@@ -20,85 +19,6 @@ const HeroSection = () => {
     
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Efeito de partículas tecnológicas
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    
-    const particles: Array<{x: number, y: number, vx: number, vy: number, size: number}> = [];
-    const particleCount = 50;
-    
-    // Criar partículas
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2 + 1
-      });
-    }
-    
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      particles.forEach((particle, i) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        
-        // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
-        
-        // Draw particle
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
-        
-        // Draw connections
-        particles.forEach((particle2, j) => {
-          if (i === j) return;
-          const dx = particle.x - particle2.x;
-          const dy = particle.y - particle2.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          
-          if (distance < 150) {
-            ctx.strokeStyle = `rgba(255, 255, 255, ${0.2 * (1 - distance / 150)})`;
-            ctx.lineWidth = 0.5;
-            ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(particle2.x, particle2.y);
-            ctx.stroke();
-          }
-        });
-      });
-      
-      requestAnimationFrame(animate);
-    };
-    
-    animate();
-    
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-    
-    window.addEventListener('resize', handleResize);
-    
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
   }, []);
 
   // Dados destacados com animação
@@ -121,23 +41,51 @@ const HeroSection = () => {
   ];
 
   return (
-    <section id="inicio" className="relative min-h-[100vh] flex items-center bg-gradient-to-b from-slate-900 dark:from-slate-950 via-slate-800 dark:via-slate-900 to-slate-700 dark:to-slate-800 pb-8 md:pb-10 lg:pb-12">
-      {/* Canvas para efeito de partículas */}
-      <canvas 
-        ref={canvasRef}
-        className="absolute inset-0 z-0 opacity-30"
-      />
-      
-      {/* Gradiente tecnológico high-end */}
-      <div className="absolute inset-0 z-1">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-950/15 via-transparent to-red-950/15" />
-        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-black/30" />
+    <section id="inicio" className="relative bg-gradient-to-b from-slate-800 to-slate-900 text-white pb-0">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src="/src/assets/BACKGROUNDHERO.png"
+          alt=""
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/70 via-slate-900/60 to-slate-900/80" />
       </div>
+      
+      {/* Empresa 100% Brasileira Badge - Top Right */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="absolute top-4 right-4 md:top-6 md:right-6 lg:top-8 lg:right-8 z-20"
+      >
+        <img 
+          src="/src/assets/empresa-100-brasileira.png" 
+          alt="Empresa 100% Brasileira"
+          className="w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 h-auto object-contain"
+          loading="eager"
+        />
+      </motion.div>
       
 
       {/* Hero content com animações escalonadas */}
-      <div className="relative z-10 max-w-container mx-auto px-4 md:px-8 h-full flex flex-col justify-center">
+      <div className="relative z-10 max-w-container mx-auto px-4 md:px-8 min-h-[100vh] flex items-center pb-20">
+        {/* Logo 3D na metade direita - alinhada com o texto */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5, x: 100 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 1.2, delay: 0.8, type: "spring", stiffness: 80 }}
+          className="absolute right-8 md:right-16 lg:right-24 xl:right-32 top-[35%] md:top-[30%] -translate-y-1/2 hidden md:block"
+        >
+          <img 
+            src="/src/assets/logofb3dHERO.png" 
+            alt="FB Bombas 3D Logo"
+            className="w-48 md:w-64 lg:w-80 xl:w-96 h-auto object-contain filter drop-shadow-2xl"
+            loading="eager"
+          />
+        </motion.div>
+        
+        <div className="flex flex-col justify-center w-full md:w-1/2">
         <motion.div 
           className="max-w-4xl relative"
           initial={{ opacity: 0 }}
@@ -238,10 +186,8 @@ const HeroSection = () => {
             ))}
           </motion.div>
         </motion.div>
+        </div>
       </div>
-      
-      {/* Gradiente sutil para conexão natural com o divisor */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent via-slate-700/50 dark:via-slate-800/50 to-slate-700 dark:to-slate-800 pointer-events-none" />
       
       {/* Indicador de scroll */}
       {scrollIndicator && (
@@ -278,6 +224,41 @@ const HeroSection = () => {
           </motion.div>
         </motion.div>
       )}
+      
+      {/* Wave Divider - 3 layers without gradients */}
+      <div className="relative w-full -mt-px">
+        <svg
+          className="w-full h-16 sm:h-20 md:h-24"
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {/* Background wave layer */}
+          <path
+            d="M0,20 C480,100 960,100 1440,20 L1440,120 L0,120 Z"
+            fill="#f8fafc"
+            className="dark:fill-slate-800"
+            opacity="0.4"
+          />
+          
+          {/* Middle wave layer */}
+          <path
+            d="M0,40 C360,90 720,90 1080,40 S1440,0 1440,0 L1440,120 L0,120 Z"
+            fill="#f8fafc"
+            className="dark:fill-slate-800"
+            opacity="0.7"
+          />
+          
+          {/* Front wave layer */}
+          <path
+            d="M0,60 C240,95 480,95 720,60 C960,25 1200,25 1440,60 L1440,120 L0,120 Z"
+            fill="#f8fafc"
+            className="dark:fill-slate-800"
+          />
+        </svg>
+        {/* Bottom cover to hide any lines */}
+        <div className="absolute bottom-0 left-0 right-0 h-2 bg-slate-50 dark:bg-slate-800" />
+      </div>
     </section>
   );
 };

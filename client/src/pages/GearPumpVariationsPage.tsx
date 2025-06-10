@@ -25,10 +25,24 @@ const GearPumpVariationsPage: React.FC = () => {
   const [location, setLocation] = useLocation();
   const diameter = params.diameter || '';
   
+  // Map diameter from URL to actual diameter
+  const diameterMap: Record<string, string> = {
+    '18': '1/8"',
+    '14': '1/4"',
+    '38': '3/8"',
+    '12': '1/2"',
+    '34': '3/4"',
+    '1': '1"',
+    '112': '1.1/2"',
+    '2': '2"',
+    '3': '3"',
+    '4': '4"'
+  };
+  
+  const mappedDiameter = diameterMap[diameter] || diameter;
+  
   // Find pump data from complete dataset
-  const pumpData = gearPumpsComplete.find(p => 
-    p.diameter.replace(/"/g, '') === diameter
-  );
+  const pumpData = gearPumpsComplete.find(p => p.diameter === mappedDiameter);
   
   const variations = pumpData?.models || [];
 
@@ -37,8 +51,7 @@ const GearPumpVariationsPage: React.FC = () => {
   }, []);
 
   const handleModelClick = (model: any) => {
-    const cleanModel = model.model.replace(/"/g, '').replace(/ /g, '-');
-    setLocation(`/produtos/bombas-engrenagem/${diameter}/${cleanModel}`);
+    setLocation(`/produtos/bombas-engrenagem/${diameter}/${model.id}/especificacoes`);
   };
 
   if (!variations.length) {
@@ -63,9 +76,9 @@ const GearPumpVariationsPage: React.FC = () => {
                 {language === 'pt' ? 'SÉRIE FBE' : 'FBE SERIES'}
               </Badge>
               <h1 className="font-garamond text-4xl md:text-5xl lg:text-6xl text-azul-profundo dark:text-white mb-6">
-                {language === 'pt' ? `Bombas de Engrenagem ${diameter}"` :
-                 language === 'en' ? `${diameter}" Gear Pumps` :
-                 `Bombas de Engranaje ${diameter}"`}
+                {language === 'pt' ? `Bombas de Engrenagem ${mappedDiameter}` :
+                 language === 'en' ? `${mappedDiameter} Gear Pumps` :
+                 `Bombas de Engranaje ${mappedDiameter}`}
               </h1>
               <p className="text-lg md:text-xl text-cinza-titanio dark:text-prata/90 max-w-3xl mx-auto">
                 {language === 'pt' ? 'Selecione o modelo desejado para ver as especificações completas' :

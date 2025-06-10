@@ -411,3 +411,835 @@ Browserslist: browsers data (caniuse-lite) is 8 months old. Please run:
 6:40:31 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif
 6:40:40 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif
 6:43:43 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif
+10:31:35 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb
+The request url "/home/nando/top/fbfinal/node_modules/.vite/deps/wouter.js" is outside of Vite serving allow list.
+
+- /home/nando/fbfinal
+
+Refer to docs https://vite.dev/config/server-options.html#server-fs-allow for configurations and more details.
+
+The request url "/home/nando/top/fbfinal/node_modules/.vite/deps/chunk-3TFVT2CW.js" is outside of Vite serving allow list.
+The request url "/home/nando/top/fbfinal/node_modules/.vite/deps/class-variance-authority.js" is outside of Vite serving allow list.
+10:38:16 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb
+The request url "/home/nando/top/fbfinal/node_modules/.vite/deps/wouter.js" is outside of Vite serving allow list.
+The request url "/home/nando/top/fbfinal/node_modules/.vite/deps/clsx.js" is outside of Vite serving allow list.
+10:52:52 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb
+The request url "/home/nando/top/fbfinal/node_modules/vite/dist/client/env.mjs" is outside of Vite serving allow list.
+10:54:56 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa
+10:55:54 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa
+The request url "/home/nando/top/fbfinal/node_modules/vite/dist/client/env.mjs" is outside of Vite serving allow list.
+11:11:18 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb
+11:12:11 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb
+11:22:40 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb
+The request url "/home/nando/top/fbfinal/node_modules/vite/dist/client/env.mjs" is outside of Vite serving allow list.
+11:24:15 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J
+11:24:20 PM [vite] Pre-transform error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Unexpected token (1273:107)
+
+  1271 |                               <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950 rounded-3xl p-8 backdrop-blur-xl border border-blue-200/50 dark:border-blue-700/30 shadow-2xl">
+  1272 |                                 {/* Background Pattern */}
+> 1273 |                                 <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+       |                                                                                                            ^
+  1274 |                                 
+  1275 |                                 <div className="relative space-y-3">
+  1276 |                                   {/* Industrial Heating Systems */}
+11:24:30 PM [vite] hmr update /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy
+11:24:39 PM [vite] hmr update /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy
+11:24:43 PM [vite] Pre-transform error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Unexpected token (1273:107)
+
+  1271 |                               <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950 rounded-3xl p-8 backdrop-blur-xl border border-blue-200/50 dark:border-blue-700/30 shadow-2xl">
+  1272 |                                 {/* Background Pattern */}
+> 1273 |                                 <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+       |                                                                                                            ^
+  1274 |                                 
+  1275 |                                 <div className="relative space-y-3">
+  1276 |                                   {/* Industrial Heating Systems */}
+11:24:43 PM [vite] Internal server error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Unexpected token (1273:107)
+
+  1271 |                               <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950 rounded-3xl p-8 backdrop-blur-xl border border-blue-200/50 dark:border-blue-700/30 shadow-2xl">
+  1272 |                                 {/* Background Pattern */}
+> 1273 |                                 <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+       |                                                                                                            ^
+  1274 |                                 
+  1275 |                                 <div className="relative space-y-3">
+  1276 |                                   {/* Industrial Heating Systems */}
+  Plugin: vite:react-babel
+  File: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx:1273:107
+  1271|                                <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950 rounded-3xl p-8 backdrop-blur-xl border border-blue-200/50 dark:border-blue-700/30 shadow-2xl">
+  1272|                                  {/* Background Pattern */}
+  1273|                                  <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+     |                                                                                                             ^
+  1274|                                  
+  1275|                                  <div className="relative space-y-3">
+      at toParseError (/home/nando/fbfinal/node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at raise (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+      at unexpected (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1537:16)
+      at jsxParseIdentifier (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:278:14)
+      at jsxParseNamespacedName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:288:25)
+      at jsxParseAttribute (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:413:24)
+      at jsxParseOpeningElementAfterName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:440:30)
+      at jsxParseOpeningElementAfterName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:4054:20)
+      at jsxParseOpeningElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:430:19)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:470:35)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at fn (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3588:23)
+      at tryParse (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/util.ts:174:20)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3587:20)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseMaybeAssignAllowIn (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at parseParenAndDistinguishExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1771:16)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1131:21)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:583:22)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOpBaseRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:569:12)
+      at parseExprOpRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:554:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:485:27)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:506:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:407:17)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+11:24:47 PM [vite] Internal server error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Unexpected token (1273:107)
+
+  1271 |                               <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950 rounded-3xl p-8 backdrop-blur-xl border border-blue-200/50 dark:border-blue-700/30 shadow-2xl">
+  1272 |                                 {/* Background Pattern */}
+> 1273 |                                 <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+       |                                                                                                            ^
+  1274 |                                 
+  1275 |                                 <div className="relative space-y-3">
+  1276 |                                   {/* Industrial Heating Systems */}
+  Plugin: vite:react-babel
+  File: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx:1273:107
+  1271|                                <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950 rounded-3xl p-8 backdrop-blur-xl border border-blue-200/50 dark:border-blue-700/30 shadow-2xl">
+  1272|                                  {/* Background Pattern */}
+  1273|                                  <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+     |                                                                                                             ^
+  1274|                                  
+  1275|                                  <div className="relative space-y-3">
+      at toParseError (/home/nando/fbfinal/node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at raise (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+      at unexpected (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1537:16)
+      at jsxParseIdentifier (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:278:14)
+      at jsxParseNamespacedName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:288:25)
+      at jsxParseAttribute (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:413:24)
+      at jsxParseOpeningElementAfterName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:440:30)
+      at jsxParseOpeningElementAfterName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:4054:20)
+      at jsxParseOpeningElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:430:19)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:470:35)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at fn (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3588:23)
+      at tryParse (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/util.ts:174:20)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3587:20)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseMaybeAssignAllowIn (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at parseParenAndDistinguishExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1771:16)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1131:21)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:583:22)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOpBaseRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:569:12)
+      at parseExprOpRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:554:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:485:27)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:506:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:407:17)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+11:24:49 PM [vite] Internal server error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Unexpected token (1273:107)
+
+  1271 |                               <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950 rounded-3xl p-8 backdrop-blur-xl border border-blue-200/50 dark:border-blue-700/30 shadow-2xl">
+  1272 |                                 {/* Background Pattern */}
+> 1273 |                                 <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+       |                                                                                                            ^
+  1274 |                                 
+  1275 |                                 <div className="relative space-y-3">
+  1276 |                                   {/* Industrial Heating Systems */}
+  Plugin: vite:react-babel
+  File: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx:1273:107
+  1271|                                <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950 rounded-3xl p-8 backdrop-blur-xl border border-blue-200/50 dark:border-blue-700/30 shadow-2xl">
+  1272|                                  {/* Background Pattern */}
+  1273|                                  <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+     |                                                                                                             ^
+  1274|                                  
+  1275|                                  <div className="relative space-y-3">
+      at toParseError (/home/nando/fbfinal/node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at raise (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+      at unexpected (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1537:16)
+      at jsxParseIdentifier (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:278:14)
+      at jsxParseNamespacedName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:288:25)
+      at jsxParseAttribute (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:413:24)
+      at jsxParseOpeningElementAfterName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:440:30)
+      at jsxParseOpeningElementAfterName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:4054:20)
+      at jsxParseOpeningElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:430:19)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:470:35)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at fn (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3588:23)
+      at tryParse (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/util.ts:174:20)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3587:20)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseMaybeAssignAllowIn (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at parseParenAndDistinguishExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1771:16)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1131:21)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:583:22)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOpBaseRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:569:12)
+      at parseExprOpRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:554:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:485:27)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:506:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:407:17)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+11:24:50 PM [vite] Internal server error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Unexpected token (1273:107)
+
+  1271 |                               <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950 rounded-3xl p-8 backdrop-blur-xl border border-blue-200/50 dark:border-blue-700/30 shadow-2xl">
+  1272 |                                 {/* Background Pattern */}
+> 1273 |                                 <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+       |                                                                                                            ^
+  1274 |                                 
+  1275 |                                 <div className="relative space-y-3">
+  1276 |                                   {/* Industrial Heating Systems */}
+  Plugin: vite:react-babel
+  File: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx:1273:107
+  1271|                                <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950 rounded-3xl p-8 backdrop-blur-xl border border-blue-200/50 dark:border-blue-700/30 shadow-2xl">
+  1272|                                  {/* Background Pattern */}
+  1273|                                  <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+     |                                                                                                             ^
+  1274|                                  
+  1275|                                  <div className="relative space-y-3">
+      at toParseError (/home/nando/fbfinal/node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at raise (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+      at unexpected (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1537:16)
+      at jsxParseIdentifier (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:278:14)
+      at jsxParseNamespacedName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:288:25)
+      at jsxParseAttribute (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:413:24)
+      at jsxParseOpeningElementAfterName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:440:30)
+      at jsxParseOpeningElementAfterName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:4054:20)
+      at jsxParseOpeningElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:430:19)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:470:35)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at fn (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3588:23)
+      at tryParse (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/util.ts:174:20)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3587:20)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseMaybeAssignAllowIn (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at parseParenAndDistinguishExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1771:16)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1131:21)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:583:22)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOpBaseRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:569:12)
+      at parseExprOpRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:554:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:485:27)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:506:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:407:17)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+11:24:50 PM [vite] Internal server error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Unexpected token (1273:107)
+
+  1271 |                               <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950 rounded-3xl p-8 backdrop-blur-xl border border-blue-200/50 dark:border-blue-700/30 shadow-2xl">
+  1272 |                                 {/* Background Pattern */}
+> 1273 |                                 <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+       |                                                                                                            ^
+  1274 |                                 
+  1275 |                                 <div className="relative space-y-3">
+  1276 |                                   {/* Industrial Heating Systems */}
+  Plugin: vite:react-babel
+  File: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx:1273:107
+  1271|                                <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950 rounded-3xl p-8 backdrop-blur-xl border border-blue-200/50 dark:border-blue-700/30 shadow-2xl">
+  1272|                                  {/* Background Pattern */}
+  1273|                                  <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+     |                                                                                                             ^
+  1274|                                  
+  1275|                                  <div className="relative space-y-3">
+      at toParseError (/home/nando/fbfinal/node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at raise (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+      at unexpected (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1537:16)
+      at jsxParseIdentifier (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:278:14)
+      at jsxParseNamespacedName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:288:25)
+      at jsxParseAttribute (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:413:24)
+      at jsxParseOpeningElementAfterName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:440:30)
+      at jsxParseOpeningElementAfterName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:4054:20)
+      at jsxParseOpeningElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:430:19)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:470:35)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at fn (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3588:23)
+      at tryParse (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/util.ts:174:20)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3587:20)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseMaybeAssignAllowIn (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at parseParenAndDistinguishExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1771:16)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1131:21)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:583:22)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOpBaseRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:569:12)
+      at parseExprOpRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:554:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:485:27)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:506:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:407:17)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+The request url "/home/nando/top/fbfinal/node_modules/vite/dist/client/env.mjs" is outside of Vite serving allow list.
+11:25:05 PM [vite] Internal server error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Unexpected token (1273:107)
+
+  1271 |                               <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950 rounded-3xl p-8 backdrop-blur-xl border border-blue-200/50 dark:border-blue-700/30 shadow-2xl">
+  1272 |                                 {/* Background Pattern */}
+> 1273 |                                 <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+       |                                                                                                            ^
+  1274 |                                 
+  1275 |                                 <div className="relative space-y-3">
+  1276 |                                   {/* Industrial Heating Systems */}
+  Plugin: vite:react-babel
+  File: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx:1273:107
+  1271|                                <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950 rounded-3xl p-8 backdrop-blur-xl border border-blue-200/50 dark:border-blue-700/30 shadow-2xl">
+  1272|                                  {/* Background Pattern */}
+  1273|                                  <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+     |                                                                                                             ^
+  1274|                                  
+  1275|                                  <div className="relative space-y-3">
+      at toParseError (/home/nando/fbfinal/node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at raise (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+      at unexpected (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1537:16)
+      at jsxParseIdentifier (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:278:14)
+      at jsxParseNamespacedName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:288:25)
+      at jsxParseAttribute (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:413:24)
+      at jsxParseOpeningElementAfterName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:440:30)
+      at jsxParseOpeningElementAfterName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:4054:20)
+      at jsxParseOpeningElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:430:19)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:470:35)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at fn (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3588:23)
+      at tryParse (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/util.ts:174:20)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3587:20)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseMaybeAssignAllowIn (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at parseParenAndDistinguishExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1771:16)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1131:21)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:583:22)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOpBaseRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:569:12)
+      at parseExprOpRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:554:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:485:27)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:506:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:407:17)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+11:25:18 PM [vite] Internal server error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Unexpected token (1273:107)
+
+  1271 |                               <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950 rounded-3xl p-8 backdrop-blur-xl border border-blue-200/50 dark:border-blue-700/30 shadow-2xl">
+  1272 |                                 {/* Background Pattern */}
+> 1273 |                                 <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+       |                                                                                                            ^
+  1274 |                                 
+  1275 |                                 <div className="relative space-y-3">
+  1276 |                                   {/* Industrial Heating Systems */}
+  Plugin: vite:react-babel
+  File: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx:1273:107
+  1271|                                <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950 rounded-3xl p-8 backdrop-blur-xl border border-blue-200/50 dark:border-blue-700/30 shadow-2xl">
+  1272|                                  {/* Background Pattern */}
+  1273|                                  <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+     |                                                                                                             ^
+  1274|                                  
+  1275|                                  <div className="relative space-y-3">
+      at toParseError (/home/nando/fbfinal/node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at raise (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+      at unexpected (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1537:16)
+      at jsxParseIdentifier (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:278:14)
+      at jsxParseNamespacedName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:288:25)
+      at jsxParseAttribute (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:413:24)
+      at jsxParseOpeningElementAfterName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:440:30)
+      at jsxParseOpeningElementAfterName (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:4054:20)
+      at jsxParseOpeningElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:430:19)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:470:35)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at fn (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3588:23)
+      at tryParse (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/util.ts:174:20)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3587:20)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseMaybeAssignAllowIn (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at parseParenAndDistinguishExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1771:16)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1131:21)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:583:22)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOpBaseRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:569:12)
+      at parseExprOpRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:554:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:485:27)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:506:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:407:17)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+11:26:13 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO
+11:26:49 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO
+11:26:56 PM [vite] Pre-transform error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Expected corresponding JSX closing tag for <div>. (1299:34)
+
+  1297 |                                       <ChevronRight className="w-5 h-5 text-slate-400 group-hover/item:text-orange-500 transition-colors duration-300 mt-4" />
+  1298 |                                     </div>
+> 1299 |                                   </motion.div>
+       |                                   ^
+  1300 |
+  1301 |                                   {/* Chemical Processes */}
+  1302 |                                   <motion.div 
+11:26:56 PM [vite] Internal server error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Expected corresponding JSX closing tag for <div>. (1299:34)
+
+  1297 |                                       <ChevronRight className="w-5 h-5 text-slate-400 group-hover/item:text-orange-500 transition-colors duration-300 mt-4" />
+  1298 |                                     </div>
+> 1299 |                                   </motion.div>
+       |                                   ^
+  1300 |
+  1301 |                                   {/* Chemical Processes */}
+  1302 |                                   <motion.div 
+  Plugin: vite:react-babel
+  File: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx:1299:34
+  1297|                                        <ChevronRight className="w-5 h-5 text-slate-400 group-hover/item:text-orange-500 transition-colors duration-300 mt-4" />
+  1298|                                      </div>
+  1299|                                    </motion.div>
+     |                                    ^
+  1300|  
+  1301|                                    {/* Chemical Processes */}
+      at toParseError (/home/nando/fbfinal/node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at raise (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:527:18)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at fn (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3588:23)
+      at tryParse (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/util.ts:174:20)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3587:20)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseMaybeAssignAllowIn (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at parseParenAndDistinguishExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1771:16)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1131:21)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:583:22)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOpBaseRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:569:12)
+      at parseExprOpRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:554:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:485:27)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:506:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:407:17)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3607:22)
+      at parseExpressionBase (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:221:23)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:212:39)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:212:17)
+11:29:08 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO
+11:29:11 PM [vite] Pre-transform error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Expected corresponding JSX closing tag for <div>. (1299:34)
+
+  1297 |                                       <ChevronRight className="w-5 h-5 text-slate-400 group-hover/item:text-orange-500 transition-colors duration-300 mt-4" />
+  1298 |                                     </div>
+> 1299 |                                   </motion.div>
+       |                                   ^
+  1300 |
+  1301 |                                   {/* Chemical Processes */}
+  1302 |                                   <div className="group/item relative overflow-hidden rounded-2xl bg-gradient-to-r from-white/80 to-purple-50/80 dark:from-slate-800/80 dark:to-purple-900/30 backdrop-blur-sm border border-purple-200/50 dark:border-purple-700/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:translate-x-2.5">
+11:29:17 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO
+11:29:26 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO
+11:29:33 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO
+11:29:50 PM [vite] Pre-transform error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Expected corresponding JSX closing tag for <div>. (1299:34)
+
+  1297 |                                       <ChevronRight className="w-5 h-5 text-slate-400 group-hover/item:text-orange-500 transition-colors duration-300 mt-4" />
+  1298 |                                     </div>
+> 1299 |                                   </motion.div>
+       |                                   ^
+  1300 |
+  1301 |                                   {/* Chemical Processes */}
+  1302 |                                   <div className="group/item relative overflow-hidden rounded-2xl bg-gradient-to-r from-white/80 to-purple-50/80 dark:from-slate-800/80 dark:to-purple-900/30 backdrop-blur-sm border border-purple-200/50 dark:border-purple-700/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:translate-x-2.5">
+11:29:51 PM [vite] Internal server error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Expected corresponding JSX closing tag for <div>. (1299:34)
+
+  1297 |                                       <ChevronRight className="w-5 h-5 text-slate-400 group-hover/item:text-orange-500 transition-colors duration-300 mt-4" />
+  1298 |                                     </div>
+> 1299 |                                   </motion.div>
+       |                                   ^
+  1300 |
+  1301 |                                   {/* Chemical Processes */}
+  1302 |                                   <div className="group/item relative overflow-hidden rounded-2xl bg-gradient-to-r from-white/80 to-purple-50/80 dark:from-slate-800/80 dark:to-purple-900/30 backdrop-blur-sm border border-purple-200/50 dark:border-purple-700/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:translate-x-2.5">
+  Plugin: vite:react-babel
+  File: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx:1299:34
+  1297|                                        <ChevronRight className="w-5 h-5 text-slate-400 group-hover/item:text-orange-500 transition-colors duration-300 mt-4" />
+  1298|                                      </div>
+  1299|                                    </motion.div>
+     |                                    ^
+  1300|  
+  1301|                                    {/* Chemical Processes */}
+      at toParseError (/home/nando/fbfinal/node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at raise (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:527:18)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at fn (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3588:23)
+      at tryParse (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/util.ts:174:20)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3587:20)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseMaybeAssignAllowIn (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at parseParenAndDistinguishExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1771:16)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1131:21)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:583:22)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOpBaseRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:569:12)
+      at parseExprOpRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:554:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:485:27)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:506:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:407:17)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3607:22)
+      at parseExpressionBase (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:221:23)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:212:39)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:212:17)
+11:29:51 PM [vite] Internal server error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Expected corresponding JSX closing tag for <div>. (1299:34)
+
+  1297 |                                       <ChevronRight className="w-5 h-5 text-slate-400 group-hover/item:text-orange-500 transition-colors duration-300 mt-4" />
+  1298 |                                     </div>
+> 1299 |                                   </motion.div>
+       |                                   ^
+  1300 |
+  1301 |                                   {/* Chemical Processes */}
+  1302 |                                   <div className="group/item relative overflow-hidden rounded-2xl bg-gradient-to-r from-white/80 to-purple-50/80 dark:from-slate-800/80 dark:to-purple-900/30 backdrop-blur-sm border border-purple-200/50 dark:border-purple-700/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:translate-x-2.5">
+  Plugin: vite:react-babel
+  File: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx:1299:34
+  1297|                                        <ChevronRight className="w-5 h-5 text-slate-400 group-hover/item:text-orange-500 transition-colors duration-300 mt-4" />
+  1298|                                      </div>
+  1299|                                    </motion.div>
+     |                                    ^
+  1300|  
+  1301|                                    {/* Chemical Processes */}
+      at toParseError (/home/nando/fbfinal/node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at raise (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:527:18)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at fn (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3588:23)
+      at tryParse (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/util.ts:174:20)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3587:20)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseMaybeAssignAllowIn (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at parseParenAndDistinguishExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1771:16)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1131:21)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:583:22)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOpBaseRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:569:12)
+      at parseExprOpRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:554:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:485:27)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:506:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:407:17)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3607:22)
+      at parseExpressionBase (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:221:23)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:212:39)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:212:17)
+11:29:54 PM [vite] Internal server error: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx: Expected corresponding JSX closing tag for <div>. (1299:34)
+
+  1297 |                                       <ChevronRight className="w-5 h-5 text-slate-400 group-hover/item:text-orange-500 transition-colors duration-300 mt-4" />
+  1298 |                                     </div>
+> 1299 |                                   </motion.div>
+       |                                   ^
+  1300 |
+  1301 |                                   {/* Chemical Processes */}
+  1302 |                                   <div className="group/item relative overflow-hidden rounded-2xl bg-gradient-to-r from-white/80 to-purple-50/80 dark:from-slate-800/80 dark:to-purple-900/30 backdrop-blur-sm border border-purple-200/50 dark:border-purple-700/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:translate-x-2.5">
+  Plugin: vite:react-babel
+  File: /home/nando/fbfinal/client/src/pages/ProductsPagePremium.tsx:1299:34
+  1297|                                        <ChevronRight className="w-5 h-5 text-slate-400 group-hover/item:text-orange-500 transition-colors duration-300 mt-4" />
+  1298|                                      </div>
+  1299|                                    </motion.div>
+     |                                    ^
+  1300|  
+  1301|                                    {/* Chemical Processes */}
+      at toParseError (/home/nando/fbfinal/node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at raise (/home/nando/fbfinal/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:527:18)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElementAt (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:483:34)
+      at jsxParseElement (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:559:19)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:573:21)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at fn (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3588:23)
+      at tryParse (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/util.ts:174:20)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3587:20)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseMaybeAssignAllowIn (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at parseParenAndDistinguishExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1771:16)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:1131:21)
+      at parseExprAtom (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/jsx/index.ts:583:22)
+      at parseExprSubscripts (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+      at parseUpdate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+      at parseMaybeUnary (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3735:20)
+      at parseMaybeUnaryOrPrivate (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at parseExprOpBaseRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:569:12)
+      at parseExprOpRightExpr (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:554:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:485:27)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:506:21)
+      at parseExprOp (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:2797:20)
+      at parseExprOps (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:407:17)
+      at parseMaybeConditional (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at parseMaybeAssign (/home/nando/fbfinal/node_modules/@babel/parser/src/plugins/typescript/index.ts:3607:22)
+      at parseExpressionBase (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:221:23)
+      at callback (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:212:39)
+      at allowInAnd (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+      at parseExpression (/home/nando/fbfinal/node_modules/@babel/parser/src/parser/expression.ts:212:17)
+11:30:06 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO, /src/index.css?v=zhsy9k7jZr9IX3-P-RQqm
+11:31:58 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO, /src/index.css?v=zhsy9k7jZr9IX3-P-RQqm
+11:34:53 PM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO, /src/index.css?v=zhsy9k7jZr9IX3-P-RQqm, /src/index.css?v=NuVrk7_JPmHrea3NO_W2z
+11:35:21 PM [vite] hmr update /src/components/layout/ThemeProvider.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO, /src/index.css?v=zhsy9k7jZr9IX3-P-RQqm, /src/index.css?v=NuVrk7_JPmHrea3NO_W2z
+11:35:49 PM [vite] hmr update /src/App.tsx?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO, /src/index.css?v=zhsy9k7jZr9IX3-P-RQqm, /src/index.css?v=NuVrk7_JPmHrea3NO_W2z, /src/App.tsx?v=NI2fhViwLkapayE1KUFQx, /src/App.tsx?v=Cgb35AyW3NF0u6LNy3CvU, /src/App.tsx?v=XDT9s_s_lEpc4lcNVleCb, /src/App.tsx?v=zqxSUOK-kg505Oct2LdJO
+12:53:05 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO, /src/index.css?v=zhsy9k7jZr9IX3-P-RQqm, /src/index.css?v=NuVrk7_JPmHrea3NO_W2z
+12:55:33 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO, /src/index.css?v=zhsy9k7jZr9IX3-P-RQqm, /src/index.css?v=NuVrk7_JPmHrea3NO_W2z
+12:55:44 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO, /src/index.css?v=zhsy9k7jZr9IX3-P-RQqm, /src/index.css?v=NuVrk7_JPmHrea3NO_W2z
+12:55:52 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO, /src/index.css?v=zhsy9k7jZr9IX3-P-RQqm, /src/index.css?v=NuVrk7_JPmHrea3NO_W2z
+12:55:59 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO, /src/index.css?v=zhsy9k7jZr9IX3-P-RQqm, /src/index.css?v=NuVrk7_JPmHrea3NO_W2z
+The request url "/home/nando/top/fbfinal/node_modules/.vite/deps/@radix-ui_react-toast.js" is outside of Vite serving allow list.
+The request url "/home/nando/top/fbfinal/node_modules/.vite/deps/chunk-TCFEUPOT.js" is outside of Vite serving allow list.
+The request url "/home/nando/top/fbfinal/node_modules/.vite/deps/chunk-WTCKHL74.js" is outside of Vite serving allow list.
+The request url "/home/nando/top/fbfinal/node_modules/.vite/deps/chunk-5SOOSTSW.js" is outside of Vite serving allow list.
+The request url "/home/nando/top/fbfinal/node_modules/.vite/deps/react-hook-form.js" is outside of Vite serving allow list.
+The request url "/home/nando/top/fbfinal/node_modules/.vite/deps/@radix-ui_react-slot.js" is outside of Vite serving allow list.
+12:56:12 AM [vite] hmr update /src/pages/ProductsPagePremium.tsx, /src/index.css?v=4Q19MbZziG7fLLwaRWPLn, /src/index.css?v=j8Hqj2ekOq1Bbmi7Xirz0, /src/index.css?v=4RBYFKv7u_yPh4z80HNXq, /src/index.css?v=pceDhsX1YwsJ4MBlOUmif, /src/index.css?v=BezpNW86L2rs70kKzi5of, /src/index.css?v=ODvoQc5DV3r5-B-GwJqTb, /src/index.css?v=99gaS99aTJbXjSPnZ9pPa, /src/index.css?v=XDT9s_s_lEpc4lcNVleCb, /src/index.css?v=MNHhz-lcXPlEVNnzDEBgB, /src/index.css?v=eoloIJrbhX-m5gRqM-z1J, /src/index.css?v=yAO_NKLprgd1ARRHhUCYy, /src/index.css?v=zqxSUOK-kg505Oct2LdJO, /src/index.css?v=zhsy9k7jZr9IX3-P-RQqm, /src/index.css?v=NuVrk7_JPmHrea3NO_W2z
+❌ Server crashed with code null
+🔄 Restarting in 2 seconds...

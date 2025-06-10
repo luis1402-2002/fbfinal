@@ -20,7 +20,10 @@ import {
   Factory,
   ArrowRight,
   Settings2,
-  Check
+  Check,
+  Phone,
+  Mail,
+  Info
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
@@ -42,11 +45,7 @@ const GearPumpSpecificationsPage: React.FC = () => {
   const diameter = params.diameter || '';
   const modelId = params.modelId || '';
   const [selectedModel, setSelectedModel] = useState<number>(0);
-  
-  // Get RPM from URL query params
-  const urlParams = new URLSearchParams(window.location.search);
-  const rpmFromUrl = urlParams.get('rpm');
-  const [selectedRPM, setSelectedRPM] = useState<number>(rpmFromUrl ? parseInt(rpmFromUrl) : 1150);
+  const [selectedRPM, setSelectedRPM] = useState<number>(1750);
 
   // Map diameter for correct lookup
   const diameterMap: Record<string, string> = {
@@ -64,33 +63,27 @@ const GearPumpSpecificationsPage: React.FC = () => {
 
   const mappedDiameter = diameterMap[diameter] || diameter;
   
+  // Reverse map for URL generation
+  const reverseMap: Record<string, string> = {
+    '1/8"': '18',
+    '1/4"': '14',
+    '3/8"': '38',
+    '1/2"': '12',
+    '3/4"': '34',
+    '1"': '1',
+    '1.1/2"': '112',
+    '2"': '2',
+    '3"': '3',
+    '4"': '4'
+  };
+  
   // Get pump data from gearPumpsComplete
   const pumpData = gearPumpsComplete.find(p => p.diameter === mappedDiameter);
   
-  // Set selected model based on modelId if provided
-  useEffect(() => {
-    if (modelId && pumpData && pumpData.models) {
-      const modelIndex = pumpData.models.findIndex(model => model.id === modelId);
-      if (modelIndex !== -1) {
-        setSelectedModel(modelIndex);
-      } else {
-        // If modelId not found, default to 0
-        setSelectedModel(0);
-      }
-    } else {
-      // If no modelId provided, default to 0
-      setSelectedModel(0);
-    }
-  }, [modelId, pumpData]);
-  
-  // Get specifications from fbeDetailedSpecs
-  const detailedSpecs = fbeDetailedSpecs[mappedDiameter];
-  const specs = detailedSpecs?.[selectedModel] || detailedSpecs?.[0];
-
-  // Similar models (other diameters)
-  const similarModels = gearPumpsComplete
-    .filter(p => p.diameter !== mappedDiameter)
-    .slice(0, 3);
+  // Get current model
+  const currentModel = modelId 
+    ? pumpData?.models.find(m => m.id === modelId) || pumpData?.models[0]
+    : pumpData?.models[0];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -98,52 +91,98 @@ const GearPumpSpecificationsPage: React.FC = () => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(
-      language === 'pt' ? `Olá! Gostaria de mais informações sobre a bomba ${specs.model}.` :
-      language === 'en' ? `Hello! I would like more information about the ${specs.model} pump.` :
-      `¡Hola! Me gustaría más información sobre la bomba ${specs.model}.`
+      language === 'pt' ? `Olá! Gostaria de mais informações sobre a bomba FBE ${currentModel?.model}.` :
+      language === 'en' ? `Hello! I would like more information about the FBE ${currentModel?.model} pump.` :
+      `¡Hola! Me gustaría más información sobre la bomba FBE ${currentModel?.model}.`
     );
     window.open(`https://wa.me/5511972874837?text=${message}`, '_blank');
   };
 
   const handleDownloadPDF = () => {
-    const link = document.createElement('a');
-    link.href = '/assets/manuals/FB_Manual_Tecnico_FBE.pdf';
-    link.download = 'FB_Manual_Tecnico_FBE.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open('/public/assets/manuals/FB_Manual_Tecnico_FBE.pdf', '_blank');
   };
 
-  if (!pumpData || !specs) {
+  if (!pumpData || !currentModel) {
     setLocation('/produtos');
     return null;
   }
+
+  // Determine pump category
+  const smallPumps = ['1/8"', '1/4"', '3/8"', '1/2"', '3/4"'];
+  const isSmallPump = smallPumps.includes(mappedDiameter);
+  const pumpCategory = isSmallPump 
+    ? (language === 'pt' ? 'Bombas Pequenas' : language === 'en' ? 'Small Pumps' : 'Bombas Pequeñas')
+    : mappedDiameter === '1"' 
+      ? (language === 'pt' ? 'Bombas Diâmetro 1"' : language === 'en' ? '1" Diameter Pumps' : 'Bombas Diámetro 1"')
+      : (language === 'pt' ? `Bombas Diâmetro ${mappedDiameter}` : language === 'en' ? `${mappedDiameter} Diameter Pumps` : `Bombas Diámetro ${mappedDiameter}`);
 
   // Get drawing and product images
   const drawingImage = theme === 'dark' 
     ? `/src/assets/products/fbe/${diameter}/drawing-white.png`
     : `/src/assets/products/fbe/${diameter}/drawing-black.png`;
 
-  // Product image map for different sizes
-  const productImageMap: Record<string, string> = {
-    '1': '/src/assets/products/fbe/1/photo.png',
-    '112': '/src/assets/products/fbe/112/photo.png',
-    '2': '/src/assets/products/fbe/2/photo.png',
-    '3': '/src/assets/products/fbe/3/photo.png',
-    '4': '/src/assets/products/fbe/4/photo.png',
-    '18': '/src/assets/products/fbe/18/photo.png',
-    '14': '/src/assets/products/fbe/14/photo.png',
-    '38': '/src/assets/products/fbe/38/photo.png',
-    '12': '/src/assets/products/fbe/12/photo.png',
-    '34': '/src/assets/products/fbe/34/photo.png'
-  };
+  const productImage = `/src/assets/products/fbe/${diameter}/photo.png`;
 
-  const productImage = productImageMap[diameter] || `/src/assets/products/fbe/${diameter}/photo.png`;
+  // Get performance data for current model
+  const getPerformanceData = () => {
+    // Map model names to performance data keys
+    const modelKeyMap: Record<string, string> = {
+      '1/8"': 'FBE_1/8',
+      '1/4"': 'FBE_1/4',
+      '3/8"': 'FBE_3/8',
+      '1/2"': 'FBE_1/2',
+      '3/4"': 'FBE_3/4',
+      '1"': 'FBE_1',
+      '1" A': 'FBE_1_A',
+      '1" D': 'FBE_1_D',
+      '1" DA': 'FBE_1_DA',
+      '1.1/2"': 'FBE_1.1/2',
+      '1.1/2" A': 'FBE_1.1/2_A',
+      '2"': 'FBE_2',
+      '2" A': 'FBE_2_A',
+      '3"': 'FBE_3',
+      '3" M9': 'FBE_3_M9',
+      '4" M6': 'FBE_4_M6',
+      '4" M8': 'FBE_4_M8',
+      '4" M12': 'FBE_4_M12'
+    };
+    
+    const modelKey = modelKeyMap[currentModel.model];
+    const pumpData = performanceData.bombas_engrenagem_externa_FBE?.[modelKey];
+    
+    if (!pumpData) return { availableRPMs: [], data: {} };
+    
+    // Get all available RPMs
+    const availableRPMs = pumpData.configuracoes.map((config: any) => config.rpm);
+    
+    // Organize data by RPM
+    const dataByRPM: Record<number, any[]> = {};
+    
+    pumpData.configuracoes.forEach((config: any) => {
+      dataByRPM[config.rpm] = config.dados_operacionais.map((item: any) => ({
+        pressure: item.pressao_bar.toFixed(1),
+        flow: item.vazao_l_min.toFixed(2),
+        power: (item.potencia_cv * 0.7355).toFixed(2) // Convert CV to kW
+      }));
+    });
+    
+    return { availableRPMs, data: dataByRPM };
+  };
+  
+  const performanceInfo = getPerformanceData();
+  
+  // Set initial RPM based on available options
+  useEffect(() => {
+    if (performanceInfo.availableRPMs.length > 0 && !performanceInfo.availableRPMs.includes(selectedRPM)) {
+      setSelectedRPM(performanceInfo.availableRPMs[0]);
+    }
+  }, [performanceInfo.availableRPMs, currentModel]);
 
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-white dark:bg-slate-900">
+      
+      <div className="min-h-screen bg-slate-50 dark:bg-slate-800">
         {/* Hero Section with Red Header */}
         <section className="relative bg-gradient-to-b from-red-800 to-red-900 text-white pb-0">
           {/* Background Image with Red Overlay */}
@@ -156,673 +195,664 @@ const GearPumpSpecificationsPage: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-red-600/50 via-red-700/65 to-red-800/80" />
           </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24">
-            {/* Breadcrumb */}
-            <Breadcrumb className="mb-6">
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink 
-                    onClick={() => setLocation('/produtos')}
-                    className="text-white/70 hover:text-white cursor-pointer"
-                  >
-                    {language === 'pt' ? 'Produtos' : language === 'en' ? 'Products' : 'Productos'}
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="text-white/50" />
-                <BreadcrumbItem>
-                  <BreadcrumbPage className="text-white">
-                    {language === 'pt' ? 'Bombas de Engrenagem' : language === 'en' ? 'Gear Pumps' : 'Bombas de Engranaje'}
-                  </BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-
-            {/* Model Navigation - Category Based */}
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="mb-8"
-            >
-              {(() => {
-                const smallPumps = ['1/8"', '1/4"', '3/8"', '1/2"', '3/4"'];
-                const isSmallPump = smallPumps.includes(mappedDiameter);
-                const categoryTitle = isSmallPump ? 
-                  (language === 'pt' ? 'Bombas Pequenas' : language === 'en' ? 'Small Pumps' : 'Bombas Pequeñas') :
-                  mappedDiameter === '1"' ?
-                  (language === 'pt' ? 'Bombas de 1"' : language === 'en' ? '1" Pumps' : 'Bombas de 1"') :
-                  (language === 'pt' ? `Bombas de ${mappedDiameter}` : language === 'en' ? `${mappedDiameter} Pumps` : `Bombas de ${mappedDiameter}`);
-                
-                const pumpsToShow = gearPumpsComplete.filter(pump => {
-                  if (isSmallPump) return smallPumps.includes(pump.diameter);
-                  return pump.diameter === mappedDiameter;
-                });
-
-                return (
-                  <>
-                    <div className="flex flex-wrap gap-2">
-                      {pumpsToShow.map((pump) => {
-                        const reverseDiameterMap: Record<string, string> = {
-                          '1/8"': '18',
-                          '1/4"': '14',
-                          '3/8"': '38',
-                          '1/2"': '12',
-                          '3/4"': '34',
-                          '1"': '1',
-                          '1.1/2"': '112',
-                          '2"': '2',
-                          '3"': '3',
-                          '4"': '4'
-                        };
-                        const urlDiameter = reverseDiameterMap[pump.diameter] || pump.diameter;
-                        const isActive = pump.diameter === mappedDiameter;
-
-                        return (
-                          <Button
-                            key={pump.diameter}
-                            onClick={() => setLocation(`/produtos/bombas-engrenagem/${urlDiameter}/especificacoes`)}
-                            variant={isActive ? "default" : "outline"}
-                            className={cn(
-                              "px-4 py-2 text-sm font-medium transition-all",
-                              isActive 
-                                ? "bg-white text-red-700 hover:bg-white/90" 
-                                : "bg-white/10 text-white border-white/30 hover:bg-white/20"
-                            )}
-                          >
-                            FBE {pump.diameter}
-                          </Button>
-                        );
-                      })}
-                    </div>
-                  </>
-                );
-              })()}
-            </motion.div>
-
-            {/* Model Navigation for pumps with multiple models */}
-            {pumpData && pumpData.models && pumpData.models.length > 1 && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
-                className="mb-6"
-              >
-                <div className="flex flex-wrap gap-2">
-                  {pumpData.models.map((model, index) => {
-                    const isActive = index === selectedModel;
-                    return (
-                      <Button
-                        key={model.id}
-                        onClick={() => {
-                          setSelectedModel(index);
-                          // Update URL with modelId
-                          const reverseDiameterMap: Record<string, string> = {
-                            '1/8"': '18',
-                            '1/4"': '14',
-                            '3/8"': '38',
-                            '1/2"': '12',
-                            '3/4"': '34',
-                            '1"': '1',
-                            '1.1/2"': '112',
-                            '2"': '2',
-                            '3"': '3',
-                            '4"': '4'
-                          };
-                          const urlDiameter = reverseDiameterMap[pumpData.diameter] || pumpData.diameter;
-                          setLocation(`/produtos/bombas-engrenagem/${urlDiameter}/especificacoes/${model.id}`);
-                        }}
-                        variant={isActive ? "default" : "outline"}
-                        className={cn(
-                          "px-4 py-2 text-sm font-medium transition-all",
-                          isActive 
-                            ? "bg-white text-red-700 hover:bg-white/90" 
-                            : "bg-white/10 text-white border-white/30 hover:bg-white/20"
-                        )}
-                      >
-                        FBE {model.model}
-                      </Button>
-                    );
-                  })}
-                </div>
-              </motion.div>
-            )}
-
-            {/* Title - Left aligned, 2 lines */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            {/* FB Bombas Text at Top */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="mb-8"
+              className="flex items-center gap-4 pt-8 pb-4"
             >
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white/90">
-                {language === 'pt' ? 'Especificações Técnicas' :
-                 language === 'en' ? 'Technical Specifications' :
-                 'Especificaciones Técnicas'}
-              </h1>
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mt-2">
-                {specs.model}
-              </h2>
-              <p className="text-xl text-white/80 mt-4 max-w-2xl">
-                {language === 'pt' ? 'Especificações técnicas completas e informações detalhadas' :
-                 language === 'en' ? 'Complete technical specifications and detailed information' :
-                 'Especificaciones técnicas completas e información detallada'}
-              </p>
+              <div className="h-px w-16 bg-gradient-to-l from-white to-transparent rounded-r-full" />
+              <span className="text-white uppercase tracking-[0.2em] font-medium text-sm">
+                FB BOMBAS
+              </span>
             </motion.div>
+
+            {/* Header with Empresa Brasileira badge */}
+            <div className="flex justify-between items-start pb-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="text-left flex-1"
+              >
+                {/* Breadcrumb */}
+                <Breadcrumb className="mb-6">
+                  <BreadcrumbList>
+                    <BreadcrumbItem>
+                      <BreadcrumbLink 
+                        onClick={() => setLocation('/produtos#engrenagem')}
+                        className="text-white/70 hover:text-white cursor-pointer transition-colors"
+                      >
+                        {language === 'pt' ? 'Bombas de Engrenagem' : language === 'en' ? 'Gear Pumps' : 'Bombas de Engranaje'}
+                      </BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator className="text-white/50" />
+                    <BreadcrumbItem>
+                      <BreadcrumbPage className="text-white">
+                        {pumpCategory}
+                      </BreadcrumbPage>
+                    </BreadcrumbItem>
+                  </BreadcrumbList>
+                </Breadcrumb>
+
+                {/* Model Navigation Cards */}
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="mb-6"
+                >
+                  <div className="flex flex-wrap gap-2">
+                    {(() => {
+                      // Get related models based on category
+                      let relatedModels: any[] = [];
+                      
+                      if (isSmallPump) {
+                        // Show all small pumps
+                        relatedModels = gearPumpsComplete.filter(p => smallPumps.includes(p.diameter));
+                      } else if (mappedDiameter === '1"') {
+                        // Show all 1" variants
+                        relatedModels = gearPumpsComplete.filter(p => p.diameter === '1"');
+                      } else if (mappedDiameter === '1.1/2"') {
+                        // Show all 1.1/2" variants
+                        relatedModels = gearPumpsComplete.filter(p => p.diameter === '1.1/2"');
+                      } else if (mappedDiameter === '2"') {
+                        // Show all 2" variants
+                        relatedModels = gearPumpsComplete.filter(p => p.diameter === '2"');
+                      } else if (mappedDiameter === '3"') {
+                        // Show all 3" variants
+                        relatedModels = gearPumpsComplete.filter(p => p.diameter === '3"');
+                      } else if (mappedDiameter === '4"') {
+                        // Show all 4" variants
+                        relatedModels = gearPumpsComplete.filter(p => p.diameter === '4"');
+                      }
+                      
+                      // Create flat list of all models with their diameter info
+                      const allModels = relatedModels.flatMap(pump => 
+                        pump.models.map(model => ({
+                          ...model,
+                          diameter: pump.diameter,
+                          urlDiameter: reverseMap[pump.diameter] || pump.diameter
+                        }))
+                      );
+                      
+                      return allModels.map((model) => {
+                        const isActive = model.id === currentModel.id;
+                        const diameterUrl = model.urlDiameter;
+                        
+                        // Handle navigation with proper URL construction
+                        const handleModelClick = () => {
+                          // Check if this pump has only one model
+                          const pumpInfo = gearPumpsComplete.find(p => p.diameter === model.diameter);
+                          const hasMultipleModels = pumpInfo && pumpInfo.models.length > 1;
+                          
+                          if (hasMultipleModels) {
+                            // For pumps with multiple models, include the model ID
+                            setLocation(`/produtos/bombas-engrenagem/${diameterUrl}/${model.id}/especificacoes`);
+                          } else {
+                            // For single model pumps, go directly to specifications without model ID
+                            setLocation(`/produtos/bombas-engrenagem/${diameterUrl}/especificacoes`);
+                          }
+                        };
+                        
+                        return (
+                          <motion.button
+                            key={model.id}
+                            onClick={handleModelClick}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className={cn(
+                              "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300",
+                              isActive
+                                ? "bg-white text-red-800 shadow-lg"
+                                : "bg-white/10 text-white/90 hover:bg-white/20 backdrop-blur-sm border border-white/20"
+                            )}
+                          >
+                            {model.model}
+                          </motion.button>
+                        );
+                      });
+                    })()}
+                  </div>
+                </motion.div>
+
+                {/* Main Title */}
+                <h1 className="text-3xl md:text-5xl lg:text-6xl text-white mb-6 font-light">
+                  <motion.span
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="block text-3xl md:text-4xl lg:text-5xl"
+                  >
+                    {language === "pt"
+                      ? "Especificações"
+                      : language === "en"
+                        ? "Specifications"
+                        : "Especificaciones"}
+                  </motion.span>
+                  <motion.span
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="block text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-white via-blue-200 to-cyan-200 bg-clip-text text-transparent pb-2"
+                  >
+                    FBE {currentModel.model}
+                  </motion.span>
+                </h1>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="text-base md:text-lg text-slate-300 mb-8 max-w-2xl leading-relaxed font-light"
+                >
+                  {language === "pt"
+                    ? "Dados técnicos completos e informações detalhadas para sua aplicação industrial."
+                    : language === "en"
+                      ? "Complete technical data and detailed information for your industrial application."
+                      : "Datos técnicos completos e información detallada para su aplicación industrial."}
+                </motion.p>
+              </motion.div>
+              
+              {/* Empresa Brasileira Badge */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="hidden md:block ml-8 mt-auto mb-0"
+              >
+                <img 
+                  src="/src/assets/empresa-100-brasileira.png" 
+                  alt="Empresa 100% Brasileira"
+                  className="w-48 md:w-56 lg:w-64 xl:w-72 h-auto object-contain drop-shadow-2xl"
+                  loading="eager"
+                />
+              </motion.div>
+            </div>
           </div>
 
-          {/* Wave Divider - Transparent top */}
-          <div className="relative">
-            <svg 
-              viewBox="0 0 1440 120" 
-              preserveAspectRatio="none" 
-              className="w-full h-[60px] md:h-[80px] lg:h-[120px]"
+          {/* Wave Divider - 3 layers without gradients */}
+          <div className="relative w-full -mt-px">
+            <svg
+              className="w-full h-16 sm:h-20 md:h-24"
+              viewBox="0 0 1440 120"
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <path 
-                d="M0,40 C360,90 720,10 1080,50 C1260,70 1380,80 1440,60 L1440,0 L0,0 Z" 
-                className="fill-transparent"
+              {/* Background wave layer */}
+              <path
+                d="M0,20 C480,100 960,100 1440,20 L1440,120 L0,120 Z"
+                fill="#f8fafc"
+                className="dark:fill-slate-800"
+                opacity="0.4"
               />
-              <path 
-                d="M0,40 C360,90 720,10 1080,50 C1260,70 1380,80 1440,60 L1440,120 L0,120 Z" 
-                className="fill-white dark:fill-slate-900"
+              
+              {/* Middle wave layer */}
+              <path
+                d="M0,40 C360,90 720,90 1080,40 S1440,0 1440,0 L1440,120 L0,120 Z"
+                fill="#f8fafc"
+                className="dark:fill-slate-800"
+                opacity="0.7"
+              />
+              
+              {/* Front wave layer */}
+              <path
+                d="M0,60 C240,95 480,95 720,60 C960,25 1200,25 1440,60 L1440,120 L0,120 Z"
+                fill="#f8fafc"
+                className="dark:fill-slate-800"
               />
             </svg>
+            {/* Bottom cover to hide any lines */}
+            <div className="absolute bottom-0 left-0 right-0 h-2 bg-slate-50 dark:bg-slate-800" />
           </div>
         </section>
 
-        {/* Main Content Section */}
-        <section className="py-16 md:py-20">
+        {/* Main Content - Clean and High-end */}
+        <section className="py-12 md:py-16 bg-slate-50 dark:bg-slate-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-              {/* Left Column - Product Info and Image */}
-              <div className="lg:col-span-1">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                  className="sticky top-24 space-y-6"
-                >
-                  {/* Product Image */}
-                  <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 rounded-2xl p-8 shadow-xl">
+            {/* Product Overview Section - Red Theme */}
+            <div className="relative border-2 border-red-600 rounded-3xl p-8 md:p-12 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm mb-12">
+              <div className="grid lg:grid-cols-2 gap-12">
+                {/* Left Side - Product Image and Gallery */}
+                <div>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                    className="relative"
+                  >
+                    <div className="bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-2xl p-8">
+                      <img 
+                        src={productImage}
+                        alt={`FBE ${currentModel.model}`}
+                        className="w-full h-auto object-contain max-h-[400px]"
+                        onError={(e) => {
+                          const img = e.target as HTMLImageElement;
+                          img.src = '/src/assets/products/generic-pump.png';
+                        }}
+                      />
+                    </div>
+                    
+                    {/* Product Badge */}
+                    <div className="absolute top-4 right-4">
+                      <Badge className="text-lg px-4 py-2 bg-gradient-to-r from-laranja to-red-600 text-white">
+                        {currentModel.code}
+                      </Badge>
+                    </div>
+                  </motion.div>
+                  
+                  {/* Produto Nacional Badge - Below Product Image */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="mt-6"
+                  >
                     <img 
-                      src={productImage}
-                      alt={specs.model}
+                      src={theme === 'dark' 
+                        ? "/src/assets/produto-nacional-badge-dark.png"
+                        : "/src/assets/produto-nacional-badge-light.png"
+                      }
+                      alt="Produto 100% Nacional"
                       className="w-full h-auto object-contain"
+                      loading="eager"
                     />
-                  </div>
+                  </motion.div>
+                </div>
 
-                  {/* Main Specifications - Premium Design */}
-                  <div className="grid grid-cols-2 gap-4">
-                    {/* Flow */}
-                    <div className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
-                      <div className="p-2 bg-gradient-to-br from-laranja to-red-700 rounded-lg w-fit mb-3">
-                        <Droplets className="w-6 h-6 text-white" />
-                      </div>
-                      <h4 className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
-                        {language === 'pt' ? 'VAZÃO (MAX)' : language === 'en' ? 'FLOW (MAX)' : 'FLUJO (MAX)'}
-                      </h4>
-                      <p className="text-2xl font-bold text-slate-900 dark:text-white">
-                        {specs.maxFlow}
-                      </p>
-                    </div>
+                {/* Right Side - Key Specifications */}
+                <div>
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
+                      {language === "pt" ? "Características Principais" : language === "en" ? "Key Features" : "Características Principales"}
+                    </h2>
 
-                    {/* Pressure */}
-                    <div className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
-                      <div className="p-2 bg-gradient-to-br from-laranja to-red-700 rounded-lg w-fit mb-3">
-                        <Gauge className="w-6 h-6 text-white" />
-                      </div>
-                      <h4 className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
-                        {language === 'pt' ? 'PRESSÃO (MAX)' : language === 'en' ? 'PRESSURE (MAX)' : 'PRESIÓN (MAX)'}
-                      </h4>
-                      <p className="text-2xl font-bold text-slate-900 dark:text-white">
-                        {specs.maxPressure}
-                      </p>
-                    </div>
-
-                    {/* Temperature */}
-                    <div className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
-                      <div className="p-2 bg-gradient-to-br from-laranja to-red-700 rounded-lg w-fit mb-3">
-                        <Thermometer className="w-6 h-6 text-white" />
-                      </div>
-                      <h4 className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
-                        {language === 'pt' ? 'TEMPERATURA (MAX)' : language === 'en' ? 'TEMPERATURE (MAX)' : 'TEMPERATURA (MAX)'}
-                      </h4>
-                      <p className="text-2xl font-bold text-slate-900 dark:text-white">
-                        350°C
-                      </p>
-                    </div>
-
-                    {/* RPM */}
-                    <div className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
-                      <div className="p-2 bg-gradient-to-br from-laranja to-red-700 rounded-lg w-fit mb-3">
-                        <Activity className="w-6 h-6 text-white" />
-                      </div>
-                      <h4 className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
-                        {language === 'pt' ? 'ROTAÇÕES' : language === 'en' ? 'ROTATIONS' : 'ROTACIONES'}
-                      </h4>
-                      <div className="space-y-2">
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-laranja rounded-full"></div>
-                          <p className="text-lg font-bold text-slate-900 dark:text-white">1150 RPM</p>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-laranja rounded-full"></div>
-                          <p className="text-lg font-bold text-slate-900 dark:text-white">1750 RPM</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Viscosity */}
-                    <div className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
-                      <div className="p-2 bg-gradient-to-br from-laranja to-red-700 rounded-lg w-fit mb-3">
-                        <Droplets className="w-6 h-6 text-white" />
-                      </div>
-                      <h4 className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
-                        {language === 'pt' ? 'VISCOSIDADE' : language === 'en' ? 'VISCOSITY' : 'VISCOSIDAD'}
-                      </h4>
-                      <p className="text-xl font-bold text-slate-900 dark:text-white">
-                        {specs.maxViscosity}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* CTA Buttons */}
-                  <div className="flex flex-col gap-3">
-                    <Button
-                      onClick={handleDownloadPDF}
-                      size="lg"
-                      className="group relative bg-gradient-to-r from-laranja to-red-700 text-white font-bold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 px-8 py-4"
-                    >
-                      <span className="flex items-center">
-                        <Download className="mr-3 h-5 w-5 group-hover:animate-bounce" />
-                        {language === 'pt' ? 'Manual Técnico' : language === 'en' ? 'Technical Manual' : 'Manual Técnico'}
-                      </span>
-                    </Button>
-                    <Button
-                      onClick={handleWhatsAppClick}
-                      size="lg"
-                      className="group relative bg-gradient-to-r from-green-600 to-green-700 text-white font-bold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 px-8 py-4"
-                    >
-                      <span className="flex items-center">
-                        <MessageCircle className="mr-3 h-5 w-5 group-hover:rotate-12 transition-transform" />
-                        {language === 'pt' ? 'Falar com Especialista' : language === 'en' ? 'Talk to Expert' : 'Hablar con Experto'}
-                      </span>
-                    </Button>
-                  </div>
-                </motion.div>
-              </div>
-
-              {/* Right Column - Detailed Specifications */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="lg:col-span-2 space-y-16"
-              >
-                {/* Technical Specifications - Full Width Premium Design */}
-                <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800/50 dark:to-slate-900/50 rounded-3xl p-8 md:p-12 border border-slate-200 dark:border-slate-700">
-                  <div className="flex items-center gap-4 mb-8">
-                    <div className="p-3 bg-gradient-to-br from-laranja to-red-700 rounded-xl">
-                      <Settings className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-3xl font-bold text-slate-900 dark:text-white">
-                      {language === 'pt' ? 'ESPECIFICAÇÕES TÉCNICAS' :
-                       language === 'en' ? 'TECHNICAL SPECIFICATIONS' :
-                       'ESPECIFICACIONES TÉCNICAS'}
-                    </h3>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {/* Main Specifications */}
-                    <div className="space-y-4">
-                      {[
-                        { icon: Package, text: specs.specifications?.[language]?.connections || `Bocais de sucção e recalque de Ø ${specs.diameter} com rosca "BSP"` },
-                        { icon: Cog, text: specs.specifications?.[language]?.gears || 'Engrenagens de dentes helicoidais' },
-                        { icon: Shield, text: specs.specifications?.[language]?.sealing || 'Vedação por gaxeta teflonada ou selo mecânico' },
-                        { icon: Settings2, text: specs.specifications?.[language]?.bearings || 'Mancais deslizantes em buchas de bronze TM23 autolubrificantes' },
-                        { icon: Factory, text: specs.specifications?.[language]?.construction || 'Construção em ferro fundido, aço inox ou aço carbono' }
-                      ].map((item, index) => (
-                        <div key={index} className="flex items-start gap-4 group">
-                          <div className="p-2 bg-gradient-to-br from-laranja to-red-700 rounded-lg shadow-sm group-hover:shadow-md transition-all">
-                            <item.icon className="w-5 h-5 text-white" />
+                    <div className="grid grid-cols-2 gap-4 mb-8">
+                      <Card className="bg-white dark:bg-slate-900 border-2 border-red-200 dark:border-red-800 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <CardContent className="p-4">
+                          <div className="flex items-start gap-3">
+                            <div className="p-2 bg-gradient-to-br from-laranja to-red-600 rounded-lg">
+                              <Gauge className="w-5 h-5 text-white" />
+                            </div>
+                            <div>
+                              <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-1">
+                                {language === "pt" ? "Pressão (MÁX)" : language === "en" ? "Pressure (MAX)" : "Presión (MÁX)"}
+                              </h4>
+                              <p className="text-lg font-bold text-laranja">
+                                {currentModel.specifications.maxPressure}
+                              </p>
+                            </div>
                           </div>
-                          <p className="text-slate-700 dark:text-slate-300 leading-relaxed flex-1">
-                            {item.text}
-                          </p>
+                        </CardContent>
+                      </Card>
+                      <Card className="bg-white dark:bg-slate-900 border-2 border-red-200 dark:border-red-800 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <CardContent className="p-4">
+                          <div className="flex items-start gap-3">
+                            <div className="p-2 bg-gradient-to-br from-laranja to-red-600 rounded-lg">
+                              <Droplets className="w-5 h-5 text-white" />
+                            </div>
+                            <div>
+                              <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-1">
+                                {language === "pt" ? "Vazão (MÁX)" : language === "en" ? "Flow (MAX)" : "Flujo (MÁX)"}
+                              </h4>
+                              <p className="text-lg font-bold text-laranja">
+                                {currentModel.specifications.maxFlow}
+                              </p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                      <Card className="bg-white dark:bg-slate-900 border-2 border-red-200 dark:border-red-800 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <CardContent className="p-4">
+                          <div className="flex items-start gap-3">
+                            <div className="p-2 bg-gradient-to-br from-laranja to-red-600 rounded-lg">
+                              <Thermometer className="w-5 h-5 text-white" />
+                            </div>
+                            <div>
+                              <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-1">
+                                {language === "pt" ? "Temperatura" : language === "en" ? "Temperature" : "Temperatura"}
+                              </h4>
+                              <p className="text-lg font-bold text-laranja">
+                                {currentModel.specifications.temperature}
+                              </p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                      <Card className="bg-white dark:bg-slate-900 border-2 border-red-200 dark:border-red-800 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <CardContent className="p-4">
+                          <div className="flex items-start gap-3">
+                            <div className="p-2 bg-gradient-to-br from-laranja to-red-600 rounded-lg">
+                              <Settings className="w-5 h-5 text-white" />
+                            </div>
+                            <div>
+                              <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-1">
+                                {language === "pt" ? "RPM Disponíveis" : language === "en" ? "Available RPM" : "RPM Disponibles"}
+                              </h4>
+                              <p className="text-lg font-bold text-laranja">
+                                {performanceInfo.availableRPMs.length > 0 
+                                  ? performanceInfo.availableRPMs.join(', ')
+                                  : currentModel.specifications.maxRPM}
+                              </p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+
+                    {/* Technical Details List */}
+                    <div className="space-y-3">
+                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">
+                        {language === "pt" ? "Especificações Técnicas" : language === "en" ? "Technical Specifications" : "Especificaciones Técnicas"}
+                      </h3>
+                      {currentModel.technicalSpecs[language].map((spec, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                          <Check className="w-5 h-5 text-laranja flex-shrink-0 mt-0.5" />
+                          <p className="text-sm text-slate-700 dark:text-slate-300">{spec}</p>
                         </div>
                       ))}
                     </div>
 
-                    {/* Optionals */}
-                    {specs.optionals?.[language] && specs.optionals[language].length > 0 && (
-                      <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
-                        <h4 className="font-bold text-xl text-laranja mb-6 flex items-center gap-2">
-                          <Wrench className="w-6 h-6" />
-                          {language === 'pt' ? 'OPCIONAIS' :
-                           language === 'en' ? 'OPTIONALS' :
-                           'OPCIONALES'}
-                        </h4>
-                        <div className="space-y-3">
-                          {specs.optionals[language].map((option: string, index: number) => (
-                            <div key={index} className="flex items-start gap-3">
-                              <div className="mt-2 w-2 h-2 bg-laranja rounded-full flex-shrink-0" />
-                              <p className="text-slate-700 dark:text-slate-300">{option}</p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
+                    {/* CTA Buttons */}
+                    <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                      <Button
+                        onClick={handleDownloadPDF}
+                        className="bg-gradient-to-r from-laranja to-red-600 hover:from-red-600 hover:to-red-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                      >
+                        <Download className="mr-2 h-4 w-4" />
+                        {language === "pt" ? "Baixar Manual Técnico" : language === "en" ? "Download Technical Manual" : "Descargar Manual Técnico"}
+                      </Button>
+                      <Button
+                        onClick={handleWhatsAppClick}
+                        variant="outline"
+                        className="bg-white border-2 border-laranja text-laranja hover:bg-laranja hover:text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                      >
+                        <svg className="mr-2 h-4 w-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        {language === "pt" ? "Fale com um Especialista" : language === "en" ? "Talk to a Specialist" : "Hable con un Especialista"}
+                      </Button>
+                    </div>
+                  </motion.div>
                 </div>
+              </div>
+            </div>
 
-                {/* Technical Drawing */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                >
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 text-center">
-                    {language === 'pt' ? 'Desenho Técnico' :
-                     language === 'en' ? 'Technical Drawing' :
-                     'Dibujo Técnico'}
-                  </h3>
-                  <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl border border-slate-200 dark:border-slate-700">
+            {/* Detailed Specifications Tabs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mb-12"
+            >
+              <Tabs defaultValue="performance" className="w-full">
+                <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 bg-white dark:bg-slate-900 shadow-lg">
+                  <TabsTrigger value="performance" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-laranja data-[state=active]:to-red-600 data-[state=active]:text-white">
+                    <Activity className="mr-2 h-4 w-4" />
+                    {language === "pt" ? "Tabela de Vazão" : language === "en" ? "Flow Table" : "Tabla de Flujo"}
+                  </TabsTrigger>
+                  <TabsTrigger value="materials" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-laranja data-[state=active]:to-red-600 data-[state=active]:text-white">
+                    <Package className="mr-2 h-4 w-4" />
+                    {language === "pt" ? "Materiais" : language === "en" ? "Materials" : "Materiales"}
+                  </TabsTrigger>
+                  <TabsTrigger value="optionals" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-laranja data-[state=active]:to-red-600 data-[state=active]:text-white">
+                    <Wrench className="mr-2 h-4 w-4" />
+                    {language === "pt" ? "Opcionais" : language === "en" ? "Options" : "Opcionales"}
+                  </TabsTrigger>
+                </TabsList>
+
+                <TabsContent value="performance" className="mt-6">
+                  <Card className="bg-white dark:bg-slate-900 shadow-xl">
+                    <CardHeader>
+                      <CardTitle className="text-xl font-bold text-slate-900 dark:text-white text-center">
+                        {language === "pt" ? `TABELA DE VAZÃO E PRESSÃO PARA BOMBA DE ENGRENAGEM EXTERNA MODELO FBE ${currentModel.model}` : language === "en" ? `FLOW AND PRESSURE TABLE FOR EXTERNAL GEAR PUMP MODEL FBE ${currentModel.model}` : `TABLA DE FLUJO Y PRESIÓN PARA BOMBA DE ENGRANAJE EXTERNA MODELO FBE ${currentModel.model}`}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      {performanceInfo.availableRPMs.length > 0 ? (
+                        <div className="overflow-x-auto">
+                          <table className="w-full border-collapse">
+                            <thead>
+                              <tr>
+                                <th className="border border-slate-300 dark:border-slate-600 bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 p-2 text-sm font-bold">
+                                  {language === "pt" ? "Modelo" : "Model"}
+                                </th>
+                                <th className="border border-slate-300 dark:border-slate-600 bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 p-2 text-sm font-bold">
+                                  RPM
+                                </th>
+                                <th className="border border-slate-300 dark:border-slate-600 bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 p-2 text-sm font-bold">
+                                  {language === "pt" ? "Pressão" : "Pressure"}
+                                </th>
+                                {performanceInfo.data[performanceInfo.availableRPMs[0]] && performanceInfo.data[performanceInfo.availableRPMs[0]].map((item: any, idx: number) => (
+                                  <th key={idx} className="border border-slate-300 dark:border-slate-600 bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 p-2 text-sm font-bold">
+                                    {parseFloat(item.pressure).toFixed(2)}
+                                  </th>
+                                ))}
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {performanceInfo.availableRPMs.map((rpm: number, rpmIdx: number) => (
+                                <React.Fragment key={rpm}>
+                                  <tr>
+                                    <td rowSpan={2} className="border border-slate-300 dark:border-slate-600 p-2 text-center font-bold">
+                                      FBE {currentModel.model}
+                                    </td>
+                                    <td rowSpan={2} className="border border-slate-300 dark:border-slate-600 p-2 text-center font-bold">
+                                      {rpm}
+                                    </td>
+                                    <td className="border border-slate-300 dark:border-slate-600 p-2 text-center bg-blue-50 dark:bg-blue-900/20">
+                                      L/min
+                                    </td>
+                                    {performanceInfo.data[rpm] && performanceInfo.data[rpm].map((item: any, idx: number) => (
+                                      <td key={idx} className="border border-slate-300 dark:border-slate-600 p-2 text-center">
+                                        {item.flow}
+                                      </td>
+                                    ))}
+                                  </tr>
+                                  <tr>
+                                    <td className="border border-slate-300 dark:border-slate-600 p-2 text-center bg-green-50 dark:bg-green-900/20">
+                                      {language === "pt" ? "CV" : "HP"}
+                                    </td>
+                                    {performanceInfo.data[rpm] && performanceInfo.data[rpm].map((item: any, idx: number) => (
+                                      <td key={idx} className="border border-slate-300 dark:border-slate-600 p-2 text-center">
+                                        {(parseFloat(item.power) / 0.7355).toFixed(2)}
+                                      </td>
+                                    ))}
+                                  </tr>
+                                </React.Fragment>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      ) : (
+                        <div className="text-center text-slate-500 py-8">
+                          <Activity className="h-8 w-8 text-slate-300 mx-auto mb-2" />
+                          <p>{language === "pt" ? "Dados de performance não disponíveis para este modelo" : language === "en" ? "Performance data not available for this model" : "Datos de rendimiento no disponibles para este modelo"}</p>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+
+                <TabsContent value="materials" className="mt-6">
+                  <Card className="bg-white dark:bg-slate-900 shadow-xl">
+                    <CardHeader>
+                      <CardTitle className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <Package className="h-5 w-5 text-laranja" />
+                        {language === "pt" ? "Materiais de Construção" : language === "en" ? "Construction Materials" : "Materiales de Construcción"}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {currentModel.materials[language].map((material, index) => (
+                          <div key={index} className="flex items-start gap-3 p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-lg">
+                            <Check className="w-5 h-5 text-laranja flex-shrink-0 mt-0.5" />
+                            <p className="text-sm text-slate-700 dark:text-slate-300">{material}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+
+                <TabsContent value="optionals" className="mt-6">
+                  <Card className="bg-white dark:bg-slate-900 shadow-xl">
+                    <CardHeader>
+                      <CardTitle className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <Wrench className="h-5 w-5 text-laranja" />
+                        {language === "pt" ? "Opcionais Disponíveis" : language === "en" ? "Available Options" : "Opcionales Disponibles"}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {currentModel.optionals[language].map((optional, index) => (
+                          <div key={index} className="flex items-start gap-3 p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-lg">
+                            <Settings2 className="w-5 h-5 text-laranja flex-shrink-0 mt-0.5" />
+                            <p className="text-sm text-slate-700 dark:text-slate-300">{optional}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+              </Tabs>
+            </motion.div>
+
+            {/* Technical Drawing Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mb-12"
+            >
+              <Card className="bg-white dark:bg-slate-900 shadow-xl overflow-hidden">
+                <CardHeader className="bg-gradient-to-r from-laranja to-red-600 text-white">
+                  <CardTitle className="text-xl font-bold flex items-center gap-2">
+                    <Settings className="h-5 w-5" />
+                    {language === "pt" ? "Desenho Técnico" : language === "en" ? "Technical Drawing" : "Dibujo Técnico"}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-8">
+                  <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 rounded-xl p-8">
                     <img 
                       src={drawingImage}
-                      alt={`${specs.model} - Technical Drawing`}
-                      className="w-full h-auto object-contain"
-                      style={{ maxHeight: '600px' }}
+                      alt={`Technical drawing FBE ${currentModel.model}`}
+                      className="w-full h-auto object-contain max-h-[500px]"
                       onError={(e) => {
                         const img = e.target as HTMLImageElement;
-                        // Try the generic drawing as fallback
-                        img.src = `/src/assets/products/fbe/${diameter}/drawing.png`;
+                        img.src = '/src/assets/products/generic-drawing.png';
                       }}
                     />
                   </div>
-                </motion.div>
-
-                {/* Performance Data */}
-                <div>
-                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
-                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-                      {language === 'pt' ? 'TABELA DE VAZÃO' :
-                       language === 'en' ? 'FLOW TABLE' :
-                       'TABLA DE FLUJO'}
-                    </h3>
-
-                    {/* RPM Selector */}
-                    <div className="flex gap-2">
-                      {(() => {
-                        const performanceKeyMap: Record<string, string> = {
-                          '1/8"': 'FBE_1/8',
-                          '1/4"': 'FBE_1/4',
-                          '3/8"': 'FBE_3/8',
-                          '1/2"': 'FBE_1/2',
-                          '3/4"': 'FBE_3/4',
-                          '1"': 'FBE_1',
-                          '1.1/2"': 'FBE_1.1/2',
-                          '2"': 'FBE_2',
-                          '3"': 'FBE_3',
-                          '4"': 'FBE_4'
-                        };
-
-                        const performanceKey = performanceKeyMap[specs.diameter] || performanceKeyMap[mappedDiameter];
-                        const pumpPerformanceData = (performanceData as any).bombas_engrenagem_externa_FBE?.[performanceKey];
-                        
-                        // Get available RPMs for this specific model
-                        const availableRPMs = pumpPerformanceData?.configuracoes?.map((config: any) => config.rpm) || [1150, 1750];
-                        
-                        return availableRPMs.map((rpm: number) => (
-                          <Button
-                            key={rpm}
-                            variant={selectedRPM === rpm ? "default" : "outline"}
-                            size="sm"
-                            onClick={() => {
-                              setSelectedRPM(rpm);
-                              // Update URL with RPM parameter
-                              const newUrl = new URL(window.location.href);
-                              newUrl.searchParams.set('rpm', rpm.toString());
-                              window.history.pushState({}, '', newUrl.toString());
-                            }}
-                            className={cn(
-                              "px-4 py-2",
-                              selectedRPM === rpm
-                                ? "bg-laranja text-white hover:bg-red-700"
-                                : "bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-600"
-                            )}
-                          >
-                            {rpm} RPM
-                          </Button>
-                        ));
-                      })()}
+                  <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div className="text-center">
+                      <p className="text-sm text-slate-600 dark:text-slate-400">{language === "pt" ? "Entrada" : "Inlet"}</p>
+                      <p className="font-bold text-slate-900 dark:text-white">{currentModel.specifications.inlet}</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-sm text-slate-600 dark:text-slate-400">{language === "pt" ? "Saída" : "Outlet"}</p>
+                      <p className="font-bold text-slate-900 dark:text-white">{currentModel.specifications.outlet}</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-sm text-slate-600 dark:text-slate-400">{language === "pt" ? "Peso" : "Weight"}</p>
+                      <p className="font-bold text-slate-900 dark:text-white">{currentModel.specifications.weight}</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-sm text-slate-600 dark:text-slate-400">{language === "pt" ? "Viscosidade (MÁX)" : "Viscosity (MAX)"}</p>
+                      <p className="font-bold text-slate-900 dark:text-white">{currentModel.specifications.maxViscosity}</p>
                     </div>
                   </div>
-
-                  {(() => {
-                    const performanceKeyMap: Record<string, string> = {
-                      '1/8"': 'FBE_1/8',
-                      '1/4"': 'FBE_1/4',
-                      '3/8"': 'FBE_3/8',
-                      '1/2"': 'FBE_1/2',
-                      '3/4"': 'FBE_3/4',
-                      '1"': 'FBE_1',
-                      '1.1/2"': 'FBE_1.1/2',
-                      '2"': 'FBE_2',
-                      '3"': 'FBE_3',
-                      '4"': 'FBE_4'
-                    };
-
-                    const performanceKey = performanceKeyMap[specs.diameter] || performanceKeyMap[mappedDiameter];
-                    let pumpPerformanceData = (performanceData as any).bombas_engrenagem_externa_FBE?.[performanceKey];
-
-                    // For models with variations, try to find specific model data
-                    if (!pumpPerformanceData && specs.model) {
-                      const modelKey = specs.model.replace(/\s+/g, '_').replace(/"/g, '');
-                      pumpPerformanceData = (performanceData as any).bombas_engrenagem_externa_FBE?.[modelKey];
-                    }
-
-                    // For specific variations (like FBE 1" A, FBE 1" D, etc)
-                    if (specs.model && specs.model.includes(' ')) {
-                      const modelParts = specs.model.split(' ');
-                      if (modelParts.length > 2) {
-                        const variantKey = modelParts.join('_').replace(/"/g, '');
-                        const variantData = (performanceData as any).bombas_engrenagem_externa_FBE?.[variantKey];
-                        if (variantData) {
-                          pumpPerformanceData = variantData;
-                        }
-                      }
-                    }
-
-                    if (!pumpPerformanceData) {
-                      return (
-                        <div className="text-center py-12">
-                          <p className="text-slate-500 dark:text-slate-400 text-lg">
-                            {language === 'pt' ? 'Dados de performance não disponíveis para este modelo.' :
-                             language === 'en' ? 'Performance data not available for this model.' :
-                             'Datos de rendimiento no disponibles para este modelo.'}
-                          </p>
-                        </div>
-                      );
-                    }
-
-                    // Find configuration for selected RPM
-                    const selectedConfig = pumpPerformanceData.configuracoes?.find((config: any) => config.rpm === selectedRPM);
-
-                    if (!selectedConfig) {
-                      return (
-                        <div className="text-center py-12">
-                          <p className="text-slate-500 dark:text-slate-400 text-lg">
-                            {language === 'pt' ? 'Dados não disponíveis para esta rotação.' :
-                             language === 'en' ? 'Data not available for this rotation.' :
-                             'Datos no disponibles para esta rotación.'}
-                          </p>
-                        </div>
-                      );
-                    }
-
-                    return (
-                      <div className="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
-                        <div className="bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 px-6 py-4">
-                          <div className="flex items-center justify-between">
-                            <span className="text-lg font-semibold text-slate-900 dark:text-white">
-                              {specs.model}
-                            </span>
-                            <Badge className="text-base px-4 py-1 bg-laranja text-white">
-                              {selectedRPM} RPM
-                            </Badge>
-                          </div>
-                        </div>
-                        <div className="p-6">
-                          <div className="overflow-x-auto">
-                            <Table className="w-full">
-                              <TableHeader>
-                                <TableRow className="border-b-2">
-                                  <TableHead className="text-center font-bold text-base">
-                                    {language === 'pt' ? 'Pressão (bar)' :
-                                     language === 'en' ? 'Pressure (bar)' :
-                                     'Presión (bar)'}
-                                  </TableHead>
-                                  <TableHead className="text-center font-bold text-base">
-                                    {language === 'pt' ? 'Vazão (L/min)' :
-                                     language === 'en' ? 'Flow (L/min)' :
-                                     'Flujo (L/min)'}
-                                  </TableHead>
-                                  <TableHead className="text-center font-bold text-base">
-                                    {language === 'pt' ? 'Potência (CV)' :
-                                     language === 'en' ? 'Power (HP)' :
-                                     'Potencia (CV)'}
-                                  </TableHead>
-                                </TableRow>
-                              </TableHeader>
-                              <TableBody>
-                                {selectedConfig.dados_operacionais?.map((row: any, idx: number) => (
-                                  <TableRow key={idx} className="hover:bg-slate-50 dark:hover:bg-slate-800">
-                                    <TableCell className="text-center font-medium">
-                                      {row.pressao_bar?.toFixed(2) || '-'}
-                                    </TableCell>
-                                    <TableCell className="text-center">
-                                      {row.vazao_l_min?.toFixed(2) || '-'}
-                                    </TableCell>
-                                    <TableCell className="text-center">
-                                      {row.potencia_cv !== null && row.potencia_cv !== undefined ? row.potencia_cv.toFixed(2) : '-'}
-                                    </TableCell>
-                                  </TableRow>
-                                ))}
-                              </TableBody>
-                            </Table>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })()}
-                </div>
-
-                {/* Similar Models Section */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  className="mt-16"
-                >
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl md:text-3xl font-bold text-laranja mb-4">
-                      {language === 'pt' ? 'Modelos Semelhantes' :
-                       language === 'en' ? 'Similar Models' :
-                       'Modelos Similares'}
-                    </h3>
-                    <p className="text-lg text-slate-600 dark:text-slate-300">
-                      {language === 'pt' ? 'Explore outras opções de bombas de engrenagem' :
-                       language === 'en' ? 'Explore other gear pump options' :
-                       'Explore otras opciones de bombas de engranaje'}
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {similarModels.map((pump, index) => {
-                      // Reverse map the diameter for URL
-                      const reverseDiameterMap: Record<string, string> = {
-                        '1/8"': '18',
-                        '1/4"': '14',
-                        '3/8"': '38',
-                        '1/2"': '12',
-                        '3/4"': '34',
-                        '1"': '1',
-                        '1.1/2"': '112',
-                        '2"': '2',
-                        '3"': '3',
-                        '4"': '4'
-                      };
-
-                      const urlDiameter = reverseDiameterMap[pump.diameter] || pump.diameter;
-                      const pumpImage = `/src/assets/products/fbe/${urlDiameter}/photo.png`;
-
-                      return (
-                        <motion.div
-                          key={pump.diameter}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                        >
-                          <Card
-                            className="group cursor-pointer h-full bg-white dark:bg-slate-800 hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700 hover:border-laranja/30"
-                            onClick={() => {
-                              setLocation(`/produtos/bombas-engrenagem/${urlDiameter}/especificacoes`);
-                            }}
-                          >
-                            <div className="aspect-[4/3] bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
-                              <div className="absolute inset-0 flex items-center justify-center p-6">
-                                <img 
-                                  src={pumpImage}
-                                  alt={`Bomba FBE ${pump.diameter}`}
-                                  className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
-                                  onError={(e) => {
-                                    const img = e.target as HTMLImageElement;
-                                    img.src = '/src/assets/products/generic-pump.png';
-                                  }}
-                                />
-                              </div>
-                              <Badge className="absolute top-4 right-4 bg-laranja text-white">
-                                FBE
-                              </Badge>
-                            </div>
-                            <CardContent className="p-6">
-                              <h4 className="text-xl font-bold text-azul-profundo dark:text-white mb-2">
-                                FBE {pump.diameter}
-                              </h4>
-                              <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
-                                {pump.models[0].maxFlow} {language === 'pt' ? 'máx' : 'max'}
-                              </p>
-                              <div className="flex items-center text-laranja dark:text-orange-400 font-medium">
-                                <span className="text-sm">
-                                  {language === 'pt' ? 'Ver especificações' : 'View specifications'}
-                                </span>
-                                <ArrowRight className="w-4 h-4 ml-2" />
-                              </div>
-                            </CardContent>
-                          </Card>
-                        </motion.div>
-                      );
-                    })}
-                  </div>
-                </motion.div>
-              </motion.div>
-            </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </section>
 
-        {/* Wave Divider before Footer - Same color as footer */}
-        <div className="relative bg-white dark:bg-slate-900">
-          <svg 
-            viewBox="0 0 1440 120" 
-            preserveAspectRatio="none" 
+        {/* Premium CTA Section - IDENTICAL TO PRODUCTS PAGE */}
+        <section className="py-20 bg-slate-50 dark:bg-slate-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              {/* Single Unified Container */}
+              <div className="relative overflow-hidden rounded-3xl p-12 md:p-16 bg-gradient-to-br from-red-900 via-red-800 to-black/90">
+                <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:40px_40px]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                
+                <div className="relative z-10 text-center max-w-4xl mx-auto">
+                  {/* Excellence Badge */}
+                  <div className="flex items-center justify-center gap-4 mb-8">
+                    <div className="h-px w-24 bg-gradient-to-r from-transparent to-white/50" />
+                    <span className="text-white/80 uppercase tracking-[0.3em] font-light text-xs">
+                      {language === "pt" ? "EXCELÊNCIA EM ATENDIMENTO" : language === "en" ? "EXCELLENCE IN SERVICE" : "EXCELENCIA EN SERVICIO"}
+                    </span>
+                    <div className="h-px w-24 bg-gradient-to-l from-transparent to-white/50" />
+                  </div>
+
+                  {/* Main Title */}
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                    {language === "pt"
+                      ? "Precisa de Ajuda para Escolher?"
+                      : language === "en"
+                        ? "Need Help Choosing?"
+                        : "¿Necesita Ayuda para Elegir?"}
+                  </h2>
+                  
+                  {/* Description */}
+                  <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    {language === "pt"
+                      ? "Nossa equipe técnica especializada está pronta para oferecer consultoria personalizada, dimensionamento correto e a solução ideal para sua aplicação. Com mais de 80 anos de experiência, garantimos qualidade e confiabilidade em cada projeto."
+                      : language === "en"
+                        ? "Our specialized technical team is ready to offer personalized consulting, correct sizing and the ideal solution for your application. With over 80 years of experience, we guarantee quality and reliability in every project."
+                        : "Nuestro equipo técnico especializado está listo para ofrecer consultoría personalizada, dimensionamiento correcto y la solución ideal para su aplicación. Con más de 80 años de experiencia, garantizamos calidad y confiabilidad en cada proyecto."}
+                  </p>
+
+                  {/* CTA Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button
+                      onClick={handleWhatsAppClick}
+                      size="lg"
+                      className="bg-white hover:bg-white/90 text-slate-900 font-semibold px-10 py-6 text-lg shadow-2xl transition-all duration-300"
+                    >
+                      {language === "pt" ? "Falar com Especialista" : language === "en" ? "Talk to Expert" : "Hablar con Experto"}
+                    </Button>
+                    <Button
+                      onClick={() => setLocation('/contato')}
+                      size="lg"
+                      className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold px-10 py-6 text-lg transition-all duration-300"
+                    >
+                      {language === "pt" ? "Preencher Formulário" : language === "en" ? "Fill Out Form" : "Completar Formulario"}
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Wave Divider for Footer */}
+        <div className="relative">
+          <svg
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
             className="w-full h-[60px] md:h-[80px] lg:h-[120px]"
           >
-            <path 
-              d="M0,40 C360,90 720,10 1080,50 C1260,70 1380,80 1440,60 L1440,120 L0,120 Z" 
+            <path
+              d="M0,60 C360,10 720,90 1080,50 C1260,30 1380,20 1440,40 L1440,120 L0,120 Z"
               className="fill-primary"
             />
           </svg>
         </div>
-      </main>
+      </div>
+
       <Footer />
     </>
   );

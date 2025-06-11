@@ -283,13 +283,13 @@ const ProductsPagePremium: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
-                  className="text-base md:text-lg text-slate-300 mb-8 max-w-xl leading-relaxed font-light"
+                  className="text-base md:text-lg text-slate-300 mb-8 max-w-2xl leading-relaxed font-light ml-0"
                 >
                   {language === "pt"
-                    ? <>Há mais de 80 anos desenvolvendo soluções<br />sob medida para os desafios mais exigentes da indústria brasileira.</>
+                    ? <>Há mais de 80 anos desenvolvendo soluções sob medida<br />para os desafios mais exigentes da indústria brasileira.</>
                     : language === "en"
                       ? <>For over 80 years developing custom solutions<br />for the most demanding challenges in Brazilian industry.</>
-                      : <>Por más de 80 años desarrollando soluciones<br />a medida para los desafíos más exigentes de la industria brasileña.</>}
+                      : <>Por más de 80 años desarrollando soluciones a medida<br />para los desafíos más exigentes de la industria brasileña.</>}
                 </motion.p>
               </motion.div>
             </div>
@@ -459,10 +459,10 @@ const ProductsPagePremium: React.FC = () => {
                           </div>
                           <p className="text-2xl md:text-3xl font-semibold text-slate-900 dark:text-white">
                             {language === "pt"
-                              ? "Bombas de Engrenagem"
+                              ? "Bombas de Engrenagem Externa"
                               : language === "en"
-                                ? "Gear Pumps"
-                                : "Bombas de Engranaje"}
+                                ? "External Gear Pumps"
+                                : "Bombas de Engranaje Externa"}
                           </p>
                         </motion.div>
                       </div>
@@ -479,30 +479,30 @@ const ProductsPagePremium: React.FC = () => {
 
                         <div className="grid grid-cols-3 gap-4">
                           <div className="bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 p-4 rounded-xl border border-red-200 dark:border-red-800">
-                            <Gauge className="w-6 h-6 text-laranja mx-auto mb-2" />
+                            <Droplets className="w-6 h-6 text-laranja mx-auto mb-2" />
                             <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-1">
-                              {language === "pt" ? "Pressão (MÁX)" : language === "en" ? "Pressure (MAX)" : "Presión (MÁX)"}
+                              {language === "pt" ? "Vazão Máx." : language === "en" ? "Flow Max." : "Flujo Máx."}
                             </h4>
                             <p className="text-sm text-slate-700 dark:text-slate-300 font-bold">
-                              {language === "pt" ? "Até 210 kgf/cm²" : language === "en" ? "Up to 210 kgf/cm²" : "Hasta 210 kgf/cm²"}
+                              1.350 l/min
+                            </p>
+                          </div>
+                          <div className="bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 p-4 rounded-xl border border-red-200 dark:border-red-800">
+                            <Gauge className="w-6 h-6 text-laranja mx-auto mb-2" />
+                            <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-1">
+                              {language === "pt" ? "Pressão Máx." : language === "en" ? "Pressure Max." : "Presión Máx."}
+                            </h4>
+                            <p className="text-sm text-slate-700 dark:text-slate-300 font-bold">
+                              22 bar
                             </p>
                           </div>
                           <div className="bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 p-4 rounded-xl border border-red-200 dark:border-red-800">
                             <Thermometer className="w-6 h-6 text-laranja mx-auto mb-2" />
                             <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-1">
-                              {language === "pt" ? "Viscosidade (MÁX)" : language === "en" ? "Viscosity (MAX)" : "Viscosidad (MÁX)"}
+                              {language === "pt" ? "Temperatura Máx." : language === "en" ? "Temperature Max." : "Temperatura Máx."}
                             </h4>
                             <p className="text-sm text-slate-700 dark:text-slate-300 font-bold">
-                              {language === "pt" ? "Até 1.000.000 cSt" : language === "en" ? "Up to 1,000,000 cSt" : "Hasta 1.000.000 cSt"}
-                            </p>
-                          </div>
-                          <div className="bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 p-4 rounded-xl border border-red-200 dark:border-red-800">
-                            <Droplets className="w-6 h-6 text-laranja mx-auto mb-2" />
-                            <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-1">
-                              {language === "pt" ? "Vazão (MÁX)" : language === "en" ? "Flow (MAX)" : "Flujo (MÁX)"}
-                            </h4>
-                            <p className="text-sm text-slate-700 dark:text-slate-300 font-bold">
-                              {language === "pt" ? "0,17 a 27.600 L/h" : language === "en" ? "0.17 to 27,600 L/h" : "0,17 a 27.600 L/h"}
+                              350°C
                             </p>
                           </div>
                         </div>
@@ -539,7 +539,7 @@ const ProductsPagePremium: React.FC = () => {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                           >
                             <Card
-                              className="group cursor-pointer h-full overflow-hidden bg-gradient-to-br from-white to-red-50 dark:from-slate-800 dark:to-red-950/20 hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-laranja"
+                              className="group cursor-pointer h-full overflow-hidden bg-gradient-to-br from-white to-red-50 dark:from-slate-800 dark:to-red-950/20 hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-laranja rounded-xl"
                               onClick={() =>
                                 handleGearPumpClick(
                                   pump.diameter
@@ -570,38 +570,29 @@ const ProductsPagePremium: React.FC = () => {
                               </div>
 
                               <CardContent className="p-4">
-                                <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
-                                  <div>
-                                    <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 mb-1">
+                                <div className="space-y-3 mb-4">
+                                  <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-2">
                                       <Droplets className="w-4 h-4 text-laranja" />
-                                      <span className="whitespace-nowrap">{language === "pt" ? "Vazão (MÁX)" : language === "en" ? "Flow (MAX)" : "Flujo (MÁX)"}</span>
+                                      <span className="text-sm text-slate-600 dark:text-slate-400">{language === "pt" ? "Vazão Máx." : language === "en" ? "Flow Max." : "Flujo Máx."}</span>
                                     </div>
                                     <p className="font-bold text-sm text-slate-900 dark:text-white">
                                       {pump.models[0].specifications.maxFlow}
                                     </p>
                                   </div>
-                                  <div>
-                                    <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 mb-1">
+                                  <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-2">
                                       <Gauge className="w-4 h-4 text-laranja" />
-                                      <span className="whitespace-nowrap">{language === "pt" ? "Pressão (MÁX)" : language === "en" ? "Pressure (MAX)" : "Presión (MÁX)"}</span>
+                                      <span className="text-sm text-slate-600 dark:text-slate-400">{language === "pt" ? "Pressão Máx." : language === "en" ? "Pressure Max." : "Presión Máx."}</span>
                                     </div>
                                     <p className="font-bold text-sm text-slate-900 dark:text-white">
                                       {pump.models[0].specifications.maxPressure}
                                     </p>
                                   </div>
-                                  <div>
-                                    <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 mb-1">
-                                      <Thermometer className="w-4 h-4 text-laranja" />
-                                      {language === "pt" ? "Temp." : language === "en" ? "Temp." : "Temp."}
-                                    </div>
-                                    <p className="font-bold text-sm text-slate-900 dark:text-white">
-                                      até 350°C
-                                    </p>
-                                  </div>
-                                  <div>
-                                    <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 mb-1">
+                                  <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-2">
                                       <Settings className="w-4 h-4 text-laranja" />
-                                      RPM
+                                      <span className="text-sm text-slate-600 dark:text-slate-400">RPM Máx.</span>
                                     </div>
                                     <p className="font-bold text-sm text-slate-900 dark:text-white">
                                       {pump.models[0].specifications.maxRPM}
@@ -658,7 +649,7 @@ const ProductsPagePremium: React.FC = () => {
                           }}
                         >
                           <Card
-                            className="group cursor-pointer h-full overflow-hidden bg-gradient-to-br from-white to-red-50 dark:from-slate-800 dark:to-red-950/20 hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-laranja"
+                            className="group cursor-pointer h-full overflow-hidden bg-gradient-to-br from-white to-red-50 dark:from-slate-800 dark:to-red-950/20 hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-laranja rounded-xl"
                             onClick={() =>
                               handleGearPumpClick(
                                 mediumPumps[0].diameter,
@@ -667,13 +658,13 @@ const ProductsPagePremium: React.FC = () => {
                             }
                           >
                             {/* Red header like large pumps */}
-                            <div className="relative h-24 bg-gradient-to-br from-laranja to-red-700 overflow-hidden">
+                            <div className="relative h-20 bg-gradient-to-br from-laranja to-red-700 overflow-hidden">
                               <div className="absolute inset-0 bg-grid-white/[0.1] bg-[size:20px_20px]" />
-                              <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/50 to-transparent" />
+                              <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-black/50 to-transparent" />
 
                               <div className="relative h-full flex items-center justify-center">
                                 <div className="text-center">
-                                  <h4 className="text-2xl font-bold text-white">
+                                  <h4 className="text-xl font-bold text-white">
                                     {model.model}
                                   </h4>
                                   <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm text-xs">
@@ -684,61 +675,47 @@ const ProductsPagePremium: React.FC = () => {
                             </div>
 
                             {/* Photo area with same bg as small pumps */}
-                            <div className="p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20">
-                              <div className="flex items-center justify-center mb-3">
+                            <div className="p-3 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20">
+                              <div className="flex items-center justify-center">
                                 <img 
-                                  src='/src/assets/products/fbe/1/photo.png'
+                                  src={(model.model === '1" D' || model.model === '1" DA' || model.code === 'FBE-1-D' || model.code === 'FBE-1-DA')
+                                    ? `/src/assets/products/fbe/1/photo-d-da.png?v=${Date.now()}` 
+                                    : '/src/assets/products/fbe/1/photo.png'}
                                   alt={model.model}
-                                  className="w-32 h-32 object-contain"
+                                  className="w-28 h-28 object-contain"
                                   onError={(e) => {
                                     const img = e.target as HTMLImageElement;
+                                    console.error('Image error for model:', model.model, 'Code:', model.code);
                                     img.src = '/src/assets/products/generic-pump.png';
                                   }}
                                 />
                               </div>
                             </div>
 
-                            <CardContent className="p-4 bg-white dark:bg-slate-800">
-                              <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
-                                <div>
-                                  <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 mb-1">
+                            <CardContent className="p-3 bg-white dark:bg-slate-800">
+                              <div className="grid grid-cols-1 gap-3 mb-3">
+                                <div className="flex items-center justify-between">
+                                  <div className="flex items-center gap-2">
                                     <Droplets className="w-4 h-4 text-laranja" />
-                                    {language === "pt"
-                                      ? "Vazão (MÁX)"
-                                      : language === "en"
-                                        ? "Flow (MAX)"
-                                        : "Flujo (MÁX)"}
+                                    <span className="text-sm text-slate-600 dark:text-slate-400">{language === "pt" ? "Vazão Máx." : language === "en" ? "Flow Max." : "Flujo Máx."}</span>
                                   </div>
                                   <p className="font-bold text-sm text-slate-900 dark:text-white">
                                     {model.specifications.maxFlow}
                                   </p>
                                 </div>
-                                <div>
-                                  <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 mb-1">
+                                <div className="flex items-center justify-between">
+                                  <div className="flex items-center gap-2">
                                     <Gauge className="w-4 h-4 text-laranja" />
-                                    {language === "pt"
-                                      ? "Pressão (MÁX)"
-                                      : language === "en"
-                                        ? "Pressure (MAX)"
-                                        : "Presión (MÁX)"}
+                                    <span className="text-sm text-slate-600 dark:text-slate-400">{language === "pt" ? "Pressão Máx." : language === "en" ? "Pressure Max." : "Presión Máx."}</span>
                                   </div>
                                   <p className="font-bold text-sm text-slate-900 dark:text-white">
                                     {model.specifications.maxPressure}
                                   </p>
                                 </div>
-                                <div>
-                                  <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 mb-1">
-                                    <Thermometer className="w-4 h-4 text-laranja" />
-                                    {language === "pt" ? "Temp. (MÁX)" : "Temp. (MAX)"}
-                                  </div>
-                                  <p className="font-bold text-sm text-slate-900 dark:text-white">
-                                    até 350°C
-                                  </p>
-                                </div>
-                                <div>
-                                  <div className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 mb-1">
+                                <div className="flex items-center justify-between">
+                                  <div className="flex items-center gap-2">
                                     <Settings className="w-4 h-4 text-laranja" />
-                                    RPM (MÁX)
+                                    <span className="text-sm text-slate-600 dark:text-slate-400">RPM Máx.</span>
                                   </div>
                                   <p className="font-bold text-sm text-slate-900 dark:text-white">
                                     {model.specifications.maxRPM}
@@ -789,7 +766,7 @@ const ProductsPagePremium: React.FC = () => {
                           </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                           {pumpGroup.models.map((model, modelIndex) => (
                             <motion.div
                               key={model.id}
@@ -801,7 +778,7 @@ const ProductsPagePremium: React.FC = () => {
                               }}
                             >
                               <Card
-                                className="group cursor-pointer h-full overflow-hidden bg-gradient-to-br from-white to-red-50 dark:from-slate-800 dark:to-red-950/20 hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-laranja"
+                                className="group cursor-pointer h-full overflow-hidden bg-gradient-to-br from-white to-red-50 dark:from-slate-800 dark:to-red-950/20 hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-laranja rounded-xl"
                                 onClick={() =>
                                   handleGearPumpClick(
                                     pumpGroup.diameter,
@@ -809,16 +786,16 @@ const ProductsPagePremium: React.FC = () => {
                                   )
                                 }
                               >
-                                <div className="relative h-32 bg-gradient-to-br from-laranja to-red-700 overflow-hidden">
+                                <div className="relative h-24 bg-gradient-to-br from-laranja to-red-700 overflow-hidden">
                                   <div className="absolute inset-0 bg-grid-white/[0.1] bg-[size:20px_20px]" />
-                                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/50 to-transparent" />
+                                  <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/50 to-transparent" />
 
                                   <div className="relative h-full flex items-center justify-center">
                                     <div className="text-center">
-                                      <h4 className="text-3xl font-bold text-white mb-1">
+                                      <h4 className="text-2xl font-bold text-white">
                                         {model.model}
                                       </h4>
-                                      <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
+                                      <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm text-xs">
                                         {model.code}
                                       </Badge>
                                     </div>
@@ -826,12 +803,12 @@ const ProductsPagePremium: React.FC = () => {
                                 </div>
 
                                 {/* Photo area with same bg as small pumps */}
-                                <div className="p-6 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20">
+                                <div className="p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20">
                                   <div className="flex items-center justify-center">
                                     <img 
                                       src={getPumpImage(pumpGroup.diameter)}
                                       alt={model.model}
-                                      className="w-40 h-40 object-contain"
+                                      className="w-32 h-32 object-contain"
                                       onError={(e) => {
                                         const img = e.target as HTMLImageElement;
                                         img.src = '/src/assets/products/generic-pump.png';
@@ -840,52 +817,33 @@ const ProductsPagePremium: React.FC = () => {
                                   </div>
                                 </div>
 
-                                <CardContent className="p-6 bg-white dark:bg-slate-800">
+                                <CardContent className="p-4 bg-white dark:bg-slate-800">
 
-                                  <div className="grid grid-cols-2 gap-4 mb-6">
-                                    <div>
-                                      <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-1">
+                                  <div className="grid grid-cols-1 gap-3 mb-4">
+                                    <div className="flex items-center justify-between">
+                                      <div className="flex items-center gap-2">
                                         <Droplets className="w-4 h-4 text-laranja" />
-                                        {language === "pt"
-                                          ? "Vazão (MÁX)"
-                                          : language === "en"
-                                            ? "Flow (MAX)"
-                                            : "Flujo (MÁX)"}
+                                        <span className="text-sm text-slate-600 dark:text-slate-400">{language === "pt" ? "Vazão Máx." : language === "en" ? "Flow Max." : "Flujo Máx."}</span>
                                       </div>
-                                      <p className="font-bold text-slate-900 dark:text-white">
+                                      <p className="font-bold text-sm text-slate-900 dark:text-white">
                                         {model.specifications.maxFlow}
                                       </p>
                                     </div>
-                                    <div>
-                                      <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-1">
+                                    <div className="flex items-center justify-between">
+                                      <div className="flex items-center gap-2">
                                         <Gauge className="w-4 h-4 text-laranja" />
-                                        {language === "pt"
-                                          ? "Pressão (MÁX)"
-                                          : language === "en"
-                                            ? "Pressure (MAX)"
-                                            : "Presión (MÁX)"}
+                                        <span className="text-sm text-slate-600 dark:text-slate-400">{language === "pt" ? "Pressão Máx." : language === "en" ? "Pressure Max." : "Presión Máx."}</span>
                                       </div>
-                                      <p className="font-bold text-slate-900 dark:text-white">
+                                      <p className="font-bold text-sm text-slate-900 dark:text-white">
                                         {model.specifications.maxPressure}
                                       </p>
                                     </div>
-                                    <div>
-                                      <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-1">
-                                        <Thermometer className="w-4 h-4 text-laranja" />
-                                        {language === "pt"
-                                          ? "Temp."
-                                          : "Temp."}
-                                      </div>
-                                      <p className="font-bold text-slate-900 dark:text-white">
-                                        até 350°C
-                                      </p>
-                                    </div>
-                                    <div>
-                                      <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-1">
+                                    <div className="flex items-center justify-between">
+                                      <div className="flex items-center gap-2">
                                         <Settings className="w-4 h-4 text-laranja" />
-                                        RPM
+                                        <span className="text-sm text-slate-600 dark:text-slate-400">RPM Máx.</span>
                                       </div>
-                                      <p className="font-bold text-slate-900 dark:text-white">
+                                      <p className="font-bold text-sm text-slate-900 dark:text-white">
                                         {model.specifications.maxRPM}
                                       </p>
                                     </div>
@@ -989,26 +947,28 @@ const ProductsPagePremium: React.FC = () => {
 
                       {/* Right Side - Image */}
                       <div className="relative h-full flex items-center justify-center lg:justify-end">
-                        <AnimatePresence mode="wait">
-                          <motion.div
-                            key={fbcnImage}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.8 }}
-                            transition={{ duration: 0.5 }}
-                            className="relative w-full max-w-md lg:max-w-lg"
-                          >
-                            <img 
-                              src={fbcnImages[fbcnImage]} 
-                              alt="FBCN" 
-                              className="w-full h-auto object-contain max-h-[400px] lg:max-h-[500px] drop-shadow-2xl"
-                              onError={(e) => {
-                                const img = e.target as HTMLImageElement;
-                                img.src = '/src/assets/products/fbcn.png';
-                              }}
-                            />
-                          </motion.div>
-                        </AnimatePresence>
+                        <div className="relative w-full max-w-md lg:max-w-lg h-[400px] lg:h-[500px]">
+                          <AnimatePresence mode="wait">
+                            <motion.div
+                              key={fbcnImage}
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              exit={{ opacity: 0 }}
+                              transition={{ duration: 0.8, ease: "easeInOut" }}
+                              className="absolute inset-0"
+                            >
+                              <img 
+                                src={fbcnImages[fbcnImage]} 
+                                alt="FBCN" 
+                                className="w-full h-full object-contain drop-shadow-2xl"
+                                onError={(e) => {
+                                  const img = e.target as HTMLImageElement;
+                                  img.src = '/src/assets/products/fbcn.png';
+                                }}
+                              />
+                            </motion.div>
+                          </AnimatePresence>
+                        </div>
                       </div>
                     </div>
 
@@ -1182,26 +1142,28 @@ const ProductsPagePremium: React.FC = () => {
 
                       {/* Right Side - Image */}
                       <div className="relative h-full flex items-center justify-center lg:justify-end">
-                        <AnimatePresence mode="wait">
-                          <motion.div
-                            key={fbotImage}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.8 }}
-                            transition={{ duration: 0.5 }}
-                            className="relative w-full max-w-md lg:max-w-lg"
-                          >
-                            <img 
-                              src={fbotImages[fbotImage]} 
-                              alt="FBOT" 
-                              className="w-full h-auto object-contain max-h-[400px] lg:max-h-[500px] drop-shadow-2xl"
-                              onError={(e) => {
-                                const img = e.target as HTMLImageElement;
-                                img.src = '/src/assets/products/fbot.png';
-                              }}
-                            />
-                          </motion.div>
-                        </AnimatePresence>
+                        <div className="relative w-full max-w-md lg:max-w-lg h-[400px] lg:h-[500px]">
+                          <AnimatePresence mode="wait">
+                            <motion.div
+                              key={fbotImage}
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              exit={{ opacity: 0 }}
+                              transition={{ duration: 0.8, ease: "easeInOut" }}
+                              className="absolute inset-0"
+                            >
+                              <img 
+                                src={fbotImages[fbotImage]} 
+                                alt="FBOT" 
+                                className="w-full h-full object-contain drop-shadow-2xl"
+                                onError={(e) => {
+                                  const img = e.target as HTMLImageElement;
+                                  img.src = '/src/assets/products/fbot.png';
+                                }}
+                              />
+                            </motion.div>
+                          </AnimatePresence>
+                        </div>
                       </div>
                     </div>
 

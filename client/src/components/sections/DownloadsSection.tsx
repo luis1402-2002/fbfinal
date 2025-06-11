@@ -47,13 +47,7 @@ const DownloadsSection = () => {
   ];
 
   return (
-    <section id="downloads" className="relative py-16 md:py-20 bg-white dark:bg-slate-900 overflow-hidden">
-      {/* Subtle pattern */}
-      <div className="absolute inset-0 opacity-[0.01] dark:opacity-[0.025]">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(227,6,19,0.05) 50px, rgba(227,6,19,0.05) 52px)`,
-        }}></div>
-      </div>
+    <section id="downloads" className="relative py-16 md:py-20 bg-slate-50 dark:bg-slate-800 overflow-hidden">
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader />
@@ -118,13 +112,13 @@ const ManualCard = ({ manual, index }: ManualCardProps) => {
       initial={{ opacity: 0, y: 30 }}
       animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
-      className="group bg-white dark:bg-slate-800/60 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-slate-200 dark:border-slate-700/50 overflow-hidden flex flex-col h-full"
+      className="group bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-800/50 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200/50 dark:border-slate-700/30 overflow-hidden flex flex-col h-full relative"
     >
       {/* Header with Icon */}
       <div className="relative p-6 sm:p-7 pb-4">
         <div className="flex items-start space-x-4">
-          <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#E30613] to-[#c60411] rounded-xl flex items-center justify-center shadow-lg">
-            <FileText className="h-6 w-6 text-white" />
+          <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[#E30613] to-[#c60411] rounded-2xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+            <FileText className="h-7 w-7 text-white" />
           </div>
           <div className="flex-grow min-w-0">
             <h3 className="text-xl font-bold text-azul-profundo dark:text-white mb-1 leading-tight">
@@ -144,7 +138,7 @@ const ManualCard = ({ manual, index }: ManualCardProps) => {
         </p>
 
         {/* File Info */}
-        <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-700/50 dark:to-slate-600/30 p-4 rounded-xl mb-6 border border-slate-200/50 dark:border-slate-600/20">
+        <div className="bg-gradient-to-br from-slate-100 to-slate-150 dark:from-slate-700/50 dark:to-slate-600/30 p-4 rounded-2xl mb-6 border border-slate-200 dark:border-slate-600/20">
           <div className="flex items-center justify-between text-sm">
             <span className="text-slate-600 dark:text-slate-400 font-medium">{t('downloads.file_size', 'Tamanho do arquivo')}</span>
             <span className="text-azul-profundo dark:text-white font-bold">{manual.size}</span>
@@ -158,7 +152,7 @@ const ManualCard = ({ manual, index }: ManualCardProps) => {
         {/* Download Button */}
         <button
           onClick={handleDownload}
-          className="inline-flex items-center justify-center bg-gradient-to-r from-[#E30613] to-[#c60411] hover:from-[#c60411] hover:to-[#a50310] text-white font-semibold py-3 sm:py-3.5 px-6 sm:px-8 rounded-xl transition-all duration-300 text-sm sm:text-base shadow-lg hover:shadow-xl transform hover:scale-105 w-full"
+          className="inline-flex items-center justify-center bg-gradient-to-r from-[#E30613] to-[#c60411] hover:from-[#c60411] hover:to-[#a50310] text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-300 text-base shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full"
         >
           <Download className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
           {t('downloads.download_manual', 'Baixar Manual')}

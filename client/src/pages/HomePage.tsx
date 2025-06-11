@@ -139,34 +139,40 @@ const HomePage = () => {
         <CompanySection />
         <ProductsSection />
         <DownloadsSection />
-        <div className="relative">
-          {/* Background Container */}
-          <div className="absolute inset-0 overflow-hidden">
-            {/* Background Images - Light Theme */}
-            <div className="absolute inset-0 dark:hidden">
-              <img 
-                src="https://www.dropbox.com/scl/fi/aiwyc2l13fzqgc2e6o8ad/5.png?rlkey=l5we3n51misoa8xxa6u2i4mfx&st=nl2mon3x&raw=1"
-                alt=""
-                className="absolute inset-0 w-full h-full opacity-50 object-cover object-right-bottom"
+        <div className="bg-white dark:bg-slate-800">
+          <ContactSection />
+          <WorkWithUsSection />
+          
+          {/* Wave Divider before Footer - matching Footer color */}
+          <div className="relative w-full -mb-px">
+            <svg
+              className="w-full h-16 sm:h-20 md:h-24"
+              viewBox="0 0 1440 120"
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Background wave layer */}
+              <path
+                d="M0,20 C480,100 960,100 1440,20 L1440,120 L0,120 Z"
+                fill="hsl(211 100% 15%)"
+                opacity="0.4"
               />
-              {/* Gradient Overlays */}
-              <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-white via-white/95 to-transparent pointer-events-none"></div>
-            </div>
-            {/* Background Images - Dark Theme */}
-            <div className="absolute inset-0 hidden dark:block">
-              <img 
-                src="https://www.dropbox.com/scl/fi/2buladnibnrbimf7q0uxs/6.png?rlkey=1updjxyetqc2l47tj70dfadqf&st=81s16j8q&raw=1"
-                alt=""
-                className="absolute inset-0 w-full h-full opacity-25 object-cover object-right-bottom"
+              
+              {/* Middle wave layer */}
+              <path
+                d="M0,40 C360,90 720,90 1080,40 S1440,0 1440,0 L1440,120 L0,120 Z"
+                fill="hsl(211 100% 15%)"
+                opacity="0.7"
               />
-              {/* Gradient Overlays */}
-              <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-slate-900 via-slate-900/95 to-transparent pointer-events-none"></div>
-            </div>
-          </div>
-          {/* Content */}
-          <div className="relative z-10">
-            <ContactSection />
-            <WorkWithUsSection />
+              
+              {/* Front wave layer */}
+              <path
+                d="M0,60 C240,95 480,95 720,60 C960,25 1200,25 1440,60 L1440,120 L0,120 Z"
+                fill="hsl(211 100% 15%)"
+              />
+            </svg>
+            {/* Bottom cover to hide any lines */}
+            <div className="absolute bottom-0 left-0 right-0 h-2 bg-primary" />
           </div>
         </div>
       </main>

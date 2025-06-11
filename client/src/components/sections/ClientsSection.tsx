@@ -195,7 +195,7 @@ const InfiniteLogoRow = ({
             key={`${client.name}-${index}`}
             className="flex-shrink-0"
           >
-            <div className="relative bg-white/70 dark:bg-gray-100/80 backdrop-blur-md p-4 rounded-2xl border border-gray-200/50 dark:border-gray-300/50 shadow-sm hover:shadow-md transition-all duration-300 h-[80px] sm:h-[90px] md:h-[100px] w-[140px] sm:w-[160px] md:w-[180px] flex items-center justify-center overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/20 before:to-transparent before:opacity-50">
+            <div className="relative bg-gray-200 dark:bg-gray-200/80 backdrop-blur-md p-4 rounded-2xl border border-gray-300/50 dark:border-gray-400/50 shadow-sm hover:shadow-md transition-all duration-300 h-[80px] sm:h-[90px] md:h-[100px] w-[140px] sm:w-[160px] md:w-[180px] flex items-center justify-center overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/20 before:to-transparent before:opacity-50">
               <img
                 src={client.url}
                 alt={client.name}

@@ -9,32 +9,32 @@ const BenefitsSection = () => {
   const { t } = useLanguage();
   
   return (
-    <section id="diferenciais" className="relative py-16 md:py-20 bg-white dark:bg-slate-900 overflow-hidden">
+    <section id="diferenciais" className="relative py-16 md:py-20 bg-white dark:bg-slate-800 overflow-hidden">
       {/* Background Images - Light Theme */}
       <div className="absolute inset-0 dark:hidden">
         <img 
           src="https://www.dropbox.com/scl/fi/iauykzh8d1epy9u107uro/Design-sem-nome-86.svg?rlkey=4cxyhu42nwr4z14c7staqi2li&st=ku61ie4g&raw=1"
           alt=""
-          className="w-full h-full"
+          className="w-full h-full opacity-90"
           style={{ objectFit: 'cover', objectPosition: 'top right' }}
         />
         {/* Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/20 to-white/70 pointer-events-none"></div>
-        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white via-white/80 to-transparent pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/20 pointer-events-none"></div>
+        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white via-white/40 to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white via-white/40 to-transparent pointer-events-none"></div>
       </div>
       {/* Background Images - Dark Theme */}
       <div className="absolute inset-0 hidden dark:block">
         <img 
           src="https://www.dropbox.com/scl/fi/m2ue41c7cn3j91ktu7sbd/Design-sem-nome-87.svg?rlkey=f4nkobzw56c2kovx9aep2i1ph&st=iehy09hn&raw=1"
           alt=""
-          className="w-full h-full opacity-90"
+          className="w-full h-full opacity-50"
           style={{ objectFit: 'cover', objectPosition: 'top right' }}
         />
         {/* Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/70 via-slate-900/20 to-slate-900/70 pointer-events-none"></div>
-        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-slate-900 via-slate-900/80 to-transparent pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-800/70 via-slate-800/30 to-slate-800/70 pointer-events-none"></div>
+        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-slate-800 via-slate-800/80 to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-800 via-slate-800/80 to-transparent pointer-events-none"></div>
       </div>
       
       {/* Red highlight line */}

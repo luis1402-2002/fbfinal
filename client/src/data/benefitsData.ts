@@ -22,7 +22,7 @@ export const benefits: Benefit[] = [
   {
     id: "benefit-4",
     icon: "support",
-    title: "Suporte Especializado",
-    description: "Equipe técnica altamente qualificada oferece consultoria personalizada durante todo o atendimento e ciclo de vida do produto."
+    title: "Atendimento Diferenciado",
+    description: "Suporte técnico especializado com atendimento personalizado. Atendemos cliente final e revendas com preços especiais, oferecendo condições comerciais competitivas para todos os segmentos do mercado."
   }
 ];

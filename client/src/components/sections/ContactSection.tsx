@@ -49,13 +49,13 @@ const ContactSection = () => {
   const { t } = useLanguage();
   
   return (
-    <section id="contato" className="relative pt-12 pb-8 sm:pt-16 sm:pb-10 md:pt-20 md:pb-12 lg:pt-24 lg:pb-16">
+    <section id="contato" className="relative pt-16 pb-20 bg-white dark:bg-slate-800 overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader />
         
-        <div className="mt-12 md:mt-16">
+        <div className="mt-16">
           {/* Form First */}
-          <div className="mb-12 md:mb-16">
+          <div className="mb-16">
             <ContactForm />
           </div>
           
@@ -145,7 +145,9 @@ const ContactForm = () => {
       animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="bg-white dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50 p-6 sm:p-8 md:p-10">
+      <div className="bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 backdrop-blur-sm rounded-3xl shadow-2xl border border-slate-200/50 dark:border-slate-700/30 p-8 sm:p-10 md:p-12 relative overflow-hidden">
+        {/* Decorative gradient */}
+        <div className="absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br from-[#E30613]/10 to-transparent rounded-full blur-3xl"></div>
         
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -472,7 +474,10 @@ const ContactInfo = () => {
       animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
       transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
     >
-      <div className="bg-azul-profundo dark:bg-slate-800 rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10">
+      <div className="bg-gradient-to-br from-azul-profundo to-[#002560] dark:from-slate-800 dark:to-slate-900 rounded-3xl shadow-2xl p-8 sm:p-10 md:p-12 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute -bottom-12 -left-12 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
+        <div className="absolute -top-12 -right-12 w-40 h-40 bg-[#E30613]/10 rounded-full blur-3xl"></div>
         <h3 className="font-garamond text-2xl md:text-3xl text-white text-center mb-8">
           {t('contact.info.title', 'Informações de Contato')}
         </h3>
@@ -480,7 +485,7 @@ const ContactInfo = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {infoItems.map((item, index) => (
             <div key={index} className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="w-14 h-14 bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg border border-white/10">
                 <item.icon className="h-6 w-6 text-white" />
               </div>
               

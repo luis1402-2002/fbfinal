@@ -7,18 +7,18 @@ const CompanySection = () => {
   const { t } = useLanguage();
   
   return (
-    <section id="empresa" className="relative pt-12 pb-16 sm:pt-16 sm:pb-20 md:pt-20 md:pb-24 lg:pt-24 lg:pb-28 bg-white dark:bg-slate-900 overflow-hidden">
+    <section id="empresa" className="relative pt-12 pb-16 sm:pt-16 sm:pb-20 md:pt-20 md:pb-24 lg:pt-24 lg:pb-28 bg-white dark:bg-slate-800 overflow-hidden">
       {/* Background Images - Light Theme */}
       <div className="absolute inset-0 dark:hidden">
         <img 
           src="https://www.dropbox.com/scl/fi/7kjbz77hhv2eom3aupicg/Design-sem-nome-80.svg?rlkey=2ku8yejzrvkum000kmjhftxfl&st=quvqpa8a&raw=1"
           alt=""
-          className="w-full h-full object-cover opacity-60"
+          className="w-full h-full object-cover opacity-80"
         />
         {/* Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/30 to-white/80 pointer-events-none"></div>
-        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white via-white/80 to-transparent pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/20 to-white/60 pointer-events-none"></div>
+        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white via-white/70 to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white via-white/70 to-transparent pointer-events-none"></div>
       </div>
       {/* Background Images - Dark Theme */}
       <div className="absolute inset-0 hidden dark:block">
@@ -28,9 +28,9 @@ const CompanySection = () => {
           className="w-full h-full object-cover opacity-40"
         />
         {/* Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/30 to-slate-900/80 pointer-events-none"></div>
-        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-slate-900 via-slate-900/80 to-transparent pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-800/80 via-slate-800/30 to-slate-800/80 pointer-events-none"></div>
+        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-slate-800 via-slate-800/80 to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-800 via-slate-800/80 to-transparent pointer-events-none"></div>
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,7 +120,7 @@ const HistorySection = () => {
       <div className="order-1 lg:order-2">
         <div className="relative group h-full min-h-[400px] lg:min-h-full">
           {/* Main Image Container */}
-          <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-white dark:bg-slate-800 h-full">
+          <div className="relative overflow-hidden rounded-3xl shadow-2xl bg-white dark:bg-slate-800 h-full">
             <img 
               src="https://www.dropbox.com/scl/fi/hb2m9rl73sd6k6se8o0oi/IMG_9437-2.JPG?rlkey=swmg4z5hnb34cq6crl2hpsjtc&st=rqyc6gbq&raw=1" 
               alt="História da FB Bombas" 
@@ -197,7 +197,7 @@ const CertificationsSection = () => {
         {certifications.map((cert, index) => (
           <motion.div 
             key={index}
-            className="group bg-white dark:bg-slate-800/50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200/50 dark:border-slate-600/30 hover:border-[#E30613]/30 hover:-translate-y-2"
+            className="group bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-800/50 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200/50 dark:border-slate-600/30 hover:border-[#E30613]/30 hover:-translate-y-2"
             initial={{ opacity: 0, y: 30 }}
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -261,7 +261,7 @@ const FactorySection = () => {
     >
       {/* Image Side */}
       <div className="relative group">
-        <div className="relative overflow-hidden rounded-2xl shadow-2xl h-full min-h-[400px]">
+        <div className="relative overflow-hidden rounded-3xl shadow-2xl h-full min-h-[400px]">
           <img 
             src="https://www.dropbox.com/scl/fi/7znzl3jj6xpw3punhxeh0/DSC05486-2-1-1.JPG?rlkey=0oce1tv73y02gmakavzw7sodg&st=hy0940l8&raw=1"
             alt="Parque Fabril FB Bombas" 
@@ -313,12 +313,12 @@ const FactorySection = () => {
           {factoryFeatures.map((feature, index) => (
             <motion.div 
               key={index} 
-              className="flex items-center bg-white dark:bg-slate-800/60 p-4 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-slate-200 dark:border-slate-700/50"
+              className="flex items-center bg-gradient-to-br from-white to-slate-50 dark:from-slate-800/60 dark:to-slate-800/40 p-4 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-slate-200/50 dark:border-slate-700/30"
               initial={{ opacity: 0, x: -20 }}
               animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
               transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
             >
-              <div className="flex-shrink-0 mr-4 w-12 h-12 bg-gradient-to-br from-[#E30613] to-[#c60411] rounded-xl flex items-center justify-center text-white shadow-md">
+              <div className="flex-shrink-0 mr-4 w-12 h-12 bg-gradient-to-br from-[#E30613] to-[#c60411] rounded-2xl flex items-center justify-center text-white shadow-lg">
                 {feature.icon}
               </div>
               <span className="text-slate-700 dark:text-slate-200 font-medium">{feature.text}</span>

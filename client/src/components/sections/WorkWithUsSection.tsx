@@ -7,8 +7,7 @@ const WorkWithUsSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="trabalhe-conosco" className="work-with-us-section relative py-16 md:py-20 overflow-hidden">
-      
+    <section id="trabalhe-conosco" className="work-with-us-section relative py-16 md:py-20 bg-white dark:bg-slate-800 overflow-hidden">
       <div className="relative z-10 max-w-container mx-auto px-4 md:px-8">
         <SectionHeader />
         <BenefitsGrid />
@@ -47,12 +46,12 @@ const BenefitsGrid = () => {
 
   const benefits = [
     {
-      icon: <Users className="h-8 w-8 text-[#E30613]" />,
+      icon: <Users className="h-8 w-8 text-white" />,
       title: t('careers.team.title', 'Equipe Especializada'),
       description: t('careers.team.desc', 'Trabalhe com profissionais altamente qualificados e apaixonados por tecnologia')
     },
     {
-      icon: <Award className="h-8 w-8 text-[#E30613]" />,
+      icon: <Award className="h-8 w-8 text-white" />,
       title: t('careers.growth.title', 'Crescimento Profissional'),
       description: t('careers.growth.desc', 'Oportunidades de desenvolvimento e capacitação contínua')
     }
@@ -69,13 +68,13 @@ const BenefitsGrid = () => {
       {benefits.map((benefit, index) => (
         <motion.div
           key={index}
-          className="bg-slate-50 dark:bg-slate-800/30 p-8 rounded-xl border border-slate-200 dark:border-slate-700/50 hover:shadow-lg transition-all duration-300"
+          className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-800/50 p-8 rounded-2xl border border-slate-200 dark:border-slate-700/30 hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.4, delay: index * 0.1 }}
         >
           <div className="flex flex-col items-center text-center">
-            <div className="mb-4 p-3 bg-white dark:bg-slate-700 rounded-full shadow-sm">
+            <div className="mb-4 p-4 bg-gradient-to-br from-[#E30613] to-[#c60411] rounded-2xl shadow-lg transform group-hover:scale-110 transition-transform duration-300">
               {benefit.icon}
             </div>
             <h3 className="text-xl font-bold text-azul-profundo dark:text-white mb-3">
@@ -103,11 +102,14 @@ const CallToAction = () => {
       animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.6, delay: 0.2 }}
     >
-      <div className="bg-slate-50 dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 max-w-2xl mx-auto shadow-sm">
-        <h3 className="text-2xl font-bold text-azul-profundo dark:text-white mb-4">
+      <div className="bg-gradient-to-br from-azul-profundo to-[#002560] dark:from-slate-700 dark:to-slate-800 p-10 rounded-3xl border border-slate-200 dark:border-slate-600 max-w-2xl mx-auto shadow-2xl relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#E30613]/10 dark:bg-[#E30613]/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/5 dark:bg-white/10 rounded-full blur-3xl"></div>
+        <h3 className="text-2xl font-bold text-white mb-4">
           {t('careers.cta.title', 'Pronto para fazer a diferença?')}
         </h3>
-        <p className="text-cinza-titanio dark:text-slate-300 mb-6 leading-relaxed">
+        <p className="text-white/80 dark:text-white/90 mb-6 leading-relaxed">
           {t('careers.cta.description', 'Envie seu currículo e faça parte da nossa equipe de excelência')}
         </p>
         <a
@@ -120,7 +122,7 @@ const CallToAction = () => {
               document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
             }
           }}
-          className="inline-flex items-center px-8 py-4 bg-[#E30613] hover:bg-[#c60411] text-white rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+          className="inline-flex items-center px-8 py-4 bg-white text-azul-profundo hover:bg-slate-100 dark:bg-[#E30613] dark:text-white dark:hover:bg-[#c60411] rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
         >
           {t('careers.cta.button', 'Entre em Contato')}
           <ArrowRight className="ml-2 h-5 w-5" />

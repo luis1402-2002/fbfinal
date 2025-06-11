@@ -121,7 +121,9 @@ const GearPumpSpecificationsPage: React.FC = () => {
     ? `/src/assets/products/fbe/${diameter}/drawing-white.png`
     : `/src/assets/products/fbe/${diameter}/drawing-black.png`;
 
-  const productImage = `/src/assets/products/fbe/${diameter}/photo.png`;
+  const productImage = (currentModel?.model === '1" D' || currentModel?.model === '1" DA' || currentModel?.code === 'FBE-1-D' || currentModel?.code === 'FBE-1-DA') 
+    ? `/src/assets/products/fbe/${diameter}/photo-d-da.png?v=${Date.now()}`
+    : `/src/assets/products/fbe/${diameter}/photo.png`;
 
   // Get performance data for current model
   const getPerformanceData = () => {
@@ -637,36 +639,49 @@ const GearPumpSpecificationsPage: React.FC = () => {
                               </tr>
                             </thead>
                             <tbody>
-                              {performanceInfo.availableRPMs.map((rpm: number, rpmIdx: number) => (
-                                <React.Fragment key={rpm}>
-                                  <tr>
-                                    <td rowSpan={2} className="border border-slate-300 dark:border-slate-600 p-2 text-center font-bold">
-                                      FBE {currentModel.model}
-                                    </td>
-                                    <td rowSpan={2} className="border border-slate-300 dark:border-slate-600 p-2 text-center font-bold">
-                                      {rpm}
-                                    </td>
-                                    <td className="border border-slate-300 dark:border-slate-600 p-2 text-center bg-blue-50 dark:bg-blue-900/20">
-                                      L/min
-                                    </td>
-                                    {performanceInfo.data[rpm] && performanceInfo.data[rpm].map((item: any, idx: number) => (
-                                      <td key={idx} className="border border-slate-300 dark:border-slate-600 p-2 text-center">
-                                        {item.flow}
+                              {performanceInfo.availableRPMs.map((rpm: number, rpmIdx: number) => {
+                                // Define alternating colors for each RPM
+                                const colorClasses = [
+                                  'bg-blue-50 dark:bg-blue-900/20',
+                                  'bg-emerald-50 dark:bg-emerald-900/20',
+                                  'bg-purple-50 dark:bg-purple-900/20',
+                                  'bg-amber-50 dark:bg-amber-900/20',
+                                  'bg-rose-50 dark:bg-rose-900/20',
+                                  'bg-cyan-50 dark:bg-cyan-900/20'
+                                ];
+                                const rowColor = colorClasses[rpmIdx % colorClasses.length];
+                                
+                                return (
+                                  <React.Fragment key={rpm}>
+                                    <tr>
+                                      <td rowSpan={2} className={`border border-slate-300 dark:border-slate-600 p-2 text-center font-bold ${rowColor}`}>
+                                        FBE {currentModel.model}
                                       </td>
-                                    ))}
-                                  </tr>
-                                  <tr>
-                                    <td className="border border-slate-300 dark:border-slate-600 p-2 text-center bg-green-50 dark:bg-green-900/20">
-                                      {language === "pt" ? "CV" : "HP"}
-                                    </td>
-                                    {performanceInfo.data[rpm] && performanceInfo.data[rpm].map((item: any, idx: number) => (
-                                      <td key={idx} className="border border-slate-300 dark:border-slate-600 p-2 text-center">
-                                        {(parseFloat(item.power) / 0.7355).toFixed(2)}
+                                      <td rowSpan={2} className={`border border-slate-300 dark:border-slate-600 p-2 text-center font-bold ${rowColor}`}>
+                                        {rpm}
                                       </td>
-                                    ))}
-                                  </tr>
-                                </React.Fragment>
-                              ))}
+                                      <td className="border border-slate-300 dark:border-slate-600 p-2 text-center bg-blue-100 dark:bg-blue-800/30 font-medium">
+                                        L/min
+                                      </td>
+                                      {performanceInfo.data[rpm] && performanceInfo.data[rpm].map((item: any, idx: number) => (
+                                        <td key={idx} className={`border border-slate-300 dark:border-slate-600 p-2 text-center ${rowColor}`}>
+                                          {item.flow}
+                                        </td>
+                                      ))}
+                                    </tr>
+                                    <tr>
+                                      <td className="border border-slate-300 dark:border-slate-600 p-2 text-center bg-green-100 dark:bg-green-800/30 font-medium">
+                                        {language === "pt" ? "CV" : "HP"}
+                                      </td>
+                                      {performanceInfo.data[rpm] && performanceInfo.data[rpm].map((item: any, idx: number) => (
+                                        <td key={idx} className={`border border-slate-300 dark:border-slate-600 p-2 text-center ${rowColor}`}>
+                                          {(parseFloat(item.power) / 0.7355).toFixed(2)}
+                                        </td>
+                                      ))}
+                                    </tr>
+                                  </React.Fragment>
+                                );
+                              })}
                             </tbody>
                           </table>
                         </div>

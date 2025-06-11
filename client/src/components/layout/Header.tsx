@@ -83,13 +83,13 @@ const Header = () => {
       ref={headerRef}
       className={`sticky top-0 z-50 w-full border-b ${
         isScrolled 
-          ? "bg-white/95 dark:bg-primary/95 backdrop-blur-sm shadow-sm border-slate-200/70 dark:border-slate-800/70" 
-          : "bg-white dark:bg-primary border-slate-200 dark:border-slate-800"
+          ? "bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg border-slate-200/50 dark:border-slate-700/50" 
+          : "bg-white dark:bg-slate-900 border-slate-200/80 dark:border-slate-700/80"
       } transition-all duration-300`}
       itemScope itemType="http://schema.org/Organization"
     >
       {/* Barra superior com informações de contato e seletores - apenas desktop */}
-      <div className="hidden md:block bg-slate-50 dark:bg-slate-900 border-b border-slate-200/70 dark:border-slate-800/70 py-1.5">
+      <div className="hidden md:block bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 border-b border-slate-200/50 dark:border-slate-700/50 py-1.5">
         <div className="w-full max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center gap-4 text-xs text-slate-600 dark:text-slate-400">
             <a 
@@ -212,7 +212,7 @@ const Header = () => {
                 )}
               >
                 <img 
-                  src="/images/logos/pump-icon.svg"
+                  src="/images/pump-icon.png"
                   alt=""
                   className="w-[18px] h-[18px] mr-2 dark:brightness-0 dark:invert"
                 />
@@ -294,7 +294,7 @@ const Header = () => {
               e.preventDefault();
               window.location.href = '/#contato';
             }}
-            className="hidden md:flex ml-2 lg:ml-3 bg-[#E30613] hover:bg-[#c60411] text-white rounded-md px-4 py-2 font-medium transition-colors duration-200 items-center"
+            className="hidden md:flex ml-2 lg:ml-3 bg-gradient-to-r from-[#E30613] to-[#c60411] hover:from-[#c60411] hover:to-[#a6030f] text-white rounded-lg px-5 py-2.5 font-medium transition-all duration-300 items-center shadow-md hover:shadow-lg hover:scale-105"
           >
             <Phone className="w-4 h-4 mr-2" />
             <span>{t('nav.contact')}</span>
@@ -379,7 +379,7 @@ const Header = () => {
                     >
                       <div className="flex items-center">
                         <img 
-                          src="/images/logos/pump-icon.svg"
+                          src="/images/pump-icon.png"
                           alt=""
                           className="w-5 h-5 mr-3 dark:brightness-0 dark:invert"
                         />

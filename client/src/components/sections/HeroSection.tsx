@@ -69,7 +69,7 @@ const HeroSection = () => {
       
 
       {/* Hero content com animações escalonadas */}
-      <div className="relative z-10 max-w-container mx-auto px-4 md:px-8 min-h-[100vh] flex items-center pb-20">
+      <div className="relative z-10 max-w-container mx-auto px-4 md:px-8 min-h-[95vh] flex items-center pb-16">
         {/* Logo 3D na metade direita - alinhada com o texto */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5, x: 100 }}
@@ -101,7 +101,7 @@ const HeroSection = () => {
           ></motion.div>
           
           <motion.div
-            className="inline-flex items-center gap-3 mt-8 sm:mt-12 md:mt-16 lg:mt-20 mb-6"
+            className="inline-flex items-center gap-3 mt-8 sm:mt-10 md:mt-12 lg:mt-16 mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}

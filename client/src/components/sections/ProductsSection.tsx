@@ -15,15 +15,15 @@ const ProductsSection = () => {
   const [fbotImage, setFbotImage] = useState(0);
   
   const fbcnImages = [
-    "/src/assets/fotosfb/FBCN/FBCN FRENTE.png",
-    "/src/assets/fotosfb/FBCN/FBCN LADO.png",
-    "/src/assets/fotosfb/FBCN/FBCN TRÁS.png"
+    "/images/fotosfb/FBCN/FBCN FRENTE.png",
+    "/images/fotosfb/FBCN/FBCN LADO.png",
+    "/images/fotosfb/FBCN/FBCN TRÁS.png"
   ];
   
   const fbotImages = [
-    "/src/assets/fotosfb/FBOT/FBOT FRENTE.png",
-    "/src/assets/fotosfb/FBOT/FBOT LADO.png",
-    "/src/assets/fotosfb/FBOT/FBOT TRÁS.png"
+    "/images/fotosfb/FBOT/FBOT FRENTE.png",
+    "/images/fotosfb/FBOT/FBOT LADO.png",
+    "/images/fotosfb/FBOT/FBOT TRÁS.png"
   ];
   
   // Auto-rotate carousel images
@@ -93,7 +93,7 @@ const ProductsSection = () => {
               <div className="p-6 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20">
                 <div className="flex items-center justify-center">
                   <img 
-                    src="/src/assets/products/fbe/4/photo.png"
+                    src="/images/products/fbe/4/photo.png"
                     alt="FBE 4" 
                     className="w-48 h-48 object-contain drop-shadow-2xl"
                   />

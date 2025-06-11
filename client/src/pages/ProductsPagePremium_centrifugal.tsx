@@ -77,12 +77,12 @@
                     {/* Image Carousel */}
                     <div className="mt-12 relative overflow-hidden rounded-2xl">
                       <div className="flex animate-scroll-x">
-                        <img src="/src/assets/products/fbcn/fbcn-1.png" alt="FBCN 1" className="w-64 h-64 object-contain flex-shrink-0" />
-                        <img src="/src/assets/products/fbcn/fbcn-2.png" alt="FBCN 2" className="w-64 h-64 object-contain flex-shrink-0" />
-                        <img src="/src/assets/products/fbcn/fbcn-3.png" alt="FBCN 3" className="w-64 h-64 object-contain flex-shrink-0" />
-                        <img src="/src/assets/products/fbcn.png" alt="FBCN Main" className="w-64 h-64 object-contain flex-shrink-0" />
-                        <img src="/src/assets/products/fbcn/fbcn-1.png" alt="FBCN 1" className="w-64 h-64 object-contain flex-shrink-0" />
-                        <img src="/src/assets/products/fbcn/fbcn-2.png" alt="FBCN 2" className="w-64 h-64 object-contain flex-shrink-0" />
+                        <img src="/images/products/fbcn/fbcn-1.png" alt="FBCN 1" className="w-64 h-64 object-contain flex-shrink-0" />
+                        <img src="/images/products/fbcn/fbcn-2.png" alt="FBCN 2" className="w-64 h-64 object-contain flex-shrink-0" />
+                        <img src="/images/products/fbcn/fbcn-3.png" alt="FBCN 3" className="w-64 h-64 object-contain flex-shrink-0" />
+                        <img src="/images/products/fbcn.png" alt="FBCN Main" className="w-64 h-64 object-contain flex-shrink-0" />
+                        <img src="/images/products/fbcn/fbcn-1.png" alt="FBCN 1" className="w-64 h-64 object-contain flex-shrink-0" />
+                        <img src="/images/products/fbcn/fbcn-2.png" alt="FBCN 2" className="w-64 h-64 object-contain flex-shrink-0" />
                       </div>
                     </div>
 
@@ -219,12 +219,12 @@
                     {/* Image Carousel */}
                     <div className="mt-12 relative overflow-hidden rounded-2xl">
                       <div className="flex animate-scroll-x-reverse">
-                        <img src="/src/assets/products/fbot/fbot-1.png" alt="FBOT 1" className="w-64 h-64 object-contain flex-shrink-0" />
-                        <img src="/src/assets/products/fbot/fbot-2.png" alt="FBOT 2" className="w-64 h-64 object-contain flex-shrink-0" />
-                        <img src="/src/assets/products/fbot/fbot-3.png" alt="FBOT 3" className="w-64 h-64 object-contain flex-shrink-0" />
-                        <img src="/src/assets/products/fbot.png" alt="FBOT Main" className="w-64 h-64 object-contain flex-shrink-0" />
-                        <img src="/src/assets/products/fbot/fbot-1.png" alt="FBOT 1" className="w-64 h-64 object-contain flex-shrink-0" />
-                        <img src="/src/assets/products/fbot/fbot-2.png" alt="FBOT 2" className="w-64 h-64 object-contain flex-shrink-0" />
+                        <img src="/images/products/fbot/fbot-1.png" alt="FBOT 1" className="w-64 h-64 object-contain flex-shrink-0" />
+                        <img src="/images/products/fbot/fbot-2.png" alt="FBOT 2" className="w-64 h-64 object-contain flex-shrink-0" />
+                        <img src="/images/products/fbot/fbot-3.png" alt="FBOT 3" className="w-64 h-64 object-contain flex-shrink-0" />
+                        <img src="/images/products/fbot.png" alt="FBOT Main" className="w-64 h-64 object-contain flex-shrink-0" />
+                        <img src="/images/products/fbot/fbot-1.png" alt="FBOT 1" className="w-64 h-64 object-contain flex-shrink-0" />
+                        <img src="/images/products/fbot/fbot-2.png" alt="FBOT 2" className="w-64 h-64 object-contain flex-shrink-0" />
                       </div>
                     </div>
 

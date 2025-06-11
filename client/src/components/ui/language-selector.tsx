@@ -3,26 +3,21 @@ import { ChevronDown } from "lucide-react";
 import { useLanguage, Language } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 
-// Import flags as modules for better performance and bundling
-import brazilFlag from "@/assets/flags/brazil.svg";
-import usaFlag from "@/assets/flags/usa.svg";
-import spainFlag from "@/assets/flags/spain.svg";
-
 const languages = [
   { 
     code: 'pt' as Language, 
     name: 'Português', 
-    flag: brazilFlag
+    flag: '/images/flags/brazil.svg'
   },
   { 
     code: 'en' as Language, 
     name: 'English', 
-    flag: usaFlag
+    flag: '/images/flags/usa.svg'
   },
   { 
     code: 'es' as Language, 
     name: 'Español', 
-    flag: spainFlag
+    flag: '/images/flags/spain.svg'
   }
 ];
 

@@ -1,0 +1,627 @@
+{
+  "bombas_engrenagem_externa_FBE": {
+    "FBE_1/8": {
+      "modelo": "FBE 1/8\"",
+      "configuracoes": [
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 3.50, "potencia_cv": 0.05},
+            {"pressao_bar": 2.00, "vazao_l_min": 3.40, "potencia_cv": 0.07},
+            {"pressao_bar": 4.00, "vazao_l_min": 3.30, "potencia_cv": 0.09},
+            {"pressao_bar": 6.00, "vazao_l_min": 3.20, "potencia_cv": 0.11},
+            {"pressao_bar": 8.00, "vazao_l_min": 3.10, "potencia_cv": 0.13},
+            {"pressao_bar": 10.00, "vazao_l_min": 3.00, "potencia_cv": 0.15},
+            {"pressao_bar": 12.00, "vazao_l_min": 2.90, "potencia_cv": 0.18},
+            {"pressao_bar": 14.00, "vazao_l_min": 2.70, "potencia_cv": 0.21},
+            {"pressao_bar": 16.00, "vazao_l_min": 2.50, "potencia_cv": 0.24},
+            {"pressao_bar": 18.00, "vazao_l_min": 2.30, "potencia_cv": 0.27},
+            {"pressao_bar": 20.00, "vazao_l_min": 2.00, "potencia_cv": 0.30},
+            {"pressao_bar": 22.00, "vazao_l_min": 1.70, "potencia_cv": 0.34}
+          ]
+        },
+        {
+          "rpm": 1750,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 5.15, "potencia_cv": 0.07},
+            {"pressao_bar": 2.00, "vazao_l_min": 5.00, "potencia_cv": 0.09},
+            {"pressao_bar": 4.00, "vazao_l_min": 4.85, "potencia_cv": 0.12},
+            {"pressao_bar": 6.00, "vazao_l_min": 4.70, "potencia_cv": 0.14},
+            {"pressao_bar": 8.00, "vazao_l_min": 4.55, "potencia_cv": 0.17},
+            {"pressao_bar": 10.00, "vazao_l_min": 4.40, "potencia_cv": 0.19},
+            {"pressao_bar": 12.00, "vazao_l_min": 4.25, "potencia_cv": 0.23},
+            {"pressao_bar": 14.00, "vazao_l_min": 4.10, "potencia_cv": 0.27},
+            {"pressao_bar": 16.00, "vazao_l_min": 3.95, "potencia_cv": 0.31}
+          ]
+        }
+      ]
+    },
+    "FBE_1/4": {
+      "modelo": "FBE 1/4\"",
+      "configuracoes": [
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 6.00, "potencia_cv": 0.10},
+            {"pressao_bar": 2.00, "vazao_l_min": 5.90, "potencia_cv": 0.14},
+            {"pressao_bar": 4.00, "vazao_l_min": 5.80, "potencia_cv": 0.18},
+            {"pressao_bar": 6.00, "vazao_l_min": 5.70, "potencia_cv": 0.22},
+            {"pressao_bar": 8.00, "vazao_l_min": 5.60, "potencia_cv": 0.26},
+            {"pressao_bar": 10.00, "vazao_l_min": 5.40, "potencia_cv": 0.30},
+            {"pressao_bar": 12.00, "vazao_l_min": 5.20, "potencia_cv": 0.36},
+            {"pressao_bar": 14.00, "vazao_l_min": 5.00, "potencia_cv": 0.42},
+            {"pressao_bar": 16.00, "vazao_l_min": 4.60, "potencia_cv": 0.48},
+            {"pressao_bar": 18.00, "vazao_l_min": 4.20, "potencia_cv": 0.54},
+            {"pressao_bar": 20.00, "vazao_l_min": 3.70, "potencia_cv": 0.60},
+            {"pressao_bar": 22.00, "vazao_l_min": 3.10, "potencia_cv": 0.68}
+          ]
+        },
+        {
+          "rpm": 1750,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 8.90, "potencia_cv": 0.13},
+            {"pressao_bar": 2.00, "vazao_l_min": 8.70, "potencia_cv": 0.18},
+            {"pressao_bar": 4.00, "vazao_l_min": 8.50, "potencia_cv": 0.23},
+            {"pressao_bar": 6.00, "vazao_l_min": 8.30, "potencia_cv": 0.28},
+            {"pressao_bar": 8.00, "vazao_l_min": 8.10, "potencia_cv": 0.33},
+            {"pressao_bar": 10.00, "vazao_l_min": 7.90, "potencia_cv": 0.39},
+            {"pressao_bar": 12.00, "vazao_l_min": 7.70, "potencia_cv": 0.46},
+            {"pressao_bar": 14.00, "vazao_l_min": 7.40, "potencia_cv": 0.54},
+            {"pressao_bar": 16.00, "vazao_l_min": 6.80, "potencia_cv": 0.62}
+          ]
+        }
+      ]
+    },
+    "FBE_3/8": {
+      "modelo": "FBE 3/8\"",
+      "configuracoes": [
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 9.50, "potencia_cv": 0.15},
+            {"pressao_bar": 2.00, "vazao_l_min": 9.40, "potencia_cv": 0.17},
+            {"pressao_bar": 4.00, "vazao_l_min": 9.30, "potencia_cv": 0.23},
+            {"pressao_bar": 6.00, "vazao_l_min": 9.20, "potencia_cv": 0.42},
+            {"pressao_bar": 8.00, "vazao_l_min": 9.10, "potencia_cv": 0.52},
+            {"pressao_bar": 10.00, "vazao_l_min": 8.90, "potencia_cv": 0.65},
+            {"pressao_bar": 12.00, "vazao_l_min": 8.60, "potencia_cv": 0.76},
+            {"pressao_bar": 14.00, "vazao_l_min": 8.20, "potencia_cv": 0.88},
+            {"pressao_bar": 16.00, "vazao_l_min": 7.70, "potencia_cv": 1.02},
+            {"pressao_bar": 18.00, "vazao_l_min": 7.10, "potencia_cv": 1.30},
+            {"pressao_bar": 20.00, "vazao_l_min": 6.50, "potencia_cv": 1.70},
+            {"pressao_bar": 22.00, "vazao_l_min": 5.80, "potencia_cv": 2.10}
+          ]
+        },
+        {
+          "rpm": 1750,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 14.00, "potencia_cv": 0.19},
+            {"pressao_bar": 2.00, "vazao_l_min": 13.90, "potencia_cv": 0.22},
+            {"pressao_bar": 4.00, "vazao_l_min": 13.80, "potencia_cv": 0.30},
+            {"pressao_bar": 6.00, "vazao_l_min": 13.60, "potencia_cv": 0.54},
+            {"pressao_bar": 8.00, "vazao_l_min": 13.40, "potencia_cv": 0.67},
+            {"pressao_bar": 10.00, "vazao_l_min": 13.10, "potencia_cv": 0.80},
+            {"pressao_bar": 12.00, "vazao_l_min": 12.70, "potencia_cv": 0.91},
+            {"pressao_bar": 14.00, "vazao_l_min": 12.10, "potencia_cv": 1.14},
+            {"pressao_bar": 16.00, "vazao_l_min": 11.40, "potencia_cv": null}
+          ]
+        }
+      ]
+    },
+    "FBE_1/2": {
+      "modelo": "FBE 1/2\"",
+      "configuracoes": [
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 12.00, "potencia_cv": 0.30},
+            {"pressao_bar": 2.00, "vazao_l_min": 11.90, "potencia_cv": 0.40},
+            {"pressao_bar": 4.00, "vazao_l_min": 11.80, "potencia_cv": 0.50},
+            {"pressao_bar": 6.00, "vazao_l_min": 11.70, "potencia_cv": 0.62},
+            {"pressao_bar": 8.00, "vazao_l_min": 11.60, "potencia_cv": 0.75},
+            {"pressao_bar": 10.00, "vazao_l_min": 11.40, "potencia_cv": 0.83},
+            {"pressao_bar": 12.00, "vazao_l_min": 11.20, "potencia_cv": 0.92},
+            {"pressao_bar": 14.00, "vazao_l_min": 10.80, "potencia_cv": 1.00},
+            {"pressao_bar": 16.00, "vazao_l_min": 10.20, "potencia_cv": 1.40},
+            {"pressao_bar": 18.00, "vazao_l_min": 9.60, "potencia_cv": 1.60},
+            {"pressao_bar": 20.00, "vazao_l_min": 9.00, "potencia_cv": 1.90},
+            {"pressao_bar": 22.00, "vazao_l_min": 8.20, "potencia_cv": 2.10}
+          ]
+        },
+        {
+          "rpm": 1750,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 17.70, "potencia_cv": 0.39},
+            {"pressao_bar": 2.00, "vazao_l_min": 17.60, "potencia_cv": 0.52},
+            {"pressao_bar": 4.00, "vazao_l_min": 17.50, "potencia_cv": 0.65},
+            {"pressao_bar": 6.00, "vazao_l_min": 17.30, "potencia_cv": 0.80},
+            {"pressao_bar": 8.00, "vazao_l_min": 17.10, "potencia_cv": 0.97},
+            {"pressao_bar": 10.00, "vazao_l_min": 16.80, "potencia_cv": 1.07},
+            {"pressao_bar": 12.00, "vazao_l_min": 16.40, "potencia_cv": 1.18},
+            {"pressao_bar": 14.00, "vazao_l_min": 16.00, "potencia_cv": 1.30},
+            {"pressao_bar": 16.00, "vazao_l_min": 15.00, "potencia_cv": 1.82}
+          ]
+        }
+      ]
+    },
+    "FBE_3/4": {
+      "modelo": "FBE 3/4\"",
+      "configuracoes": [
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 30.00, "potencia_cv": 0.40},
+            {"pressao_bar": 2.00, "vazao_l_min": 29.50, "potencia_cv": 0.50},
+            {"pressao_bar": 4.00, "vazao_l_min": 29.00, "potencia_cv": 0.75},
+            {"pressao_bar": 6.00, "vazao_l_min": 28.50, "potencia_cv": 1.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 28.00, "potencia_cv": 1.40},
+            {"pressao_bar": 10.00, "vazao_l_min": 27.00, "potencia_cv": 1.75},
+            {"pressao_bar": 12.00, "vazao_l_min": 26.00, "potencia_cv": 2.00},
+            {"pressao_bar": 14.00, "vazao_l_min": 25.00, "potencia_cv": 2.30},
+            {"pressao_bar": 16.00, "vazao_l_min": 24.00, "potencia_cv": 2.70},
+            {"pressao_bar": 18.00, "vazao_l_min": 22.00, "potencia_cv": 3.00},
+            {"pressao_bar": 20.00, "vazao_l_min": 20.00, "potencia_cv": 3.20},
+            {"pressao_bar": 22.00, "vazao_l_min": 17.00, "potencia_cv": 3.50}
+          ]
+        },
+        {
+          "rpm": 1750,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 44.40, "potencia_cv": 0.40},
+            {"pressao_bar": 2.00, "vazao_l_min": 43.60, "potencia_cv": 0.50},
+            {"pressao_bar": 4.00, "vazao_l_min": 42.80, "potencia_cv": 0.90},
+            {"pressao_bar": 6.00, "vazao_l_min": 42.00, "potencia_cv": 1.20},
+            {"pressao_bar": 8.00, "vazao_l_min": 41.00, "potencia_cv": 1.70},
+            {"pressao_bar": 10.00, "vazao_l_min": 40.00, "potencia_cv": 2.00},
+            {"pressao_bar": 12.00, "vazao_l_min": 38.00, "potencia_cv": 2.40},
+            {"pressao_bar": 14.00, "vazao_l_min": 37.00, "potencia_cv": 2.90}
+          ]
+        }
+      ]
+    },
+    "FBE_1": {
+      "modelo": "FBE 1\"",
+      "configuracoes": [
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 42.00, "potencia_cv": 0.40},
+            {"pressao_bar": 2.00, "vazao_l_min": 41.50, "potencia_cv": 0.50},
+            {"pressao_bar": 4.00, "vazao_l_min": 41.00, "potencia_cv": 0.75},
+            {"pressao_bar": 6.00, "vazao_l_min": 40.50, "potencia_cv": 1.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 40.00, "potencia_cv": 1.50},
+            {"pressao_bar": 10.00, "vazao_l_min": 39.00, "potencia_cv": 2.00},
+            {"pressao_bar": 12.00, "vazao_l_min": 38.00, "potencia_cv": 2.50},
+            {"pressao_bar": 14.00, "vazao_l_min": 37.00, "potencia_cv": 3.00},
+            {"pressao_bar": 16.00, "vazao_l_min": 36.00, "potencia_cv": 3.50},
+            {"pressao_bar": 18.00, "vazao_l_min": 34.00, "potencia_cv": 4.00},
+            {"pressao_bar": 20.00, "vazao_l_min": 32.00, "potencia_cv": 4.50},
+            {"pressao_bar": 22.00, "vazao_l_min": 29.00, "potencia_cv": 5.00}
+          ]
+        },
+        {
+          "rpm": 1750,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 62.00, "potencia_cv": 0.60},
+            {"pressao_bar": 2.00, "vazao_l_min": 61.50, "potencia_cv": 0.70},
+            {"pressao_bar": 4.00, "vazao_l_min": 61.00, "potencia_cv": 1.10},
+            {"pressao_bar": 6.00, "vazao_l_min": 60.00, "potencia_cv": 1.70},
+            {"pressao_bar": 8.00, "vazao_l_min": 59.00, "potencia_cv": 2.30},
+            {"pressao_bar": 10.00, "vazao_l_min": 58.00, "potencia_cv": 2.90},
+            {"pressao_bar": 12.00, "vazao_l_min": 57.00, "potencia_cv": 3.60},
+            {"pressao_bar": 14.00, "vazao_l_min": 55.00, "potencia_cv": 4.20}
+          ]
+        }
+      ]
+    },
+    "FBE_1_A": {
+      "modelo": "FBE 1\" A",
+      "configuracoes": [
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 50.00, "potencia_cv": 0.75},
+            {"pressao_bar": 2.00, "vazao_l_min": 49.00, "potencia_cv": 1.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 48.00, "potencia_cv": 1.50},
+            {"pressao_bar": 6.00, "vazao_l_min": 47.00, "potencia_cv": 2.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 45.50, "potencia_cv": 2.50},
+            {"pressao_bar": 10.00, "vazao_l_min": 44.00, "potencia_cv": 3.00},
+            {"pressao_bar": 12.00, "vazao_l_min": 42.00, "potencia_cv": 3.70},
+            {"pressao_bar": 14.00, "vazao_l_min": 40.00, "potencia_cv": 4.00},
+            {"pressao_bar": 16.00, "vazao_l_min": 38.00, "potencia_cv": 4.50},
+            {"pressao_bar": 18.00, "vazao_l_min": 35.00, "potencia_cv": 5.20},
+            {"pressao_bar": 20.00, "vazao_l_min": 33.00, "potencia_cv": 6.00},
+            {"pressao_bar": 22.00, "vazao_l_min": 31.00, "potencia_cv": 7.50}
+          ]
+        },
+        {
+          "rpm": 1750,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 74.00, "potencia_cv": 0.75},
+            {"pressao_bar": 2.00, "vazao_l_min": 72.50, "potencia_cv": 1.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 71.00, "potencia_cv": 1.50},
+            {"pressao_bar": 6.00, "vazao_l_min": 69.00, "potencia_cv": 2.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 67.00, "potencia_cv": 3.00},
+            {"pressao_bar": 10.00, "vazao_l_min": 65.00, "potencia_cv": 3.50},
+            {"pressao_bar": 12.00, "vazao_l_min": 63.00, "potencia_cv": 4.00},
+            {"pressao_bar": 14.00, "vazao_l_min": 60.00, "potencia_cv": 4.50}
+          ]
+        }
+      ]
+    },
+    "FBE_1_D": {
+      "modelo": "FBE 1\" D",
+      "configuracoes": [
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 60.00, "potencia_cv": 0.75},
+            {"pressao_bar": 2.00, "vazao_l_min": 59.50, "potencia_cv": 1.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 59.00, "potencia_cv": 1.50},
+            {"pressao_bar": 6.00, "vazao_l_min": 58.50, "potencia_cv": 2.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 58.00, "potencia_cv": 2.50},
+            {"pressao_bar": 10.00, "vazao_l_min": 57.00, "potencia_cv": 3.00},
+            {"pressao_bar": 12.00, "vazao_l_min": 56.00, "potencia_cv": 3.70},
+            {"pressao_bar": 14.00, "vazao_l_min": 55.00, "potencia_cv": 4.50},
+            {"pressao_bar": 16.00, "vazao_l_min": 54.00, "potencia_cv": 5.20},
+            {"pressao_bar": 18.00, "vazao_l_min": 52.00, "potencia_cv": 6.00},
+            {"pressao_bar": 20.00, "vazao_l_min": 50.00, "potencia_cv": 7.00},
+            {"pressao_bar": 22.00, "vazao_l_min": 48.00, "potencia_cv": 8.00}
+          ]
+        },
+        {
+          "rpm": 1750,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 88.60, "potencia_cv": 0.75},
+            {"pressao_bar": 2.00, "vazao_l_min": 88.00, "potencia_cv": 1.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 87.30, "potencia_cv": 1.50},
+            {"pressao_bar": 6.00, "vazao_l_min": 86.60, "potencia_cv": 2.20},
+            {"pressao_bar": 8.00, "vazao_l_min": 85.80, "potencia_cv": 3.10},
+            {"pressao_bar": 10.00, "vazao_l_min": 84.90, "potencia_cv": 3.90},
+            {"pressao_bar": 12.00, "vazao_l_min": 83.80, "potencia_cv": 4.90}
+          ]
+        }
+      ]
+    },
+    "FBE_1_DA": {
+      "modelo": "FBE 1\" DA",
+      "configuracoes": [
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 75.00, "potencia_cv": 1.00},
+            {"pressao_bar": 2.00, "vazao_l_min": 74.00, "potencia_cv": 1.50},
+            {"pressao_bar": 4.00, "vazao_l_min": 73.00, "potencia_cv": 2.00},
+            {"pressao_bar": 6.00, "vazao_l_min": 71.50, "potencia_cv": 2.50},
+            {"pressao_bar": 8.00, "vazao_l_min": 70.00, "potencia_cv": 3.00},
+            {"pressao_bar": 10.00, "vazao_l_min": 68.50, "potencia_cv": 3.70},
+            {"pressao_bar": 12.00, "vazao_l_min": 67.00, "potencia_cv": 4.50},
+            {"pressao_bar": 14.00, "vazao_l_min": 65.00, "potencia_cv": 5.20},
+            {"pressao_bar": 16.00, "vazao_l_min": 63.00, "potencia_cv": 6.00},
+            {"pressao_bar": 18.00, "vazao_l_min": 61.00, "potencia_cv": 7.20},
+            {"pressao_bar": 20.00, "vazao_l_min": 59.00, "potencia_cv": 8.50},
+            {"pressao_bar": 22.00, "vazao_l_min": 56.00, "potencia_cv": 10.00}
+          ]
+        },
+        {
+          "rpm": 1750,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 112.00, "potencia_cv": 1.00},
+            {"pressao_bar": 2.00, "vazao_l_min": 110.00, "potencia_cv": 1.50},
+            {"pressao_bar": 4.00, "vazao_l_min": 108.00, "potencia_cv": 2.40},
+            {"pressao_bar": 6.00, "vazao_l_min": 106.00, "potencia_cv": 3.30},
+            {"pressao_bar": 8.00, "vazao_l_min": 104.00, "potencia_cv": 4.00},
+            {"pressao_bar": 10.00, "vazao_l_min": 101.00, "potencia_cv": 4.90},
+            {"pressao_bar": 12.00, "vazao_l_min": 98.00, "potencia_cv": 5.90}
+          ]
+        }
+      ]
+    },
+    "FBE_1.1/2": {
+      "modelo": "FBE 1.1/2\"",
+      "configuracoes": [
+        {
+          "rpm": 1750,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 150.00, "potencia_cv": 4.50},
+            {"pressao_bar": 2.00, "vazao_l_min": 148.50, "potencia_cv": 6.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 147.00, "potencia_cv": 7.50},
+            {"pressao_bar": 6.00, "vazao_l_min": 145.50, "potencia_cv": 9.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 144.00, "potencia_cv": 10.50},
+            {"pressao_bar": 10.00, "vazao_l_min": 142.50, "potencia_cv": 12.00},
+            {"pressao_bar": 12.00, "vazao_l_min": 139.50, "potencia_cv": 13.50},
+            {"pressao_bar": 14.00, "vazao_l_min": 135.00, "potencia_cv": 15.00}
+          ]
+        },
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 100.00, "potencia_cv": 3.00},
+            {"pressao_bar": 2.00, "vazao_l_min": 99.00, "potencia_cv": 4.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 98.00, "potencia_cv": 5.00},
+            {"pressao_bar": 6.00, "vazao_l_min": 97.00, "potencia_cv": 6.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 96.00, "potencia_cv": 7.00},
+            {"pressao_bar": 10.00, "vazao_l_min": 95.00, "potencia_cv": 8.00},
+            {"pressao_bar": 12.00, "vazao_l_min": 93.00, "potencia_cv": 9.00},
+            {"pressao_bar": 14.00, "vazao_l_min": 90.00, "potencia_cv": 10.00}
+          ]
+        },
+        {
+          "rpm": 850,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 70.00, "potencia_cv": 1.50},
+            {"pressao_bar": 2.00, "vazao_l_min": 69.00, "potencia_cv": 2.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 68.00, "potencia_cv": 2.50},
+            {"pressao_bar": 6.00, "vazao_l_min": 67.00, "potencia_cv": 3.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 66.00, "potencia_cv": 3.50},
+            {"pressao_bar": 10.00, "vazao_l_min": 64.00, "potencia_cv": 4.00},
+            {"pressao_bar": 12.00, "vazao_l_min": 62.00, "potencia_cv": 4.50},
+            {"pressao_bar": 14.00, "vazao_l_min": 60.00, "potencia_cv": 5.00}
+          ]
+        }
+      ]
+    },
+    "FBE_1.1/2_A": {
+      "modelo": "FBE 1.1/2\" A",
+      "configuracoes": [
+        {
+          "rpm": 1750,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 200.00, "potencia_cv": 5.25},
+            {"pressao_bar": 2.00, "vazao_l_min": 196.50, "potencia_cv": 6.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 193.50, "potencia_cv": 7.50},
+            {"pressao_bar": 6.00, "vazao_l_min": 190.50, "potencia_cv": 9.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 187.50, "potencia_cv": 11.25},
+            {"pressao_bar": 10.00, "vazao_l_min": 184.50, "potencia_cv": 13.00},
+            {"pressao_bar": 12.00, "vazao_l_min": 181.50, "potencia_cv": 14.25},
+            {"pressao_bar": 14.00, "vazao_l_min": 175.50, "potencia_cv": 15.60}
+          ]
+        },
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 133.00, "potencia_cv": 3.50},
+            {"pressao_bar": 2.00, "vazao_l_min": 131.00, "potencia_cv": 4.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 129.00, "potencia_cv": 5.00},
+            {"pressao_bar": 6.00, "vazao_l_min": 127.00, "potencia_cv": 6.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 125.00, "potencia_cv": 7.50},
+            {"pressao_bar": 10.00, "vazao_l_min": 123.00, "potencia_cv": 8.70},
+            {"pressao_bar": 12.00, "vazao_l_min": 121.00, "potencia_cv": 9.50},
+            {"pressao_bar": 14.00, "vazao_l_min": 117.00, "potencia_cv": 10.40}
+          ]
+        },
+        {
+          "rpm": 850,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 94.00, "potencia_cv": 1.75},
+            {"pressao_bar": 2.00, "vazao_l_min": 92.00, "potencia_cv": 2.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 90.00, "potencia_cv": 2.50},
+            {"pressao_bar": 6.00, "vazao_l_min": 88.00, "potencia_cv": 3.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 86.00, "potencia_cv": 3.80},
+            {"pressao_bar": 10.00, "vazao_l_min": 84.00, "potencia_cv": 4.40},
+            {"pressao_bar": 12.00, "vazao_l_min": 81.00, "potencia_cv": 4.75},
+            {"pressao_bar": 14.00, "vazao_l_min": 78.00, "potencia_cv": 5.20}
+          ]
+        }
+      ]
+    },
+    "FBE_2": {
+      "modelo": "FBE 2\"",
+      "configuracoes": [
+        {
+          "rpm": 1750,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 300.00, "potencia_cv": 6.80},
+            {"pressao_bar": 2.00, "vazao_l_min": 297.00, "potencia_cv": 9.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 294.00, "potencia_cv": 10.50},
+            {"pressao_bar": 6.00, "vazao_l_min": 291.00, "potencia_cv": 12.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 288.00, "potencia_cv": 13.50},
+            {"pressao_bar": 10.00, "vazao_l_min": 285.00, "potencia_cv": 15.00},
+            {"pressao_bar": 12.00, "vazao_l_min": 282.00, "potencia_cv": 16.50},
+            {"pressao_bar": 14.00, "vazao_l_min": 279.00, "potencia_cv": 20.20}
+          ]
+        },
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 200.00, "potencia_cv": 4.50},
+            {"pressao_bar": 2.00, "vazao_l_min": 198.00, "potencia_cv": 6.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 196.00, "potencia_cv": 7.00},
+            {"pressao_bar": 6.00, "vazao_l_min": 194.00, "potencia_cv": 8.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 192.00, "potencia_cv": 9.00},
+            {"pressao_bar": 10.00, "vazao_l_min": 190.00, "potencia_cv": 10.00},
+            {"pressao_bar": 12.00, "vazao_l_min": 188.00, "potencia_cv": 11.00},
+            {"pressao_bar": 14.00, "vazao_l_min": 186.00, "potencia_cv": 13.50}
+          ]
+        },
+        {
+          "rpm": 850,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 139.00, "potencia_cv": 2.80},
+            {"pressao_bar": 2.00, "vazao_l_min": 138.00, "potencia_cv": 3.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 137.00, "potencia_cv": 3.50},
+            {"pressao_bar": 6.00, "vazao_l_min": 136.00, "potencia_cv": 4.20},
+            {"pressao_bar": 8.00, "vazao_l_min": 135.00, "potencia_cv": 5.30},
+            {"pressao_bar": 10.00, "vazao_l_min": 133.00, "potencia_cv": 6.30},
+            {"pressao_bar": 12.00, "vazao_l_min": 131.00, "potencia_cv": 7.90},
+            {"pressao_bar": 14.00, "vazao_l_min": 129.00, "potencia_cv": 9.30}
+          ]
+        }
+      ]
+    },
+    "FBE_2_A": {
+      "modelo": "FBE 2\" A",
+      "configuracoes": [
+        {
+          "rpm": 1750,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 420.00, "potencia_cv": 11.40},
+            {"pressao_bar": 2.00, "vazao_l_min": 408.00, "potencia_cv": 13.70},
+            {"pressao_bar": 4.00, "vazao_l_min": 405.00, "potencia_cv": 16.70},
+            {"pressao_bar": 6.00, "vazao_l_min": 401.00, "potencia_cv": 18.20},
+            {"pressao_bar": 8.00, "vazao_l_min": 396.00, "potencia_cv": 22.80},
+            {"pressao_bar": 10.00, "vazao_l_min": 392.00, "potencia_cv": 27.30},
+            {"pressao_bar": 12.00, "vazao_l_min": 386.00, "potencia_cv": 30.40}
+          ]
+        },
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 275.00, "potencia_cv": 7.50},
+            {"pressao_bar": 2.00, "vazao_l_min": 269.00, "potencia_cv": 9.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 267.00, "potencia_cv": 11.00},
+            {"pressao_bar": 6.00, "vazao_l_min": 264.00, "potencia_cv": 12.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 261.00, "potencia_cv": 15.00},
+            {"pressao_bar": 10.00, "vazao_l_min": 258.00, "potencia_cv": 18.00},
+            {"pressao_bar": 12.00, "vazao_l_min": 255.00, "potencia_cv": 20.00}
+          ]
+        },
+        {
+          "rpm": 850,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 188.00, "potencia_cv": 3.80},
+            {"pressao_bar": 2.00, "vazao_l_min": 187.00, "potencia_cv": 4.50},
+            {"pressao_bar": 4.00, "vazao_l_min": 186.00, "potencia_cv": 5.50},
+            {"pressao_bar": 6.00, "vazao_l_min": 185.00, "potencia_cv": 6.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 184.00, "potencia_cv": 7.50},
+            {"pressao_bar": 10.00, "vazao_l_min": 182.00, "potencia_cv": 9.00},
+            {"pressao_bar": 12.00, "vazao_l_min": 181.00, "potencia_cv": 10.00}
+          ]
+        }
+      ]
+    },
+    "FBE_3": {
+      "modelo": "FBE 3\"",
+      "configuracoes": [
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 500.00, "potencia_cv": 10.00},
+            {"pressao_bar": 2.00, "vazao_l_min": 498.00, "potencia_cv": 12.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 496.00, "potencia_cv": 15.00},
+            {"pressao_bar": 6.00, "vazao_l_min": 493.00, "potencia_cv": 18.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 490.00, "potencia_cv": 20.00},
+            {"pressao_bar": 10.00, "vazao_l_min": 486.00, "potencia_cv": 25.00}
+          ]
+        },
+        {
+          "rpm": 850,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 351.00, "potencia_cv": 6.00},
+            {"pressao_bar": 2.00, "vazao_l_min": 348.00, "potencia_cv": 6.50},
+            {"pressao_bar": 4.00, "vazao_l_min": 347.00, "potencia_cv": 7.50},
+            {"pressao_bar": 6.00, "vazao_l_min": 345.00, "potencia_cv": 9.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 343.00, "potencia_cv": 13.00},
+            {"pressao_bar": 10.00, "vazao_l_min": 340.00, "potencia_cv": 17.20},
+            {"pressao_bar": 12.00, "vazao_l_min": 337.00, "potencia_cv": 21.40}
+          ]
+        }
+      ]
+    },
+    "FBE_3_M9": {
+      "modelo": "FBE 3\" M9",
+      "configuracoes": [
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 600.00, "potencia_cv": 12.50},
+            {"pressao_bar": 2.00, "vazao_l_min": 597.00, "potencia_cv": 15.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 595.00, "potencia_cv": 19.00},
+            {"pressao_bar": 6.00, "vazao_l_min": 592.00, "potencia_cv": 21.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 588.00, "potencia_cv": 25.00}
+          ]
+        },
+        {
+          "rpm": 850,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 420.00, "potencia_cv": 6.40},
+            {"pressao_bar": 2.00, "vazao_l_min": 418.00, "potencia_cv": 7.50},
+            {"pressao_bar": 4.00, "vazao_l_min": 416.00, "potencia_cv": 8.50},
+            {"pressao_bar": 6.00, "vazao_l_min": 414.00, "potencia_cv": 12.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 411.00, "potencia_cv": 17.00}
+          ]
+        }
+      ]
+    },
+    "FBE_4_M6": {
+      "modelo": "FBE 4\" M6",
+      "configuracoes": [
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 650.00, "potencia_cv": 11.00},
+            {"pressao_bar": 2.00, "vazao_l_min": 645.00, "potencia_cv": 15.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 640.00, "potencia_cv": 21.00},
+            {"pressao_bar": 6.00, "vazao_l_min": 635.00, "potencia_cv": 23.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 630.00, "potencia_cv": 25.00}
+          ]
+        },
+        {
+          "rpm": 850,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 455.00, "potencia_cv": 6.00},
+            {"pressao_bar": 2.00, "vazao_l_min": 452.00, "potencia_cv": 8.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 448.00, "potencia_cv": 11.00},
+            {"pressao_bar": 6.00, "vazao_l_min": 444.00, "potencia_cv": 12.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 440.00, "potencia_cv": 17.00}
+          ]
+        }
+      ]
+    },
+    "FBE_4_M8": {
+      "modelo": "FBE 4\" M8",
+      "configuracoes": [
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 1000.00, "potencia_cv": 15.00},
+            {"pressao_bar": 2.00, "vazao_l_min": 995.00, "potencia_cv": 20.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 990.00, "potencia_cv": 25.00},
+            {"pressao_bar": 6.00, "vazao_l_min": 985.00, "potencia_cv": 30.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 980.00, "potencia_cv": 35.00}
+          ]
+        },
+        {
+          "rpm": 850,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 700.00, "potencia_cv": 7.50},
+            {"pressao_bar": 2.00, "vazao_l_min": 696.00, "potencia_cv": 10.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 692.00, "potencia_cv": 15.00},
+            {"pressao_bar": 6.00, "vazao_l_min": 688.00, "potencia_cv": 21.00},
+            {"pressao_bar": 8.00, "vazao_l_min": 684.00, "potencia_cv": 30.00}
+          ]
+        }
+      ]
+    },
+    "FBE_4_M12": {
+      "modelo": "FBE 4\" M12",
+      "configuracoes": [
+        {
+          "rpm": 1150,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 1350.00, "potencia_cv": 20.00},
+            {"pressao_bar": 2.00, "vazao_l_min": 1343.00, "potencia_cv": 25.00},
+            {"pressao_bar": 4.00, "vazao_l_min": 1336.00, "potencia_cv": 30.00},
+            {"pressao_bar": 6.00, "vazao_l_min": 1329.00, "potencia_cv": 35.00}
+          ]
+        },
+        {
+          "rpm": 850,
+          "dados_operacionais": [
+            {"pressao_bar": 0.00, "vazao_l_min": 945.00, "potencia_cv": 10.00},
+            {"pressao_bar": 2.00, "vazao_l_min": 940.00, "potencia_cv": 12.50},
+            {"pressao_bar": 4.00, "vazao_l_min": 935.00, "potencia_cv": 18.00},
+            {"pressao_bar": 6.00, "vazao_l_min": 930.00, "potencia_cv": 26.00}
+          ]
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "unidade_pressao": "bar",
+    "unidade_vazao": "L/min",
+    "unidade_potencia": "CV",
+    "tipo_bomba": "Bomba de Engrenagem Externa",
+    "fabricante": "FBE"
+  }
+}

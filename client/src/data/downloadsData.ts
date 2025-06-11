@@ -11,7 +11,7 @@ export const downloads: Download[] = [
     icon: "file-pdf",
     descriptionKey: "downloads.fbcn_manual.description",
     description: "Manual técnico completo da linha de bombas centrífugas normalizadas FBCN, com especificações, diagramas e instruções de operação.",
-    fileUrl: "/attached_assets/catalogo_5.pdf"
+    fileUrl: "/assets/catalogo_5.pdf"
   },
   {
     id: "fbot-manual",
@@ -23,7 +23,7 @@ export const downloads: Download[] = [
     icon: "file-pdf",
     descriptionKey: "downloads.fbot_manual.description",
     description: "Manual técnico completo da linha de bombas para óleo térmico FBOT, com especificações detalhadas de operação e manutenção.",
-    fileUrl: "/attached_assets/catalogo_8.pdf"
+    fileUrl: "/assets/catalogo_8.pdf"
   },
   {
     id: "fbe-manual",
@@ -35,7 +35,7 @@ export const downloads: Download[] = [
     icon: "file-pdf",
     descriptionKey: "downloads.fbe_manual.description",
     description: "Manual técnico completo da linha de bombas de engrenagem externa FBE, com detalhes de instalação e manutenção.",
-    fileUrl: "/attached_assets/catalogo_16.pdf"
+    fileUrl: "/assets/catalogo_16.pdf"
   }
 ];
 

@@ -45,7 +45,7 @@ const HeroSection = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
-          src="/src/assets/BACKGROUNDHERO.png"
+          src="/images/BACKGROUNDHERO.png"
           alt=""
           className="w-full h-full object-cover object-center"
         />
@@ -60,7 +60,7 @@ const HeroSection = () => {
         className="absolute top-4 right-4 md:top-6 md:right-6 lg:top-8 lg:right-8 z-20"
       >
         <img 
-          src="/src/assets/empresa-100-brasileira.png" 
+          src="/images/empresa-100-brasileira.png" 
           alt="Empresa 100% Brasileira"
           className="w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 h-auto object-contain"
           loading="eager"
@@ -78,7 +78,7 @@ const HeroSection = () => {
           className="absolute right-8 md:right-16 lg:right-24 xl:right-32 top-[35%] md:top-[30%] -translate-y-1/2 hidden md:block"
         >
           <img 
-            src="/src/assets/logofb3dHERO.png" 
+            src="/images/logofb3dHERO.png" 
             alt="FB Bombas 3D Logo"
             className="w-48 md:w-64 lg:w-80 xl:w-96 h-auto object-contain filter drop-shadow-2xl"
             loading="eager"

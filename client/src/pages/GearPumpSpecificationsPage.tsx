@@ -99,7 +99,7 @@ const GearPumpSpecificationsPage: React.FC = () => {
   };
 
   const handleDownloadPDF = () => {
-    window.open('/public/assets/manuals/FB_Manual_Tecnico_FBE.pdf', '_blank');
+    window.open('/assets/manuals/FB_Manual_Tecnico_FBE.pdf', '_blank');
   };
 
   if (!pumpData || !currentModel) {
@@ -118,12 +118,12 @@ const GearPumpSpecificationsPage: React.FC = () => {
 
   // Get drawing and product images
   const drawingImage = theme === 'dark' 
-    ? `/src/assets/products/fbe/${diameter}/drawing-white.png`
-    : `/src/assets/products/fbe/${diameter}/drawing-black.png`;
+    ? `/images/products/fbe/${diameter}/drawing-white.png`
+    : `/images/products/fbe/${diameter}/drawing-black.png`;
 
   const productImage = (currentModel?.model === '1" D' || currentModel?.model === '1" DA' || currentModel?.code === 'FBE-1-D' || currentModel?.code === 'FBE-1-DA') 
-    ? `/src/assets/products/fbe/${diameter}/photo-d-da.png?v=${Date.now()}`
-    : `/src/assets/products/fbe/${diameter}/photo.png`;
+    ? `/images/products/fbe/${diameter}/photo-d-da.png?v=${Date.now()}`
+    : `/images/products/fbe/${diameter}/photo.png`;
 
   // Get performance data for current model
   const getPerformanceData = () => {
@@ -190,7 +190,7 @@ const GearPumpSpecificationsPage: React.FC = () => {
           {/* Background Image with Red Overlay */}
           <div className="absolute inset-0">
             <img 
-              src="/src/assets/backgrounds/benefits-dark.svg"
+              src="/images/backgrounds/benefits-dark.svg"
               alt=""
               className="w-full h-full object-cover object-top opacity-80"
             />
@@ -366,7 +366,7 @@ const GearPumpSpecificationsPage: React.FC = () => {
                 className="hidden md:block ml-8 mt-auto mb-0"
               >
                 <img 
-                  src="/src/assets/empresa-100-brasileira.png" 
+                  src="/images/empresa-100-brasileira.png" 
                   alt="Empresa 100% Brasileira"
                   className="w-48 md:w-56 lg:w-64 xl:w-72 h-auto object-contain drop-shadow-2xl"
                   loading="eager"
@@ -432,7 +432,7 @@ const GearPumpSpecificationsPage: React.FC = () => {
                         className="w-full h-auto object-contain max-h-[400px]"
                         onError={(e) => {
                           const img = e.target as HTMLImageElement;
-                          img.src = '/src/assets/products/generic-pump.png';
+                          img.src = '/images/products/generic-pump.png';
                         }}
                       />
                     </div>
@@ -454,8 +454,8 @@ const GearPumpSpecificationsPage: React.FC = () => {
                   >
                     <img 
                       src={theme === 'dark' 
-                        ? "/src/assets/produto-nacional-badge-dark.png"
-                        : "/src/assets/produto-nacional-badge-light.png"
+                        ? "/images/produto-nacional-badge-dark.png"
+                        : "/images/produto-nacional-badge-light.png"
                       }
                       alt="Produto 100% Nacional"
                       className="w-full h-auto object-contain"
@@ -761,7 +761,7 @@ const GearPumpSpecificationsPage: React.FC = () => {
                       className="w-full h-auto object-contain max-h-[500px]"
                       onError={(e) => {
                         const img = e.target as HTMLImageElement;
-                        img.src = '/src/assets/products/generic-drawing.png';
+                        img.src = '/images/products/generic-pump.png';
                       }}
                     />
                   </div>

@@ -80,15 +80,15 @@ const ProductsPagePremium: React.FC = () => {
   const [fbotImage, setFbotImage] = useState(0);
   
   const fbcnImages = [
-    "/src/assets/fotosfb/FBCN/FBCN FRENTE.png",
-    "/src/assets/fotosfb/FBCN/FBCN LADO.png",
-    "/src/assets/fotosfb/FBCN/FBCN TRÁS.png"
+    "/images/fotosfb/FBCN/FBCN FRENTE.png",
+    "/images/fotosfb/FBCN/FBCN LADO.png",
+    "/images/fotosfb/FBCN/FBCN TRÁS.png"
   ];
   
   const fbotImages = [
-    "/src/assets/fotosfb/FBOT/FBOT FRENTE.png",
-    "/src/assets/fotosfb/FBOT/FBOT LADO.png",
-    "/src/assets/fotosfb/FBOT/FBOT TRÁS.png"
+    "/images/fotosfb/FBOT/FBOT FRENTE.png",
+    "/images/fotosfb/FBOT/FBOT LADO.png",
+    "/images/fotosfb/FBOT/FBOT TRÁS.png"
   ];
 
   useEffect(() => {
@@ -183,10 +183,10 @@ const ProductsPagePremium: React.FC = () => {
     
     const folder = diameterMap[diameter];
     if (folder) {
-      return `/src/assets/products/fbe/${folder}/photo.png`;
+      return `/images/products/fbe/${folder}/photo.png`;
     }
     
-    return '/src/assets/products/generic-pump.png';
+    return '/images/products/generic-pump.png';
   };
 
   return (
@@ -219,7 +219,7 @@ const ProductsPagePremium: React.FC = () => {
           {/* Premium Background Effect with Hero Background */}
           <div className="absolute inset-0">
             <img 
-              src="/src/assets/backgrounds/benefits-light-products.svg"
+              src="/images/backgrounds/benefits-light-products.svg"
               alt=""
               className="w-full h-full object-cover"
               style={{ objectPosition: 'top right' }}
@@ -302,7 +302,7 @@ const ProductsPagePremium: React.FC = () => {
               className="hidden md:block absolute bottom-10 right-12"
             >
               <img 
-                src="/src/assets/empresa-100-brasileira.png" 
+                src="/images/empresa-100-brasileira.png" 
                 alt="Empresa 100% Brasileira"
                 className="w-48 md:w-56 lg:w-64 xl:w-72 h-auto object-contain drop-shadow-2xl"
                 loading="eager"
@@ -559,7 +559,7 @@ const ProductsPagePremium: React.FC = () => {
                                     className="w-24 h-24 object-contain"
                                     onError={(e) => {
                                       const img = e.target as HTMLImageElement;
-                                      img.src = '/src/assets/products/generic-pump.png';
+                                      img.src = '/images/products/generic-pump.png';
                                     }}
                                   />
                                 </div>
@@ -679,14 +679,14 @@ const ProductsPagePremium: React.FC = () => {
                               <div className="flex items-center justify-center">
                                 <img 
                                   src={(model.model === '1" D' || model.model === '1" DA' || model.code === 'FBE-1-D' || model.code === 'FBE-1-DA')
-                                    ? `/src/assets/products/fbe/1/photo-d-da.png?v=${Date.now()}` 
-                                    : '/src/assets/products/fbe/1/photo.png'}
+                                    ? `/images/products/fbe/1/photo-d-da.png?v=${Date.now()}` 
+                                    : '/images/products/fbe/1/photo.png'}
                                   alt={model.model}
                                   className="w-28 h-28 object-contain"
                                   onError={(e) => {
                                     const img = e.target as HTMLImageElement;
                                     console.error('Image error for model:', model.model, 'Code:', model.code);
-                                    img.src = '/src/assets/products/generic-pump.png';
+                                    img.src = '/images/products/generic-pump.png';
                                   }}
                                 />
                               </div>
@@ -811,7 +811,7 @@ const ProductsPagePremium: React.FC = () => {
                                       className="w-32 h-32 object-contain"
                                       onError={(e) => {
                                         const img = e.target as HTMLImageElement;
-                                        img.src = '/src/assets/products/generic-pump.png';
+                                        img.src = '/images/products/generic-pump.png';
                                       }}
                                     />
                                   </div>
@@ -963,7 +963,7 @@ const ProductsPagePremium: React.FC = () => {
                                 className="w-full h-full object-contain drop-shadow-2xl"
                                 onError={(e) => {
                                   const img = e.target as HTMLImageElement;
-                                  img.src = '/src/assets/products/fbcn.png';
+                                  img.src = '/images/products/fbcn.png';
                                 }}
                               />
                             </motion.div>
@@ -1055,7 +1055,7 @@ const ProductsPagePremium: React.FC = () => {
                     {/* CTA Buttons */}
                     <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
                       <Button
-                        onClick={() => window.open('/public/assets/manuals/FB_Manual_Tecnico_FBCN.pdf', '_blank')}
+                        onClick={() => window.open('/assets/manuals/FB_Manual_Tecnico_FBCN.pdf', '_blank')}
                         className="bg-gradient-to-r from-azul-profundo to-blue-600 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4 text-base font-medium"
                       >
                         <Download className="mr-2 h-5 w-5" />
@@ -1158,7 +1158,7 @@ const ProductsPagePremium: React.FC = () => {
                                 className="w-full h-full object-contain drop-shadow-2xl"
                                 onError={(e) => {
                                   const img = e.target as HTMLImageElement;
-                                  img.src = '/src/assets/products/fbot.png';
+                                  img.src = '/images/products/fbot.png';
                                 }}
                               />
                             </motion.div>
@@ -1265,7 +1265,7 @@ const ProductsPagePremium: React.FC = () => {
                     {/* CTA Buttons */}
                     <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
                       <Button
-                        onClick={() => window.open('/public/assets/manuals/FB_Manual_Tecnico_FBOT.pdf', '_blank')}
+                        onClick={() => window.open('/assets/manuals/FB_Manual_Tecnico_FBOT.pdf', '_blank')}
                         className="bg-gradient-to-r from-azul-profundo to-blue-600 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4 text-base font-medium"
                       >
                         <Download className="mr-2 h-5 w-5" />
